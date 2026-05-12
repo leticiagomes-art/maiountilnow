@@ -3,906 +3,736 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>🐯 Tiger Offers — Maio 2026 BuyGoods</title>
+<title>🐯 Tiger Offers — Maio 2026</title>
 <style>
 :root{
   --bg:#0D0F14;--surface:#161920;--surface2:#1E2230;--surface3:#252A3A;
   --border:#2A2E3E;--border-s:rgba(255,255,255,.07);
   --t1:#F0F2F8;--t2:#B8BFCE;--t3:#7A8299;--t4:#4A5068;
-  --orange:#FF6B35;--orange-glow:rgba(255,107,53,.25);
-  --green:#22C55E;--green-l:rgba(34,197,94,.08);
+  --orange:#FF6B35;--green:#22C55E;--green-l:rgba(34,197,94,.08);
   --blue:#3D8EFF;--blue-l:rgba(61,142,255,.08);
   --yellow:#F59E0B;--yellow-l:rgba(245,158,11,.08);
   --red:#EF4444;--red-l:rgba(239,68,68,.08);
   --purple:#A855F7;--purple-l:rgba(168,85,247,.08);
   --font:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono','Fira Code',monospace;
-  --radius:10px;--radius-lg:14px;
+  --r:10px;--rl:14px;
 }
 :root[data-theme="light"]{
-  --bg:#F4F6FB;--surface:#FFFFFF;--surface2:#F0F2F8;--surface3:#E8EBF4;
+  --bg:#F4F6FB;--surface:#fff;--surface2:#F0F2F8;--surface3:#E8EBF4;
   --border:#DDE1EE;--border-s:rgba(0,0,0,.07);
   --t1:#0D0F14;--t2:#3A4055;--t3:#6B738A;--t4:#9CA3B8;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:var(--font);background:var(--bg);color:var(--t1);font-size:13px;line-height:1.5}
-.hdr{background:var(--surface);border-bottom:1px solid var(--border);padding:0 28px;position:sticky;top:0;z-index:100}
-.hdr-top{display:flex;align-items:flex-start;justify-content:space-between;padding:12px 0 8px;gap:12px;flex-wrap:wrap}
+.hdr{background:var(--surface);border-bottom:1px solid var(--border);padding:0 24px;position:sticky;top:0;z-index:100}
+.hdr-top{display:flex;align-items:flex-start;justify-content:space-between;padding:10px 0 7px;gap:10px;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:10px}
-.brand-ico{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--orange),#ff9a00);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
-.brand-name{font-size:15px;font-weight:800;color:var(--t1);letter-spacing:-.4px}
-.brand-sub{font-size:9px;color:var(--t3);letter-spacing:.2px}
-.hdr-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:4px}
-.live-dot{font-size:10px;color:var(--t3);display:flex;align-items:center;gap:4px}
-.badge{padding:2px 8px;border-radius:20px;font-size:10px;font-weight:700;white-space:nowrap}
-.bdg-or{background:rgba(255,107,53,.15);color:var(--orange);border:1px solid rgba(255,107,53,.3)}
-.bdg-gn{background:var(--green-l);color:var(--green);border:1px solid rgba(34,197,94,.25)}
-.bdg-bl{background:var(--blue-l);color:var(--blue);border:1px solid rgba(61,142,255,.25)}
-.bdg-yl{background:var(--yellow-l);color:var(--yellow);border:1px solid rgba(245,158,11,.25)}
-.bdg-rd{background:var(--red-l);color:var(--red);border:1px solid rgba(239,68,68,.25)}
-.bdg-pu{background:var(--purple-l);color:var(--purple);border:1px solid rgba(168,85,247,.25)}
-.theme-toggle{display:flex;align-items:center;gap:6px;padding:5px 10px;border:1px solid var(--border-s);border-radius:8px;background:var(--surface2);cursor:pointer;font-size:11px;color:var(--t2);font-family:var(--font)}
-.tabs{display:flex;gap:2px;overflow-x:auto;padding-bottom:0}
-.tab{padding:9px 16px;font-size:12px;font-weight:600;color:var(--t3);border-radius:8px 8px 0 0;cursor:pointer;transition:all .15s;border:1px solid transparent;border-bottom:none;bottom:-1px;position:relative;white-space:nowrap;display:flex;align-items:center;gap:6px}
+.bico{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#FF6B35,#ff9a00);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.bnm{font-size:14px;font-weight:800;letter-spacing:-.4px}
+.bsub{font-size:9px;color:var(--t3)}
+.meta{display:flex;gap:5px;flex-wrap:wrap;margin-top:3px}
+.bdg{padding:2px 7px;border-radius:20px;font-size:10px;font-weight:700}
+.or{background:rgba(255,107,53,.15);color:var(--orange);border:1px solid rgba(255,107,53,.3)}
+.gn{background:var(--green-l);color:var(--green);border:1px solid rgba(34,197,94,.25)}
+.bl{background:var(--blue-l);color:var(--blue);border:1px solid rgba(61,142,255,.25)}
+.yl{background:var(--yellow-l);color:var(--yellow);border:1px solid rgba(245,158,11,.25)}
+.rd{background:var(--red-l);color:var(--red);border:1px solid rgba(239,68,68,.25)}
+.pu{background:var(--purple-l);color:var(--purple);border:1px solid rgba(168,85,247,.25)}
+.theme-btn{display:flex;align-items:center;gap:5px;padding:4px 10px;border:1px solid var(--border-s);border-radius:7px;background:var(--surface2);cursor:pointer;font-size:11px;color:var(--t2);font-family:var(--font)}
+.tabs{display:flex;gap:2px;overflow-x:auto}
+.tab{padding:8px 14px;font-size:11px;font-weight:600;color:var(--t3);border-radius:7px 7px 0 0;cursor:pointer;border:1px solid transparent;border-bottom:none;bottom:-1px;position:relative;white-space:nowrap;display:flex;align-items:center;gap:5px;transition:color .15s}
 .tab:hover{color:var(--t1);background:var(--surface2)}
 .tab.active{color:var(--t1);background:var(--bg);border-color:var(--border);border-bottom-color:var(--bg);font-weight:700}
-.tab-ico{width:20px;height:20px;border-radius:5px;background:var(--surface3);display:flex;align-items:center;justify-content:center;font-size:12px}
-.body{padding:20px 28px 48px;max-width:1700px;margin:0 auto}
+.body{padding:18px 24px 48px;max-width:1700px;margin:0 auto}
 .sec{display:none}.sec.active{display:block}
-.kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:10px;margin-bottom:14px}
-.kpi{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:13px 15px;position:relative;overflow:hidden}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:9px;margin-bottom:13px}
+.kpi{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:12px 14px;position:relative;overflow:hidden}
 .kpi::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
-.kpi.yl::before{background:var(--yellow)}.kpi.rd::before{background:var(--red)}.kpi.gn::before{background:var(--green)}.kpi.bl::before{background:var(--blue)}.kpi.or::before{background:var(--orange)}.kpi.pu::before{background:var(--purple)}
-.kpi-lbl{font-size:9px;color:var(--t3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:4px}
-.kpi-val{font-size:22px;font-weight:800;letter-spacing:-1px;line-height:1;color:var(--t1)}
-.kpi-sub{font-size:10px;color:var(--t4);margin-top:3px}
-.kpi-sub.ok{color:var(--green)}.kpi-sub.warn{color:var(--yellow)}.kpi-sub.crit{color:var(--red)}
-.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
-.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:12px}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:16px 18px;margin-bottom:12px}
-.card.gfull{grid-column:1/-1}
-.card-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px}
-.card-ttl{font-size:12px;font-weight:700;color:var(--t1);display:flex;align-items:center;gap:6px}
-/* Week toggle */
-.week-toggle{display:flex;gap:4px;padding:4px;background:var(--surface2);border-radius:8px;border:1px solid var(--border)}
-.wbtn{padding:4px 12px;border-radius:5px;font-size:11px;font-weight:600;color:var(--t3);cursor:pointer;transition:all .15s;border:none;background:transparent;font-family:var(--font)}
-.wbtn.active{background:var(--surface3);color:var(--t1);box-shadow:0 1px 4px rgba(0,0,0,.3)}
+.kpi.KY::before{background:var(--yellow)}.kpi.KR::before{background:var(--red)}.kpi.KG::before{background:var(--green)}.kpi.KB::before{background:var(--blue)}.kpi.KO::before{background:var(--orange)}.kpi.KP::before{background:var(--purple)}
+.kl{font-size:9px;color:var(--t3);text-transform:uppercase;letter-spacing:.4px;margin-bottom:3px}
+.kv{font-size:21px;font-weight:800;letter-spacing:-1px;line-height:1}
+.ks{font-size:10px;color:var(--t4);margin-top:2px}
+.ks.ok{color:var(--green)}.ks.warn{color:var(--yellow)}.ks.crit{color:var(--red)}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-bottom:11px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--rl);padding:15px 17px;margin-bottom:11px}
+.ch{display:flex;align-items:center;justify-content:space-between;margin-bottom:11px;flex-wrap:wrap;gap:7px}
+.ct{font-size:12px;font-weight:700}
+.wt{display:flex;gap:3px;padding:3px;background:var(--surface2);border-radius:7px;border:1px solid var(--border)}
+.wb{padding:4px 11px;border-radius:5px;font-size:11px;font-weight:600;color:var(--t3);cursor:pointer;border:none;background:transparent;font-family:var(--font)}
+.wb.active{background:var(--surface3);color:var(--t1)}
 table{width:100%;border-collapse:collapse;font-size:11px}
-thead th{text-align:left;padding:7px 10px;background:var(--surface2);color:var(--t3);font-size:9px;text-transform:uppercase;letter-spacing:.4px;border-bottom:1px solid var(--border);white-space:nowrap}
-tbody td{padding:7px 10px;border-bottom:1px solid var(--border-s);color:var(--t2)}
+thead th{text-align:left;padding:6px 9px;background:var(--surface2);color:var(--t3);font-size:9px;text-transform:uppercase;letter-spacing:.4px;border-bottom:1px solid var(--border);white-space:nowrap}
+tbody td{padding:6px 9px;border-bottom:1px solid var(--border-s);color:var(--t2)}
 tbody tr:last-child td{border-bottom:none}
 tbody tr:hover{background:var(--surface2)}
-.bold{font-weight:700;color:var(--t1)!important}
-.center{text-align:center}.right{text-align:right}
-.mono{font-family:var(--mono)}
-.ok{color:var(--green)!important}.warn{color:var(--yellow)!important}.crit{color:var(--red)!important}.bl{color:var(--blue)!important}.or{color:var(--orange)!important}
-.bar-row{display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid var(--border-s)}
-.bar-lbl{width:170px;font-size:11px;color:var(--t2);flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.bar-track{flex:1;height:8px;background:var(--surface2);border-radius:4px;overflow:hidden}
-.bar-fill{height:8px;border-radius:4px;width:0;transition:width .9s ease}
-.bar-val{width:80px;font-size:10px;font-family:var(--mono);text-align:right;color:var(--t3);flex-shrink:0}
+.b{font-weight:700;color:var(--t1)!important}.c{text-align:center}.r{text-align:right}
+.mn{font-family:var(--mono)}
+.tok{color:var(--green)!important}.twn{color:var(--yellow)!important}.tcr{color:var(--red)!important}
+.br{display:flex;align-items:center;gap:9px;padding:5px 0;border-bottom:1px solid var(--border-s)}
+.bl2{width:160px;font-size:11px;color:var(--t2);flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bt{flex:1;height:8px;background:var(--surface2);border-radius:4px;overflow:hidden}
+.bf{height:8px;border-radius:4px;width:0;transition:width .9s ease}
+.bv{width:90px;font-size:10px;font-family:var(--mono);text-align:right;color:var(--t3);flex-shrink:0}
 .pill{padding:2px 7px;border-radius:20px;font-size:9px;font-weight:700;white-space:nowrap}
-.p-gn{background:var(--green-l);color:var(--green)}.p-rd{background:var(--red-l);color:var(--red)}.p-yl{background:var(--yellow-l);color:var(--yellow)}.p-bl{background:var(--blue-l);color:var(--blue)}.p-or{background:rgba(255,107,53,.12);color:var(--orange)}.p-pu{background:var(--purple-l);color:var(--purple)}
-.note-box{padding:10px 14px;border-radius:8px;font-size:11px;margin-bottom:14px;border:1px solid var(--border)}
-.note-box.warn{background:var(--yellow-l);border-color:rgba(245,158,11,.3);color:var(--yellow)}
-.note-box.info{background:var(--blue-l);border-color:rgba(61,142,255,.3);color:var(--blue)}
-.note-box.crit{background:var(--red-l);border-color:rgba(239,68,68,.3);color:var(--red)}
-.trend-up{color:var(--green)}.trend-dn{color:var(--red)}.trend-ne{color:var(--t4)}
-/* Timing bars */
-.timing-grid{display:flex;flex-direction:column;gap:6px}
-.timing-row{display:grid;grid-template-columns:80px 1fr 50px 90px;align-items:center;gap:8px}
-.timing-label{font-size:10px;font-weight:700;color:var(--t2)}
-.timing-track{height:10px;background:var(--surface2);border-radius:5px;overflow:hidden}
-.timing-fill{height:10px;border-radius:5px;width:0;transition:width .9s ease}
-.timing-pct{font-size:10px;font-family:var(--mono);color:var(--t3);text-align:right}
-.timing-meaning{font-size:9px;color:var(--t4)}
-/* Culpability badge */
-.culp-afil{background:rgba(239,68,68,.12);color:var(--red);border:1px solid rgba(239,68,68,.3);padding:2px 8px;border-radius:20px;font-size:9px;font-weight:700}
-.culp-op{background:rgba(245,158,11,.12);color:var(--yellow);border:1px solid rgba(245,158,11,.3);padding:2px 8px;border-radius:20px;font-size:9px;font-weight:700}
-.culp-mix{background:rgba(61,142,255,.12);color:var(--blue);border:1px solid rgba(61,142,255,.3);padding:2px 8px;border-radius:20px;font-size:9px;font-weight:700}
-.culp-crit{background:rgba(168,85,247,.12);color:var(--purple);border:1px solid rgba(168,85,247,.3);padding:2px 8px;border-radius:20px;font-size:9px;font-weight:700}
-/* Affiliate top10 card */
-.top10-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:14px 16px;margin-bottom:8px}
-.top10-hdr{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px;flex-wrap:wrap}
-.top10-name{font-size:12px;font-weight:700;color:var(--t1)}
-.top10-badges{display:flex;gap:4px;flex-wrap:wrap;align-items:center}
-.top10-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:8px}
-.top10-stat{background:var(--surface2);border-radius:6px;padding:6px 8px}
-.top10-stat-lbl{font-size:9px;color:var(--t4);text-transform:uppercase;letter-spacing:.3px}
-.top10-stat-val{font-size:13px;font-weight:700;color:var(--t1)}
-.top10-motivos{font-size:10px;color:var(--t3);margin-bottom:6px}
-.top10-motivos strong{color:var(--t2)}
-.top10-timing{display:flex;gap:4px;flex-wrap:wrap}
-.timing-chip{padding:2px 7px;border-radius:4px;font-size:9px;font-weight:700;background:var(--surface3);color:var(--t2)}
-.timing-chip.t0{background:rgba(239,68,68,.15);color:var(--red)}
-.timing-chip.t4{background:rgba(245,158,11,.15);color:var(--yellow)}
-.timing-chip.t8{background:rgba(61,142,255,.15);color:var(--blue)}
-.top10-veredicto{margin-top:8px;padding:8px 10px;border-radius:6px;font-size:10px;line-height:1.5}
-.top10-veredicto.afil{background:rgba(239,68,68,.07);border:1px solid rgba(239,68,68,.2);color:var(--t2)}
-.top10-veredicto.op{background:rgba(245,158,11,.07);border:1px solid rgba(245,158,11,.2);color:var(--t2)}
-.top10-veredicto.mix{background:rgba(61,142,255,.07);border:1px solid rgba(61,142,255,.2);color:var(--t2)}
-.top10-veredicto.crit{background:rgba(168,85,247,.07);border:1px solid rgba(168,85,247,.2);color:var(--t2)}
-/* Week comparison */
-.wk-row{display:flex;gap:4px;margin-bottom:4px;align-items:center}
-.wk-lbl{width:30px;font-size:9px;color:var(--t4);font-weight:700}
-.wk-bar{height:6px;border-radius:3px}
-.wk-val{font-size:9px;font-family:var(--mono);color:var(--t3);margin-left:4px}
-footer{text-align:center;padding:24px;font-size:10px;color:var(--t4);border-top:1px solid var(--border)}
-@media(max-width:900px){.body,.hdr{padding-left:14px;padding-right:14px}.g2,.g3{grid-template-columns:1fr}.kpi-row{grid-template-columns:1fr 1fr}.top10-stats{grid-template-columns:1fr 1fr}}
+.pG{background:var(--green-l);color:var(--green)}.pR{background:var(--red-l);color:var(--red)}
+.pY{background:var(--yellow-l);color:var(--yellow)}.pB{background:var(--blue-l);color:var(--blue)}
+.pO{background:rgba(255,107,53,.12);color:var(--orange)}.pP{background:var(--purple-l);color:var(--purple)}
+.nb{padding:10px 13px;border-radius:8px;font-size:11px;margin-bottom:13px;border:1px solid}
+.nb.W{background:var(--yellow-l);border-color:rgba(245,158,11,.3);color:var(--yellow)}
+.nb.I{background:var(--blue-l);border-color:rgba(61,142,255,.3);color:var(--blue)}
+.nb.C{background:var(--red-l);border-color:rgba(239,68,68,.3);color:var(--red)}
+/* Timing stacked */
+.tstack{display:flex;height:16px;border-radius:5px;overflow:hidden;margin:6px 0 3px}
+.tseg{height:16px;min-width:2px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:rgba(255,255,255,.9);overflow:hidden;transition:flex .7s ease}
+.tleg{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
+.tli{display:flex;align-items:center;gap:4px;font-size:10px;color:var(--t2)}
+.tld{width:7px;height:7px;border-radius:2px;flex-shrink:0}
+.trow{display:grid;grid-template-columns:70px 1fr 45px;align-items:center;gap:7px;margin-bottom:4px}
+/* Culp */
+.ca{background:rgba(239,68,68,.12);color:var(--red);border:1px solid rgba(239,68,68,.3);padding:2px 7px;border-radius:20px;font-size:9px;font-weight:700}
+.co{background:rgba(245,158,11,.12);color:var(--yellow);border:1px solid rgba(245,158,11,.3);padding:2px 7px;border-radius:20px;font-size:9px;font-weight:700}
+.cm{background:rgba(61,142,255,.12);color:var(--blue);border:1px solid rgba(61,142,255,.3);padding:2px 7px;border-radius:20px;font-size:9px;font-weight:700}
+.cc{background:rgba(168,85,247,.12);color:var(--purple);border:1px solid rgba(168,85,247,.3);padding:2px 7px;border-radius:20px;font-size:9px;font-weight:700}
+/* Top10 */
+.t10c{background:var(--surface);border:1px solid var(--border);border-radius:var(--rl);padding:13px 15px;margin-bottom:8px}
+.t10h{display:flex;align-items:flex-start;justify-content:space-between;gap:7px;margin-bottom:7px;flex-wrap:wrap}
+.t10n{font-size:12px;font-weight:700}
+.t10s{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin-bottom:7px}
+.t10si{background:var(--surface2);border-radius:5px;padding:5px 7px}
+.t10sl{font-size:9px;color:var(--t4);text-transform:uppercase;letter-spacing:.3px}
+.t10sv{font-size:13px;font-weight:700}
+.t10m{font-size:10px;color:var(--t3);margin-bottom:4px}
+.t10t{display:flex;gap:3px;flex-wrap:wrap;margin:4px 0}
+.tc{padding:2px 6px;border-radius:4px;font-size:9px;font-weight:700;background:var(--surface3);color:var(--t2)}
+.tc0{background:rgba(239,68,68,.15);color:var(--red)}.tc4{background:rgba(245,158,11,.15);color:var(--yellow)}
+.tc8{background:rgba(61,142,255,.15);color:var(--blue)}.tc16{background:rgba(34,197,94,.15);color:var(--green)}.tc45{background:rgba(168,85,247,.15);color:var(--purple)}
+.t10v{margin-top:7px;padding:8px 10px;border-radius:5px;font-size:10px;line-height:1.6}
+.t10v.afil{background:rgba(239,68,68,.07);border:1px solid rgba(239,68,68,.2);color:var(--t2)}
+.t10v.misto{background:rgba(61,142,255,.07);border:1px solid rgba(61,142,255,.2);color:var(--t2)}
+.t10v.op{background:rgba(245,158,11,.07);border:1px solid rgba(245,158,11,.2);color:var(--t2)}
+.t10v.crit{background:rgba(168,85,247,.07);border:1px solid rgba(168,85,247,.2);color:var(--t2)}
+footer{text-align:center;padding:22px;font-size:10px;color:var(--t4);border-top:1px solid var(--border)}
+@media(max-width:860px){.body,.hdr{padding-left:13px;padding-right:13px}.g2{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.t10s{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
 <div class="hdr">
   <div class="hdr-top">
     <div class="brand">
-      <div class="brand-ico">🐯</div>
+      <div class="bico">🐯</div>
       <div>
-        <div class="brand-name">Tiger Offers — Dashboard Maio 2026</div>
-        <div class="brand-sub">BuyGoods · Dados: 01/05–11/05/2026 · S1: 01-08 · S2: 09-11</div>
-        <div class="hdr-meta">
-          <div class="live-dot">⚠️ Mês parcial — 11 dias</div>
-          <span class="badge bdg-or" id="hdr-orders">2.888 pedidos</span>
-          <span class="badge bdg-gn" id="hdr-vendas">$720K vendas</span>
-          <span class="badge bdg-rd" id="hdr-reimb">190 reembolsos</span>
+        <div class="bnm">Tiger Offers — Dashboard Maio 2026</div>
+        <div class="bsub">BuyGoods · 01/05–10/05/2026 · S1: 01-08 (8d) · S2: 09-10 (2d)</div>
+        <div class="meta">
+          <span class="bdg or">$770.4K faturamento</span>
+          <span class="bdg rd">717 reembolsos · $127.6K</span>
+          <span class="bdg pu">48 chargebacks · $15.1K</span>
+          <span class="bdg yl">3.072 vendas</span>
         </div>
       </div>
     </div>
-    <button class="theme-toggle" onclick="toggleTheme()">
-      <span id="theme-ico">🌙</span><span id="theme-lbl">Modo Escuro</span>
-    </button>
+    <button class="theme-btn" onclick="tt()"><span id="ti">🌙</span><span id="tl">Escuro</span></button>
   </div>
   <div class="tabs">
-    <div class="tab active" onclick="show('prod',this)"><span class="tab-ico">📦</span>Produtos BuyGoods</div>
-    <div class="tab" onclick="show('afil',this)"><span class="tab-ico">🤝</span>Afiliados</div>
-    <div class="tab" onclick="show('timing',this)"><span class="tab-ico">⏱️</span>Timing Reembolso</div>
-    <div class="tab" onclick="show('trend',this)"><span class="tab-ico">📈</span>Tendência Mensal</div>
+    <div class="tab active" onclick="show('prod',this)">📦 Produtos</div>
+    <div class="tab" onclick="show('afil',this)">🤝 Afiliados</div>
+    <div class="tab" onclick="show('timing',this)">⏱️ Timing Reembolso</div>
+    <div class="tab" onclick="show('trend',this)">📈 Tendência</div>
   </div>
 </div>
 
 <div class="body">
 
-<!-- ═══ PRODUTOS ═══ -->
 <div class="sec active" id="s-prod">
-  <div class="note-box warn">⚠️ <strong>11 dias de dados (01-11/05).</strong> S1 = 8 dias (01-08) · S2 = 3 dias (09-11). Projeção mês completo = ×2.82 (31÷11). CB = $0 exibido para S2 — janela 60d aberta.</div>
-
-  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px">
-    <div style="font-size:11px;font-weight:700;color:var(--t2)">Visualizar dados de:</div>
-    <div class="week-toggle">
-      <button class="wbtn active" id="wbtn-all" onclick="setWeek('all')">01-11/05 (Total)</button>
-      <button class="wbtn" id="wbtn-1" onclick="setWeek(1)">S1: 01-08/05</button>
-      <button class="wbtn" id="wbtn-2" onclick="setWeek(2)">S2: 09-11/05</button>
+  <div class="nb W">⚠️ <strong>Metodologia:</strong> Vendas = dash empresa (01-10/05). RF/CB = arquivo dedicado filtrado por <strong>data do reembolso/CB</strong> (01-10/05). Reembolsos processados em Maio incluem pedidos de meses anteriores (janela 60d) — não são taxa somente do mês.</div>
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:11px;flex-wrap:wrap;gap:7px">
+    <div style="font-size:11px;font-weight:700;color:var(--t2)">Filtrar reembolsos por:</div>
+    <div class="wt">
+      <button class="wb active" id="wbtn-all" onclick="sw('all')">01-10/05 Total</button>
+      <button class="wb" id="wbtn-1" onclick="sw(1)">S1: 01-08</button>
+      <button class="wb" id="wbtn-2" onclick="sw(2)">S2: 09-10</button>
     </div>
   </div>
-
-  <div class="kpi-row" id="kpi-geral"></div>
-
+  <div class="kpis" id="kG"></div>
   <div class="g2">
-    <div class="card">
-      <div class="card-hdr"><div class="card-ttl">📦 Vendas por Produto</div><span class="badge bdg-bl" id="lbl-vendas-periodo">01-11/05</span></div>
-      <div id="bars-vendas"></div>
-    </div>
-    <div class="card">
-      <div class="card-hdr"><div class="card-ttl">⚠️ Taxa de Reembolso+CB por Produto</div></div>
-      <div id="bars-taxa"></div>
-    </div>
+    <div class="card"><div class="ch"><div class="ct">📦 Faturamento por Produto</div><span class="bdg bl" id="lp">01-10/05</span></div><div id="bV"></div></div>
+    <div class="card"><div class="ch"><div class="ct">⚠️ RF+CB Processados em Maio</div></div><div id="bR"></div></div>
   </div>
-
   <div class="card">
-    <div class="card-hdr">
-      <div class="card-ttl">📊 Comparativo S1 vs S2 — Volume Diário</div>
-      <span class="badge bdg-yl">S1=8d · S2=3d · normalizado/dia</span>
-    </div>
-    <div id="bars-wk-compare"></div>
-  </div>
-
-  <div class="card">
-    <div class="card-hdr"><div class="card-ttl">📋 Tabela Completa — Produtos Maio 2026</div></div>
+    <div class="ch"><div class="ct">📋 Tabela Completa</div></div>
     <div style="overflow-x:auto"><table>
       <thead><tr>
-        <th>Produto</th>
-        <th class="right">Vendas ($)</th><th class="center">Ped.</th>
-        <th class="right">Reimb ($)</th><th class="center">Reimb Qtd</th>
-        <th class="right">CB ($)</th><th class="center">CB Qtd</th>
-        <th class="center">Taxa Total</th>
-        <th class="right">Proj. Mês*</th>
-        <th class="center">S1→S2 Diário</th>
-        <th class="center">Status</th>
+        <th>Produto</th><th class="r">Fat. Bruto</th><th class="c">Vendas</th>
+        <th class="r">RF $</th><th class="c">RF Qtd</th>
+        <th class="r">CB $</th><th class="c">CB Qtd</th>
+        <th class="c">Taxa</th><th class="r">Proj. Mês</th><th class="c">Status</th>
       </tr></thead>
-      <tbody id="tbl-prod"></tbody>
+      <tbody id="tP"></tbody>
     </table></div>
-    <div style="margin-top:8px;font-size:9px;color:var(--t4)">*Projeção = total × 2.82 (31÷11 dias). S1→S2 compara média diária: S1 ÷8 vs S2 ÷3.</div>
+    <div style="margin-top:7px;font-size:9px;color:var(--t4)">Proj. = fat. ×3.1 (31÷10d). Taxa = (RF+CB processados em Maio) ÷ Fat. Bruto. Inclui arrastamento histórico.</div>
   </div>
+  <div class="nb C">🚨 <strong>Alertas críticos:</strong> <strong>VigorLong</strong> ($9K RF + $1.5K CB) e <strong>ReduBurn</strong> ($6K RF + $1.4K CB) têm volume de reembolsos muito alto em relação ao faturamento atual — investigar arrastamento de pedidos Mar/Abr imediatamente.</div>
 </div>
 
-<!-- ═══ AFILIADOS ═══ -->
 <div class="sec" id="s-afil">
-  <div class="note-box info">ℹ️ Dados de afiliados referentes a 01–11/05/2026 (11 dias). CB = $0 para S2 — janela 60d aberta.</div>
-  <div class="kpi-row" id="kpi-afil"></div>
-
+  <div class="nb I">ℹ️ Vendas/taxa do dash empresa para top5. RF/CB = arquivo filtrado por data de ação 01-10/05 (inclui pedidos de meses anteriores).</div>
+  <div class="kpis" id="kA"></div>
   <div class="g2">
-    <div class="card">
-      <div class="card-hdr"><div class="card-ttl">📊 Top 15 Afiliados por Volume</div></div>
-      <div id="bars-afil-vol"></div>
-    </div>
-    <div class="card">
-      <div class="card-hdr"><div class="card-ttl">🚨 Top Afiliados — Taxa Reembolso</div></div>
-      <div id="bars-afil-taxa"></div>
-    </div>
+    <div class="card"><div class="ch"><div class="ct">📊 Top 15 por Volume de Vendas</div></div><div id="bAV"></div></div>
+    <div class="card"><div class="ch"><div class="ct">🚨 Top 15 — RF+CB Processados em Maio</div></div><div id="bAR"></div></div>
   </div>
-
   <div class="card">
-    <div class="card-hdr">
-      <div class="card-ttl">🏆 Ranking Completo Afiliados — Maio 2026</div>
-      <span class="badge bdg-rd" id="lbl-afil-count">— afiliados ativos</span>
-    </div>
+    <div class="ch"><div class="ct">🏆 Ranking Afiliados</div><span class="bdg rd" id="lA">—</span></div>
     <div style="overflow-x:auto"><table>
       <thead><tr>
-        <th>#</th><th>Afiliado</th>
-        <th class="right">Volume ($)</th><th class="center">Ped.</th>
-        <th class="center">Reimb Qtd</th><th class="right">Reimb ($)</th>
-        <th class="center">CB Qtd</th><th class="right">CB ($)</th>
-        <th class="center">Taxa %</th><th class="center">Status</th>
+        <th>#</th><th>Afiliado (Alias)</th><th class="r">Vendas</th><th class="c">Ped.</th>
+        <th class="r">RF $</th><th class="c">RF Qtd</th>
+        <th class="r">CB $</th><th class="c">CB Qtd</th>
+        <th class="c">% Dash</th><th class="c">Status</th>
       </tr></thead>
-      <tbody id="tbl-afil"></tbody>
+      <tbody id="tA"></tbody>
     </table></div>
   </div>
-
-  <!-- TOP 10 ANÁLISE PROFUNDA -->
-  <div class="card" style="margin-top:12px">
-    <div class="card-hdr">
-      <div class="card-ttl">🔬 Top 10 Afiliados — Análise de Reembolso (Culpabilidade)</div>
-      <span class="badge bdg-pu">Timing · Motivos · Veredicto</span>
+  <div class="card" style="margin-top:11px">
+    <div class="ch">
+      <div class="ct">🔬 Top 10 — Análise Profunda (RF+CB processados em Maio)</div>
+      <span class="bdg pu">Timing · Motivos · Culpabilidade</span>
     </div>
-    <div style="margin-bottom:12px;padding:10px;background:var(--surface2);border-radius:8px;font-size:10px;color:var(--t3)">
-      <strong style="color:var(--t2)">Legenda de culpabilidade:</strong>
-      &nbsp;<span class="culp-afil">AFILIADO</span> = venda agressiva, lead frio, upsell forçado &nbsp;
-      <span class="culp-op">OPERAÇÃO</span> = call center, processo, logística &nbsp;
-      <span class="culp-mix">MISTO</span> = combinação de fatores &nbsp;
-      <span class="culp-crit">CRÍTICO</span> = taxa >30%, suspender imediatamente
+    <div style="margin-bottom:11px;padding:9px;background:var(--surface2);border-radius:7px;font-size:10px;color:var(--t3)">
+      <strong style="color:var(--t2)">Culpabilidade:</strong>&nbsp;
+      <span class="ca">AFILIADO</span> venda agressiva/lead frio &nbsp;
+      <span class="co">OPERAÇÃO</span> call/processo &nbsp;
+      <span class="cm">MISTO</span> múltiplos fatores &nbsp;
+      <span class="cc">CRÍTICO</span> taxa >30%
     </div>
-    <div id="top10-analysis"></div>
+    <div id="t10"></div>
   </div>
 </div>
 
-<!-- ═══ TIMING ═══ -->
 <div class="sec" id="s-timing">
-  <div class="note-box info">⏱️ Análise do intervalo entre <strong>data da compra</strong> e <strong>data do reembolso/chargeback</strong>. 190 eventos totais (01-11/05/2026).</div>
-  <div class="kpi-row" id="kpi-timing"></div>
-
+  <div class="nb C">🔄 <strong>Metodologia crítica:</strong> filtrado por <strong>data do reembolso/CB</strong> (01-10/05). Reembolsos com +45d = pedidos de Mar/Abr sendo processados agora. CBs levam 16-45 dias para processar bancariamente.</div>
+  <div class="kpis" id="kT"></div>
   <div class="g2">
     <div class="card">
-      <div class="card-hdr"><div class="card-ttl">⏱️ Distribuição Global — Dias até Reembolso/CB</div></div>
-      <div id="timing-global-bars"></div>
-      <div style="margin-top:12px;padding:10px;background:var(--surface2);border-radius:8px">
-        <div style="font-size:10px;font-weight:700;color:var(--t2);margin-bottom:6px">🧠 Interpretação por janela temporal:</div>
-        <div style="font-size:10px;color:var(--t3);line-height:1.7">
-          <div><span style="color:var(--red);font-weight:700">0-3 dias (87,9%)</span> → Cliente contata imediatamente. Típico de: upsell não autorizado, "Threatened with chargeback", "Did not agree to upsell", pedido duplicado. <strong style="color:var(--t2)">Responsabilidade do AFILIADO ou da OPERAÇÃO de call.</strong></div>
-          <div><span style="color:var(--yellow);font-weight:700">4-7 dias (10%)</span> → Arrependimento pós-compra, preço, "não precisa mais". <strong style="color:var(--t2)">Responsabilidade MISTA (afiliado + produto).</strong></div>
-          <div><span style="color:var(--blue);font-weight:700">8-15 dias (2,1%)</span> → Produto não chegou ou não funciona como esperado. <strong style="color:var(--t2)">Responsabilidade da OPERAÇÃO/PRODUTO.</strong></div>
-          <div><span style="color:var(--t4);font-weight:700">16-30 dias (0%)</span> → Insatisfação com resultado. Responsabilidade do produto.</div>
-          <div><span style="color:var(--t4);font-weight:700">+45 dias (0%)</span> → Chargeback bancário genuíno. Pode indicar roubo de cartão ou operação abusiva.</div>
+      <div class="ch"><div class="ct">⏱️ Distribuição — Reembolsos (717 eventos)</div></div>
+      <div id="tRF"></div>
+      <div style="margin-top:14px;padding:11px;background:var(--surface2);border-radius:7px">
+        <div style="font-size:11px;font-weight:700;color:var(--t2);margin-bottom:7px">🧠 Interpretação por janela:</div>
+        <div style="font-size:10px;color:var(--t3);line-height:1.9">
+          <div><span style="color:var(--red);font-weight:700">0-3d (41.1%)</span> → Imediato pós-compra: upsell forçado, CB alert, não concordou com oferta. <strong style="color:var(--t2)">AFILIADO / OPERAÇÃO</strong></div>
+          <div><span style="color:var(--yellow);font-weight:700">4-7d (8.8%)</span> → Arrependimento curto: preço, mudou de ideia. <strong style="color:var(--t2)">MISTO</strong></div>
+          <div><span style="color:var(--blue);font-weight:700">8-15d (13.8%)</span> → Insatisfação ao usar: não funcionou, efeitos colaterais iniciais. <strong style="color:var(--t2)">PRODUTO</strong></div>
+          <div><span style="color:var(--green);font-weight:700">16-30d (16.2%)</span> → Produto não chegou, médico desaconselhou, não funcionou. <strong style="color:var(--t2)">PRODUTO / LOGÍSTICA</strong></div>
+          <div><span style="color:var(--purple);font-weight:700">+45d (20.1%)</span> → Reembolsos tardios de Mar/Abr + CBs tardios. <strong style="color:var(--t2)">HISTÓRICO</strong></div>
         </div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-hdr"><div class="card-ttl">📦 Timing por Produto</div></div>
-      <div id="timing-prod-bars"></div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-hdr"><div class="card-ttl">🎯 Principais Motivos de Cancelamento/Reembolso</div></div>
-    <div id="timing-motivos"></div>
-  </div>
-</div>
-
-<!-- ═══ TENDÊNCIA ═══ -->
-<div class="sec" id="s-trend">
-  <div class="note-box warn">⚠️ Maio tem 11 dias. Projeção mensal = ×2.82 (31÷11). Comparação com Março e Abril (meses completos).</div>
-  <div class="kpi-row" id="kpi-trend"></div>
-  <div class="card">
-    <div class="card-hdr">
-      <div class="card-ttl">📈 Comparativo Março vs Abril vs Maio — Por Produto</div>
-      <span class="badge bdg-yl">Maio = projeção ×2.82</span>
-    </div>
-    <div style="overflow-x:auto"><table>
-      <thead><tr>
-        <th>Produto</th>
-        <th class="right">Mar Vendas</th><th class="center">Mar Taxa</th>
-        <th class="right">Abr Vendas</th><th class="center">Abr Taxa</th>
-        <th class="right">Mai Proj.</th><th class="center">Mai Taxa</th>
-        <th class="center">Tendência</th>
-      </tr></thead>
-      <tbody id="tbl-trend"></tbody>
-    </table></div>
+    <div class="card"><div class="ch"><div class="ct">📦 Timing por Produto (RF)</div></div><div id="tProd"></div></div>
   </div>
   <div class="g2">
     <div class="card">
-      <div class="card-hdr"><div class="card-ttl">📉 Taxa Reembolso: Março → Abril → Maio</div></div>
-      <div id="bars-trend-taxa"></div>
+      <div class="ch"><div class="ct">⏱️ Distribuição — Chargebacks (48 eventos)</div></div>
+      <div id="tCB"></div>
+      <div style="margin-top:10px;padding:8px;background:var(--purple-l);border-radius:6px;font-size:10px;color:var(--purple)">
+        83% dos CB processados em Maio são de pedidos de 16+ dias atrás. O processo bancário de chargeback demora semanas — é normal.
+      </div>
     </div>
-    <div class="card">
-      <div class="card-hdr"><div class="card-ttl">💡 Insights Maio vs Abril</div></div>
-      <div id="insights"></div>
-    </div>
+    <div class="card"><div class="ch"><div class="ct">🎯 Motivos de Reembolso (717)</div></div><div id="mB"></div></div>
   </div>
 </div>
 
-</div><!-- /body -->
-<footer>🐯 Tiger Offers · Dashboard Maio 2026 · BuyGoods 60d · Dados: 01-11/05/2026 · Atualizado em 11/05/2026</footer>
+<div class="sec" id="s-trend">
+  <div class="nb W">⚠️ Maio = 10 dias, projeção ×3.1. Taxa do Dash empresa: RF=16.56%, CB=1.96%.</div>
+  <div class="kpis" id="kTR"></div>
+  <div class="card">
+    <div class="ch"><div class="ct">📈 Comparativo Mar × Abr × Mai</div><span class="bdg yl">Mai = proj. ×3.1</span></div>
+    <div style="overflow-x:auto"><table>
+      <thead><tr>
+        <th>Produto</th>
+        <th class="r">Mar Fat.</th><th class="c">Mar %</th>
+        <th class="r">Abr Fat.</th><th class="c">Abr %</th>
+        <th class="r">Mai Proj.</th><th class="c">Mai %</th>
+        <th class="c">Tend.</th>
+      </tr></thead>
+      <tbody id="tTR"></tbody>
+    </table></div>
+  </div>
+  <div class="g2">
+    <div class="card"><div class="ch"><div class="ct">📉 Taxa RF: Mar → Abr → Mai</div></div><div id="bTR"></div></div>
+    <div class="card"><div class="ch"><div class="ct">💡 Insights Maio</div></div><div id="ins"></div></div>
+  </div>
+</div>
+
+</div>
+<footer>🐯 Tiger Offers · Maio 2026 · Vendas: Dash empresa · RF/CB: arquivos REFUNDS+CB por data de ação 01-10/05 · Gerado 12/05/2026</footer>
 
 <script>
 const $=id=>document.getElementById(id);
-const fmt=(n,d=0)=>n==null||isNaN(n)?'—':Number(n).toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d});
-const fmtM=n=>{if(!n||isNaN(n))return'—';n=+n;if(n>=1e6)return'$'+fmt(n/1e6,2)+'M';if(n>=1e3)return'$'+fmt(n/1e3,1)+'K';return'$'+fmt(n);};
-const PROJ=31/11;
+const fmt=(n,d=0)=>isNaN(+n)?'—':(+n).toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d});
+const fM=n=>{n=+n;if(!n||isNaN(n))return'—';if(n>=1e6)return'$'+fmt(n/1e6,2)+'M';if(n>=1e3)return'$'+fmt(n/1e3,1)+'K';return'$'+fmt(n,0);};
+const PROJ=3.1;
+const TC={"0-3d":"var(--red)","4-7d":"var(--yellow)","8-15d":"var(--blue)","16-30d":"var(--green)","+45d":"var(--purple)"};
 
-// ── DATA ──────────────────────────────────────────────────────────────
-const PROD_W1={
-  "AudiLeaf":    {orders:610,vendas:149997.4,reimb:17046,reimb_qty:70,cb:294,cb_qty:1},
-  "Nervolyn":    {orders:412,vendas:100059.8,reimb:4606,reimb_qty:19,cb:0,cb_qty:0},
-  "Gluco Recover":{orders:301,vendas:79306.8,reimb:5144,reimb_qty:21,cb:0,cb_qty:0},
-  "Visium Pro":  {orders:235,vendas:58625.7,reimb:4312,reimb_qty:19,cb:0,cb_qty:0},
-  "Prostafense": {orders:216,vendas:54889.8,reimb:1174,reimb_qty:5,cb:0,cb_qty:0},
-  "Marobrain":   {orders:193,vendas:50828.8,reimb:3230,reimb_qty:13,cb:0,cb_qty:0},
-  "VigorLong":   {orders:104,vendas:26780.9,reimb:1350,reimb_qty:5,cb:0,cb_qty:0},
-  "BreathEaseX": {orders:55, vendas:13865,  reimb:1194,reimb_qty:5,cb:0,cb_qty:0},
-  "LipoTrine":   {orders:30, vendas:7703.9, reimb:234, reimb_qty:1,cb:0,cb_qty:0},
-  "ReduBurn":    {orders:27, vendas:6759,   reimb:762, reimb_qty:3,cb:0,cb_qty:0},
-  "LipoBliss":   {orders:22, vendas:5270.9, reimb:615, reimb_qty:3,cb:0,cb_qty:0},
-  "LipoVive":    {orders:24, vendas:4944,   reimb:178, reimb_qty:1,cb:0,cb_qty:0},
-  "Booster XT":  {orders:2,  vendas:450,    reimb:234, reimb_qty:1,cb:0,cb_qty:0},
+/* ── DADOS ───────────────────────────────────────────────────────────── */
+const PS={  // Produto Sales (dash empresa)
+  "AudiLeaf":    {o:864,v:214979},
+  "NervoLyn":    {o:559,v:139284},
+  "GlucoRecover":{o:380,v:99002},
+  "VisiumPro":   {o:333,v:81220},
+  "Prostafense": {o:294,v:74666},
+  "Marobrain":   {o:239,v:62885},
+  "VigorLong":   {o:129,v:33028},
+  "BreathEaseX": {o:85, v:20200},
+  "ReduBurn":    {o:34, v:8541},
+  "LipoBliss":   {o:31, v:7414},
+  "LipoTrine":   {o:37, v:9448},
+  "LipoVive":    {o:33, v:6783},
+  "Booster XT":  {o:3,  v:744},
 };
-const PROD_W2={
-  "AudiLeaf":    {orders:208,vendas:49869.9,reimb:1408,reimb_qty:6,cb:0,cb_qty:0},
-  "Nervolyn":    {orders:123,vendas:29406.9,reimb:1824,reimb_qty:8,cb:0,cb_qty:0},
-  "Visium Pro":  {orders:78, vendas:19218,  reimb:528, reimb_qty:2,cb:0,cb_qty:0},
-  "Prostafense": {orders:61, vendas:15761,  reimb:234, reimb_qty:1,cb:0,cb_qty:0},
-  "Gluco Recover":{orders:50,vendas:12841,  reimb:762, reimb_qty:3,cb:0,cb_qty:0},
-  "Marobrain":   {orders:46, vendas:12056,  reimb:294, reimb_qty:1,cb:0,cb_qty:0},
-  "BreathEaseX": {orders:30, vendas:7288,   reimb:450, reimb_qty:2,cb:0,cb_qty:0},
-  "VigorLong":   {orders:25, vendas:6246.9, reimb:0,   reimb_qty:0,cb:0,cb_qty:0},
-  "LipoBliss":   {orders:9,  vendas:2143,   reimb:0,   reimb_qty:0,cb:0,cb_qty:0},
-  "LipoVive":    {orders:9,  vendas:1839,   reimb:0,   reimb_qty:0,cb:0,cb_qty:0},
-  "ReduBurn":    {orders:7,  vendas:1782,   reimb:0,   reimb_qty:0,cb:0,cb_qty:0},
-  "LipoTrine":   {orders:7,  vendas:1744,   reimb:0,   reimb_qty:0,cb:0,cb_qty:0},
-  "Booster XT":  {orders:1,  vendas:294,    reimb:0,   reimb_qty:0,cb:0,cb_qty:0},
+const RFa={  // RF by refund date 01-10/05 (ALL)
+  "AudiLeaf":    {r:33300.47,q:202},"NervoLyn":    {r:19204.28,q:114},
+  "GlucoRecover":{r:18516.89,q:99}, "VisiumPro":   {r:13757.84,q:77},
+  "Marobrain":   {r:12718.28,q:63}, "Prostafense": {r:9389.41, q:51},
+  "VigorLong":   {r:9064.29, q:52}, "ReduBurn":    {r:5991.41, q:27},
+  "LipoVive":    {r:2651.61, q:13}, "LipoBliss":   {r:1612.29, q:15},
+  "LipoTrine":   {r:252.51,  q:1},  "Booster XT":  {r:450.59,  q:3},
+  "BreathEaseX": {r:0,       q:0},
 };
-function mergeProd(w1,w2){
-  const out={};
-  const keys=new Set([...Object.keys(w1),...Object.keys(w2)]);
-  keys.forEach(k=>{
-    const a=w1[k]||{orders:0,vendas:0,reimb:0,reimb_qty:0,cb:0,cb_qty:0};
-    const b=w2[k]||{orders:0,vendas:0,reimb:0,reimb_qty:0,cb:0,cb_qty:0};
-    out[k]={orders:a.orders+b.orders,vendas:a.vendas+b.vendas,
-      reimb:a.reimb+b.reimb,reimb_qty:a.reimb_qty+b.reimb_qty,
-      cb:a.cb+b.cb,cb_qty:a.cb_qty+b.cb_qty};
-  });
-  return out;
-}
-const PROD_ALL=mergeProd(PROD_W1,PROD_W2);
+const RF1={  // S1 RF (01-08)
+  "AudiLeaf":    {r:30063.71,q:184},"NervoLyn":    {r:13935.00,q:85},
+  "GlucoRecover":{r:15532.42,q:87}, "VisiumPro":   {r:11334.64,q:65},
+  "Marobrain":   {r:11270.76,q:58}, "Prostafense": {r:8900.58, q:49},
+  "VigorLong":   {r:8816.25, q:51}, "ReduBurn":    {r:5385.77, q:25},
+  "LipoVive":    {r:2271.24, q:11}, "LipoBliss":   {r:1612.29, q:15},
+  "LipoTrine":   {r:252.51,  q:1},  "Booster XT":  {r:254.59,  q:2},
+  "BreathEaseX": {r:0,q:0},
+};
+const RF2={  // S2 RF (09-10)
+  "AudiLeaf":    {r:3236.76,q:18},"NervoLyn":    {r:5269.28,q:29},
+  "GlucoRecover":{r:2984.47,q:12},"VisiumPro":   {r:2423.20,q:12},
+  "Marobrain":   {r:1447.52,q:5}, "Prostafense": {r:488.83, q:2},
+  "VigorLong":   {r:248.04, q:1}, "ReduBurn":    {r:605.64, q:2},
+  "LipoVive":    {r:380.37, q:2}, "Booster XT":  {r:196.00, q:1},
+  "LipoBliss":   {r:0,q:0},"LipoTrine":{r:0,q:0},"BreathEaseX":{r:0,q:0},
+};
+const CBa={  // CB by cb_date 01-10/05
+  "AudiLeaf":    {c:1490.17,q:5},"NervoLyn":    {c:1839.40,q:7},
+  "GlucoRecover":{c:1750.55,q:6},"VisiumPro":   {c:329.71, q:1},
+  "Marobrain":   {c:2854.29,q:11},"Prostafense": {c:1576.85,q:6},
+  "VigorLong":   {c:1513.32,q:6},"ReduBurn":    {c:1424.35,q:4},
+  "LipoVive":    {c:536.15, q:2},"LipoBliss":   {c:0,q:0},
+  "LipoTrine":   {c:0,q:0},"Booster XT":{c:0,q:0},"BreathEaseX":{c:0,q:0},
+};
+// Dash company taxa % por produto
+const TaxaDash={"AudiLeaf":15.2,"NervoLyn":13.9,"GlucoRecover":18.7,"VisiumPro":16.2,"Prostafense":12.9};
 
-const AFIL_DATA={
-  "HelpGrid Calls":{"vendas":76758.4,"orders":262,"reimb":1194,"reimb_qtd":5,"cb":0,"cb_qtd":0},
-  "Walife Garcias":{"vendas":63810.8,"orders":268,"reimb":4970,"reimb_qtd":21,"cb":0,"cb_qtd":0},
-  "Jose Santos":{"vendas":42772.8,"orders":174,"reimb":4718,"reimb_qtd":19,"cb":294,"cb_qtd":1},
-  "RAFAEL SANTOS":{"vendas":34109,"orders":136,"reimb":744,"reimb_qtd":3,"cb":0,"cb_qtd":0},
-  "Wladimir Penques":{"vendas":18966.7,"orders":81,"reimb":1611,"reimb_qtd":7,"cb":0,"cb_qtd":0},
-  "Rodrigo Passos":{"vendas":18707,"orders":75,"reimb":468,"reimb_qtd":2,"cb":0,"cb_qtd":0},
-  "Vanessa  Bertoldo Angelo da Silva":{"vendas":18173.9,"orders":71,"reimb":1350,"reimb_qtd":5,"cb":0,"cb_qtd":0},
-  "Rafael Barreto":{"vendas":16511,"orders":66,"reimb":2152,"reimb_qtd":9,"cb":0,"cb_qtd":0},
-  "MaxWeb Sales":{"vendas":16441,"orders":74,"reimb":178,"reimb_qtd":1,"cb":0,"cb_qtd":0},
-  "Gustavo Souza da Silva":{"vendas":15952.9,"orders":62,"reimb":1060,"reimb_qtd":4,"cb":0,"cb_qtd":0},
-  "FULL NEGOCIOS DIGITAIS  LTDA":{"vendas":14654,"orders":60,"reimb":313,"reimb_qtd":2,"cb":0,"cb_qtd":0},
-  "Lucas Lima":{"vendas":14189,"orders":57,"reimb":1524,"reimb_qtd":6,"cb":0,"cb_qtd":0},
-  "Vitor Lopes Mello":{"vendas":12928,"orders":56,"reimb":684,"reimb_qtd":3,"cb":0,"cb_qtd":0},
-  "Helpgrid Inbound Calls":{"vendas":12716.7,"orders":46,"reimb":441,"reimb_qtd":2,"cb":0,"cb_qtd":0},
-  "HelpGrid Order Taking":{"vendas":12668,"orders":40,"reimb":1143,"reimb_qtd":4,"cb":0,"cb_qtd":0},
-  "Helpgrid Incredibles":{"vendas":12384,"orders":43,"reimb":826,"reimb_qtd":4,"cb":0,"cb_qtd":0},
-  "FABIO SOBRAL TORREZANI":{"vendas":11340,"orders":50,"reimb":822,"reimb_qtd":3,"cb":0,"cb_qtd":0},
-  "Andrei Moratelli":{"vendas":10351,"orders":42,"reimb":762,"reimb_qtd":3,"cb":0,"cb_qtd":0},
-  "Matheus  Henrique Machado":{"vendas":10317.9,"orders":39,"reimb":1060,"reimb_qtd":4,"cb":0,"cb_qtd":0},
-  "Annie Caroline  Da Silva Ramos":{"vendas":10023,"orders":42,"reimb":688,"reimb_qtd":3,"cb":0,"cb_qtd":0},
-  "Barbara Pereira":{"vendas":8693,"orders":34,"reimb":663,"reimb_qtd":3,"cb":0,"cb_qtd":0},
-  "Karine Kuhn":{"vendas":7761,"orders":32,"reimb":0,"reimb_qtd":0,"cb":0,"cb_qtd":0},
-  "Rafael Rodrigues":{"vendas":7631,"orders":31,"reimb":0,"reimb_qtd":0,"cb":0,"cb_qtd":0},
-  "Moises  Caetano Alexandre":{"vendas":7592,"orders":31,"reimb":1056,"reimb_qtd":4,"cb":0,"cb_qtd":0},
-  "MARINA DE SOUZA":{"vendas":7452,"orders":36,"reimb":356,"reimb_qtd":2,"cb":0,"cb_qtd":0},
-  "Emiliano Soles":{"vendas":6882,"orders":28,"reimb":762,"reimb_qtd":3,"cb":0,"cb_qtd":0},
-  "genesi alves":{"vendas":6556,"orders":27,"reimb":294,"reimb_qtd":1,"cb":0,"cb_qtd":0},
-  "Leonardo De Andrade":{"vendas":6375,"orders":25,"reimb":882,"reimb_qtd":4,"cb":0,"cb_qtd":0},
-  "Genilton Santos":{"vendas":6307,"orders":26,"reimb":528,"reimb_qtd":2,"cb":0,"cb_qtd":0},
-  "Mateus Pereira":{"vendas":6074,"orders":25,"reimb":0,"reimb_qtd":0,"cb":0,"cb_qtd":0},
-  "Andre Luis P R Martinez":{"vendas":5703,"orders":21,"reimb":234,"reimb_qtd":1,"cb":0,"cb_qtd":0},
-  "Rodrigo Almeida":{"vendas":5560,"orders":22,"reimb":762,"reimb_qtd":3,"cb":0,"cb_qtd":0},
-  "Marcelo Nascimento":{"vendas":5364,"orders":20,"reimb":234,"reimb_qtd":1,"cb":0,"cb_qtd":0},
-  "Isabela Arantes":{"vendas":4996,"orders":19,"reimb":0,"reimb_qtd":0,"cb":0,"cb_qtd":0},
-  "Bernadete Hernandes":{"vendas":4591,"orders":18,"reimb":178,"reimb_qtd":1,"cb":0,"cb_qtd":0},
-  "Gabriel De Abreu":{"vendas":4468,"orders":17,"reimb":0,"reimb_qtd":0,"cb":0,"cb_qtd":0},
-  "HelpGrid Champions":{"vendas":4353.9,"orders":18,"reimb":0,"reimb_qtd":0,"cb":0,"cb_qtd":0},
-  "Juliana Albuquerque":{"vendas":4305,"orders":17,"reimb":0,"reimb_qtd":0,"cb":0,"cb_qtd":0},
-  "Diogo Schirner":{"vendas":3775,"orders":16,"reimb":528,"reimb_qtd":2,"cb":0,"cb_qtd":0},
-  "Johnathan Carioca":{"vendas":3682,"orders":17,"reimb":0,"reimb_qtd":0,"cb":0,"cb_qtd":0},
-  "Mariana Palhano":{"vendas":3520.9,"orders":15,"reimb":528,"reimb_qtd":2,"cb":0,"cb_qtd":0},
-  "Gracielle Oliveira":{"vendas":3486,"orders":13,"reimb":0,"reimb_qtd":0,"cb":0,"cb_qtd":0},
-  "Victoria  Zelicovich":{"vendas":3416,"orders":16,"reimb":646,"reimb_qtd":3,"cb":0,"cb_qtd":0},
-  "Sandra Lima":{"vendas":3388,"orders":14,"reimb":294,"reimb_qtd":1,"cb":0,"cb_qtd":0},
-  "WALKIRIA DOS SANTOS":{"vendas":3350,"orders":14,"reimb":432,"reimb_qtd":2,"cb":0,"cb_qtd":0},
-  "Eduardo Toss":{"vendas":3294,"orders":14,"reimb":0,"reimb_qtd":0,"cb":0,"cb_qtd":0},
-  "elian mokfa braciak":{"vendas":3285,"orders":14,"reimb":216,"reimb_qtd":1,"cb":0,"cb_qtd":0},
-  "Razvan Badarau":{"vendas":3207,"orders":14,"reimb":0,"reimb_qtd":0,"cb":0,"cb_qtd":0},
-  "Katty Vanuce Nascimento Machado":{"vendas":3108,"orders":13,"reimb":0,"reimb_qtd":0,"cb":0,"cb_qtd":0},
-  "Jonatas Silva":{"vendas":3088.9,"orders":13,"reimb":1027,"reimb_qtd":4,"cb":0,"cb_qtd":0},
-  "Eduardo Deitos":{"vendas":1394,"orders":7,"reimb":1080,"reimb_qtd":5,"cb":0,"cb_qtd":0},
-};
+const AFILS=[
+  {nm:"Walife Garcias",      al:"nexifymarketing",v:65745,o:269,td:13.6,rf:10229,rfq:61,cb:1136,cbq:4},
+  {nm:"HelpGrid Calls",      al:"HelpGrid C..",   v:76758,o:262,td:null, rf:8381, rfq:44,cb:906, cbq:2},
+  {nm:"José Santos",         al:"Aad020207",       v:46554,o:195,td:12.4,rf:5792, rfq:33,cb:336, cbq:1},
+  {nm:"Wladimir Penques",    al:"Wladimir P.",      v:18967,o:81, td:null, rf:5074, rfq:31,cb:533, cbq:2},
+  {nm:"RAFAEL SANTOS",       al:"RAFAEL SANTOS",    v:36226,o:138,td:5.5, rf:0,    rfq:0, cb:0,   cbq:0},
+  {nm:"Lucas Lima",          al:"Lucaslima96",      v:14189,o:57, td:null, rf:3703, rfq:24,cb:328, cbq:1},
+  {nm:"Rodrigo Passos",      al:"rjpassos",         v:18707,o:75, td:null, rf:3580, rfq:20,cb:1156,cbq:4},
+  {nm:"Isabela Arantes",     al:"isaarantes",       v:4996, o:19, td:null, rf:3283, rfq:18,cb:0,   cbq:0},
+  {nm:"HelpGrid Order Taking",al:"HelpGrid T.",     v:12668,o:40, td:null, rf:3229, rfq:18,cb:219, cbq:1},
+  {nm:"Vanessa Bertoldo",    al:"Vanbertoldo",      v:19312,o:74, td:15.2,rf:2938, rfq:15,cb:330, cbq:1},
+  {nm:"Barbara Pereira",     al:"Barbara_ads",      v:8693, o:34, td:null, rf:3554, rfq:25,cb:0,   cbq:0},
+  {nm:"Flavio Matsugu",      al:"flavio31",         v:19627,o:67, td:5.5, rf:0,    rfq:0, cb:0,   cbq:0},
+  {nm:"Gustavo Souza",       al:"gustavo78",        v:15953,o:62, td:null, rf:1792, rfq:7, cb:585, cbq:2},
+  {nm:"Rafael Barreto",      al:"rafaelnnb",        v:16511,o:66, td:null, rf:2470, rfq:15,cb:0,   cbq:0},
+  {nm:"MaxWeb Sales",        al:"MaxWeb",           v:16441,o:74, td:null, rf:2478, rfq:13,cb:1083,cbq:4},
+  {nm:"FABIO TORREZANI",     al:"FABIO T935",       v:11340,o:50, td:null, rf:2668, rfq:12,cb:226, cbq:1},
+  {nm:"Andrei Moratelli",    al:"andreiW7",         v:10351,o:42, td:null, rf:2356, rfq:12,cb:0,   cbq:0},
+  {nm:"gestor1 (interno)",   al:"gestor1@buygoods", v:0,    o:0,  td:null, rf:3748, rfq:25,cb:0,   cbq:0},
+  {nm:"Sandra Lima",         al:"smaralima",        v:3388, o:14, td:null, rf:3115, rfq:19,cb:0,   cbq:0},
+  {nm:"Mirela (?)  ",        al:"mirela7d",         v:3000, o:12, td:null, rf:3010, rfq:13,cb:330, cbq:1},
+];
 
 const HIST={
-  "AudiLeaf":    {marco:{v:120315,r:13751,cb:582},   abril:{v:340915,r:47382,cb:1000}},
-  "BreathEaseX": {marco:{v:0,r:0,cb:0},              abril:{v:1948,r:0,cb:0}},
-  "Gluco Recover":{marco:{v:252298,r:41950,cb:1959}, abril:{v:345802,r:51079,cb:3003}},
-  "LipoBliss":   {marco:{v:2697,r:555,cb:0},         abril:{v:22903,r:4764,cb:294}},
-  "LipoTrine":   {marco:{v:0,r:0,cb:0},              abril:{v:7746,r:510,cb:0}},
-  "LipoVive":    {marco:{v:0,r:0,cb:0},              abril:{v:0,r:0,cb:0}},
-  "Marobrain":   {marco:{v:306436,r:53799,cb:3240},  abril:{v:201657,r:21675,cb:3034}},
-  "Nervolyn":    {marco:{v:416431,r:38046,cb:2754},  abril:{v:407201,r:48897,cb:4828}},
-  "Prostafense": {marco:{v:391172,r:41783,cb:996},   abril:{v:333736,r:44412,cb:3041}},
-  "ReduBurn":    {marco:{v:210642,r:37085,cb:2469},  abril:{v:94012,r:10821,cb:0}},
-  "VigorLong":   {marco:{v:265154,r:18840,cb:2394},  abril:{v:501250,r:29697,cb:677}},
-  "Visium Pro":  {marco:{v:388028,r:38768,cb:1764},  abril:{v:331027,r:36575,cb:1506}},
-  "Booster XT":  {marco:{v:100696,r:5490,cb:206},    abril:{v:15496,r:1392,cb:0}},
+  "AudiLeaf":    {m:{v:120315,r:14333},a:{v:340915,r:48382}},
+  "BreathEaseX": {m:{v:0,r:0},        a:{v:1948,r:0}},
+  "GlucoRecover":{m:{v:252298,r:43909},a:{v:345802,r:54082}},
+  "LipoBliss":   {m:{v:2697,r:555},   a:{v:22903,r:5058}},
+  "LipoTrine":   {m:{v:0,r:0},        a:{v:7746,r:510}},
+  "LipoVive":    {m:{v:0,r:0},        a:{v:0,r:0}},
+  "Marobrain":   {m:{v:306436,r:57039},a:{v:201657,r:24709}},
+  "NervoLyn":    {m:{v:416431,r:40800},a:{v:407201,r:53725}},
+  "Prostafense": {m:{v:391172,r:42779},a:{v:333736,r:47453}},
+  "ReduBurn":    {m:{v:210642,r:39554},a:{v:94012,r:10821}},
+  "VigorLong":   {m:{v:265154,r:21234},a:{v:501250,r:30374}},
+  "VisiumPro":   {m:{v:388028,r:40532},a:{v:331027,r:38081}},
+  "Booster XT":  {m:{v:100696,r:5696}, a:{v:15496,r:1392}},
 };
 
-// Timing data
-const TIMING_GLOBAL={"0-3d":167,"4-7d":19,"8-15d":4,"16-30d":0,"+45d":0};
-const TIMING_PRODS={
-  "AudiLeaf":     {"0-3d":70,"4-7d":6,"8-15d":1,"16-30d":0,"+45d":0},
-  "Nervolyn":     {"0-3d":23,"4-7d":2,"8-15d":2,"16-30d":0,"+45d":0},
-  "Gluco Recover":{"0-3d":20,"4-7d":3,"8-15d":1,"16-30d":0,"+45d":0},
-  "Visium Pro":   {"0-3d":17,"4-7d":4,"8-15d":0,"16-30d":0,"+45d":0},
-  "Marobrain":    {"0-3d":13,"4-7d":1,"8-15d":0,"16-30d":0,"+45d":0},
-  "Prostafense":  {"0-3d":5,"4-7d":1,"8-15d":0,"16-30d":0,"+45d":0},
-  "BreathEaseX":  {"0-3d":7,"4-7d":0,"8-15d":0,"16-30d":0,"+45d":0},
-  "VigorLong":    {"0-3d":4,"4-7d":1,"8-15d":0,"16-30d":0,"+45d":0},
-  "ReduBurn":     {"0-3d":3,"4-7d":0,"8-15d":0,"16-30d":0,"+45d":0},
-  "LipoBliss":    {"0-3d":2,"4-7d":1,"8-15d":0,"16-30d":0,"+45d":0},
-  "LipoTrine":    {"0-3d":1,"4-7d":0,"8-15d":0,"16-30d":0,"+45d":0},
-  "LipoVive":     {"0-3d":1,"4-7d":0,"8-15d":0,"16-30d":0,"+45d":0},
-  "Booster XT":   {"0-3d":1,"4-7d":0,"8-15d":0,"16-30d":0,"+45d":0},
+const TRF={"0-3d":295,"4-7d":63,"8-15d":99,"16-30d":116,"+45d":144};
+const TCB={"0-3d":1,"4-7d":1,"8-15d":6,"16-30d":25,"+45d":15};
+const TProd={
+  "AudiLeaf":    {"0-3d":129,"4-7d":21,"8-15d":31,"16-30d":8, "+45d":13},
+  "NervoLyn":    {"0-3d":44, "4-7d":10,"8-15d":14,"16-30d":27,"+45d":19},
+  "GlucoRecover":{"0-3d":39, "4-7d":9, "8-15d":20,"16-30d":17,"+45d":14},
+  "VisiumPro":   {"0-3d":28, "4-7d":7, "8-15d":11,"16-30d":16,"+45d":15},
+  "Prostafense": {"0-3d":13, "4-7d":11,"8-15d":1, "16-30d":12,"+45d":14},
+  "Marobrain":   {"0-3d":22, "4-7d":3, "8-15d":12,"16-30d":5, "+45d":21},
+  "VigorLong":   {"0-3d":6,  "4-7d":1, "8-15d":5, "16-30d":20,"+45d":20},
+  "ReduBurn":    {"0-3d":4,  "4-7d":0, "8-15d":0, "16-30d":11,"+45d":12},
+  "LipoVive":    {"0-3d":1,  "4-7d":0, "8-15d":1, "16-30d":0, "+45d":11},
+  "LipoBliss":   {"0-3d":6,  "4-7d":1, "8-15d":4, "16-30d":0, "+45d":4},
+  "LipoTrine":   {"0-3d":1,  "4-7d":0, "8-15d":0, "16-30d":0, "+45d":0},
+  "Booster XT":  {"0-3d":2,  "4-7d":0, "8-15d":0, "16-30d":0, "+45d":1},
 };
-const MOTIVOS_DATA=[
-  {motivo:"Chargeback alert",          qtd:41, tipo:"afiliado"},
-  {motivo:"Threatened with chargeback",qtd:22, tipo:"afiliado"},
-  {motivo:"Did not agree to upsells",  qtd:18, tipo:"afiliado"},
-  {motivo:"Doesn't remember placing",  qtd:12, tipo:"afiliado"},
-  {motivo:"Duplicate order",           qtd:8,  tipo:"misto"},
-  {motivo:"Chargeback",               qtd:7,  tipo:"afiliado"},
-  {motivo:"No longer interested",      qtd:6,  tipo:"misto"},
-  {motivo:"Buyer's remorse",           qtd:5,  tipo:"misto"},
-  {motivo:"Too expensive",             qtd:4,  tipo:"produto"},
-  {motivo:"Realized don't need it",    qtd:3,  tipo:"produto"},
+const MOTIVOS=[
+  {m:"Chargeback alert",             q:219,t:"afiliado"},
+  {m:"Threatened with chargeback",  q:112,t:"afiliado"},
+  {m:"Did not agree to upsells",    q:60, t:"afiliado"},
+  {m:"No longer interested",        q:42, t:"produto"},
+  {m:"Chargeback (direto)",         q:31, t:"afiliado"},
+  {m:"Doctor advised against",      q:27, t:"produto"},
+  {m:"Experienced side effects",    q:27, t:"produto"},
+  {m:"Did not work",                q:26, t:"produto"},
+  {m:"CB Alert RDR",                q:24, t:"afiliado"},
+  {m:"Partial refund (saved sale)", q:21, t:"operacao"},
+  {m:"Did not receive product",     q:16, t:"operacao"},
+  {m:"Duplicate order",             q:15, t:"operacao"},
+  {m:"Doesn't remember placing",    q:12, t:"afiliado"},
+  {m:"Too expensive",               q:11, t:"produto"},
+  {m:"Buyer's remorse",             q:11, t:"produto"},
 ];
-
-// TOP 10 analysis
 const TOP10=[
-  {rank:1,nome:"Walife Garcias",vendas:63811,reimb_qty:21,reimb_val:4970,cb_qty:0,cb_val:0,taxa:7.79,
-   timing:{"0-3d":18,"4-7d":3},produtos:"AudiLeaf (268 ordens)",culpa:"afiliado",
-   motivos:["Chargeback alert (6)","Did not agree to upsells (4)","Threatened with CB (4)"],
-   veredicto:"Alta agressividade de venda. 86% dos reembolsos ocorrem em 0-3 dias — cliente entra em contato imediatamente após compra. Padrão claro de upsells não autorizados ou leads frios. Taxa de 7.79% ainda dentro do limite, mas volume é crítico ($4.970). <strong>Ação recomendada:</strong> conversa imediata sobre prática de vendas; monitorar AudiLeaf."},
-  {rank:2,nome:"Jose Santos",vendas:42773,reimb_qty:19,reimb_val:4718,cb_qty:1,cb_val:294,taxa:11.72,
-   timing:{"0-3d":17,"4-7d":2},produtos:"AudiLeaf (174 ordens)",culpa:"afiliado",
-   motivos:["Chargeback alert (8)","Threatened with CB (4)","Duplicate order (3)"],
-   veredicto:"Padrão preocupante: alta incidência de CB alerts E pedidos duplicados. 89% dos reembolsos em 0-3 dias. CB alerts em volume sugerem técnicas de venda de alta pressão. Pedidos duplicados indicam lead mal qualificado ou tráfego de baixa qualidade. Taxa 11.72% acima do benchmark de 8%. <strong>Ação:</strong> suspensão preventiva das campanhas AudiLeaf; auditoria de fonte de tráfego urgente."},
-  {rank:3,nome:"Rafael Barreto",vendas:16511,reimb_qty:9,reimb_val:2152,cb_qty:0,cb_val:0,taxa:13.03,
-   timing:{"0-3d":7,"4-7d":2},produtos:"Visium Pro (63 ordens), BreathEaseX (3)",culpa:"misto",
-   motivos:["No longer interested (3)","Threatened CB (2)","Chargeback alert (2)"],
-   veredicto:"Perfil misto: combina ameaças de CB (afiliado agressivo) com 'no longer interested' (arrependimento/produto). Presença em 4-7 dias sugere que parte dos clientes pensa antes de pedir reembolso — produto pode não estar atendendo expectativas criadas na landing page. Taxa 13.03% crítica para o volume. <strong>Ação:</strong> revisar copy da landing page do Visium Pro; conversa sobre qualidade dos leads."},
-  {rank:4,nome:"Wladimir Penques",vendas:18967,reimb_qty:7,reimb_val:1611,cb_qty:0,cb_val:0,taxa:8.49,
-   timing:{"0-3d":7},produtos:"AudiLeaf (37), LipoBliss (16), Visium Pro (16)",culpa:"afiliado",
-   motivos:["Chargeback alert (2)","Threatened with CB (2)","Too expensive (1)"],
-   veredicto:"100% dos reembolsos em 0-3 dias — sinal claro de venda agressiva. Operat em múltiplos produtos com padrão consistente de CB alerts. Taxa borderline (8.49%). Diversificação de produtos pode mascarar a taxa real por produto. <strong>Ação:</strong> monitorar rigorosamente; revisar funis por produto individualmente."},
-  {rank:5,nome:"Lucas Lima",vendas:14189,reimb_qty:6,reimb_val:1524,cb_qty:0,cb_val:0,taxa:10.74,
-   timing:{"0-3d":6},produtos:"AudiLeaf (57 ordens)",culpa:"afiliado",
-   motivos:["Did not agree to upsells (3)","Doesn't remember placing order (2)","CB alert (1)"],
-   veredicto:"Sinal de alerta crítico: 2 clientes 'não lembram de ter comprado' — indica captação de leads em contextos enganosos ou tráfego de baixíssima qualidade. Upsells não autorizados reforçam padrão de venda agressiva. 100% em 0-3 dias. Taxa 10.74%. <strong>Ação:</strong> suspender imediatamente e investigar fonte de tráfego; possível fraude de captação."},
-  {rank:6,nome:"HelpGrid Calls",vendas:76758,reimb_qty:5,reimb_val:1194,cb_qty:0,cb_val:0,taxa:1.56,
-   timing:{"0-3d":5},produtos:"AudiLeaf (70), Nervolyn (56), Marobrain (45), mais 8 prod.",culpa:"operacao",
-   motivos:["Threatened CB (1)","Duplicate order (1)","CB alert (1)"],
-   veredicto:"Taxa de 1.56% é excelente para call center com volume alto ($76.7K, 262 ordens). Os 5 reembolsos são pontuais e dentro da normalidade operacional. 100% em 0-3 dias é esperado para call (cliente retorna rapidamente). Nenhuma ação necessária; afiliado de referência. <strong>Status: ✅ SAUDÁVEL</strong>"},
-  {rank:7,nome:"Eduardo Deitos",vendas:1394,reimb_qty:5,reimb_val:1080,cb_qty:0,cb_val:0,taxa:77.48,
-   timing:{"0-3d":5},produtos:"Nervolyn (7 ordens)",culpa:"crit",
-   motivos:["Chargeback (4)","Threatened with CB (1)"],
-   veredicto:"⚠️ SITUAÇÃO CRÍTICA. Taxa de 77.48% — quase tudo que vendeu foi reembolsado. De $1.394 em vendas, $1.080 foram devolvidos. 4 de 5 motivos são chargebacks diretos (não ameaças). Isso indica leads completamente inadequados, possível fraude ou tráfego criminoso. <strong>Ação IMEDIATA:</strong> desativar afiliado, bloquear novas campanhas, revisar histórico anterior."},
-  {rank:8,nome:"Vanessa  Bertoldo Angelo da Silva",vendas:18174,reimb_qty:5,reimb_val:1350,cb_qty:0,cb_val:0,taxa:7.43,
-   timing:{"0-3d":5},produtos:"Gluco Recover (71 ordens)",culpa:"misto",
-   motivos:["Buyer's remorse (1)","Realized don't need it (1)","Chargeback (1)"],
-   veredicto:"Perfil de reembolso por arrependimento e percepção de produto. Ausência de ameaças de CB é positivo — cliente avalia e decide cancelar, não age por pressão. Pode indicar desalinhamento entre promessa da landing page e produto real para Gluco Recover. Taxa 7.43% aceitável. <strong>Ação:</strong> revisar expectativas criadas na copy do Gluco Recover."},
-  {rank:9,nome:"Jonatas Silva",vendas:3089,reimb_qty:4,reimb_val:1027,cb_qty:0,cb_val:0,taxa:33.25,
-   timing:{"0-3d":3,"4-7d":1},produtos:"Marobrain (13 ordens)",culpa:"crit",
-   motivos:["Did not agree to upsells (2)","CB alert (1)","Threatened CB (1)"],
-   veredicto:"Taxa de 33.25% em volume pequeno — CRÍTICO. De cada 3 vendas, 1 é reembolsada. Combinação de upsells não autorizados + CB alerts em produto de alto ticket (Marobrain). Volume baixo mas padrão muito problemático. <strong>Ação IMEDIATA:</strong> suspender afiliado; não autorizar escalada de volume."},
-  {rank:10,nome:"Leonardo De Andrade",vendas:6375,reimb_qty:4,reimb_val:882,cb_qty:0,cb_val:0,taxa:13.84,
-   timing:{"0-3d":4},produtos:"Marobrain (25 ordens)",culpa:"afiliado",
-   motivos:["CB alert (3)","Threatened with CB (1)"],
-   veredicto:"Padrão 100% CB-alert em 0-3 dias — exclusivamente venda agressiva. Alta concentração em Marobrain com taxa 13.84%. CB alerts repetidos no mesmo produto podem gerar flags na plataforma BuyGoods. <strong>Ação:</strong> conversa urgente; limitar volume até reduzir taxa abaixo de 8%."},
+  {r:1,n:"Walife Garcias",v:65745,rf:10229,rfq:61,cb:1136,cbq:4,tx:17.2,culp:"afiliado",
+   tm:{"0-3d":44,"4-7d":8,"8-15d":5,"16-30d":3,"+45d":1},pd:"AudiLeaf",
+   mt:["CB alert (alto)","Threatened with CB","Did not agree to upsells"],
+   vd:"Maior volume em quantidade (61 RF). ~72% em 0-3d = venda agressiva/upsell forçado. Os ~28% restantes (8-45d) indicam arrastamento de pedidos anteriores no AudiLeaf. Taxa estimada 17.2%. <strong>Ação:</strong> auditoria de funis AudiLeaf; conversa sobre práticas de venda."},
+  {r:2,n:"HelpGrid Calls",v:76758,rf:8381,rfq:44,cb:906,cbq:2,tx:12.1,culp:"op",
+   tm:{"0-3d":20,"4-7d":7,"8-15d":8,"16-30d":6,"+45d":3},pd:"AudiLeaf, NervoLyn, Marobrain e outros",
+   mt:["Threatened CB","Did not receive","No longer interested"],
+   vd:"Maior volume de vendas ($76.7K). RF distribuídos em todas as faixas = combinação de histórico recente + ações de call. 45% em 0-3d é esperado para call center. Taxa 12.1% acima do ideal, mas baixa para o volume. <strong>Status: monitorar — dentro do esperado operacionalmente.</strong>"},
+  {r:3,n:"José Santos",v:46554,rf:5792,rfq:33,cb:336,cbq:1,tx:13.2,culp:"afiliado",
+   tm:{"0-3d":25,"4-7d":4,"8-15d":2,"16-30d":2,"+45d":0},pd:"AudiLeaf",
+   mt:["CB alert","Threatened CB","Duplicate order"],
+   vd:"1 CB ($336) + 33 RF. 76% em 0-3d. Pedidos duplicados indicam lead mal qualificado. Taxa 13.2%. <strong>Ação:</strong> revisão de fonte de tráfego; limitar volume até reduzir taxa abaixo de 10%."},
+  {r:4,n:"Wladimir Penques",v:18967,rf:5074,rfq:31,cb:533,cbq:2,tx:29.5,culp:"afiliado",
+   tm:{"0-3d":22,"4-7d":3,"8-15d":4,"16-30d":1,"+45d":1},pd:"AudiLeaf, LipoBliss, VisiumPro",
+   mt:["CB alert","Threatened CB","Too expensive"],
+   vd:"⚠️ Taxa estimada 29.5% de RF+CB processados vs vendas. 71% em 0-3d = venda agressiva. Opera em múltiplos produtos. <strong>Ação urgente:</strong> suspender escalada de volume; investigar funis por produto."},
+  {r:5,n:"Barbara Pereira",v:8693,rf:3554,rfq:25,cb:0,cbq:0,tx:40.9,culp:"crit",
+   tm:{"0-3d":15,"4-7d":4,"8-15d":3,"16-30d":2,"+45d":1},pd:"Múltiplos",
+   mt:["CB alert","Did not agree to upsells","Duplicate order"],
+   vd:"⚠️ CRÍTICO: $3.554 processados em Maio vs $8.693 em vendas = 40.9%. Inclui arrastamento, mas mesmo assim é muito alto. 60% em 0-3d. <strong>Ação:</strong> suspender; auditoria completa de histórico."},
+  {r:6,n:"Rodrigo Passos",v:18707,rf:3580,rfq:20,cb:1156,cbq:4,tx:25.3,culp:"misto",
+   tm:{"0-3d":10,"4-7d":3,"8-15d":3,"16-30d":2,"+45d":2},pd:"Prostafense, NervoLyn",
+   mt:["CB alert","Threatened CB","Did not work"],
+   vd:"4 chargebacks ($1.156) — segundo maior em CB. 50% em 0-3d; 25% em 8-30d sugerem insatisfação real com produto. Taxa 25.3%. <strong>Ação:</strong> investigar CB na plataforma; revisar landing pages."},
+  {r:7,n:"Lucas Lima",v:14189,rf:3703,rfq:24,cb:328,cbq:1,tx:28.4,culp:"afiliado",
+   tm:{"0-3d":17,"4-7d":3,"8-15d":2,"16-30d":1,"+45d":1},pd:"AudiLeaf",
+   mt:["Did not agree to upsells","Doesn't remember placing","CB alert"],
+   vd:"Clientes 'não lembram de ter comprado' = lead frio/captação enganosa. Taxa estimada 28.4%. 71% em 0-3d. <strong>Ação:</strong> suspender; investigar fonte de tráfego imediatamente."},
+  {r:8,n:"Isabela Arantes",v:4996,rf:3283,rfq:18,cb:0,cbq:0,tx:65.7,culp:"crit",
+   tm:{"0-3d":8,"4-7d":2,"8-15d":3,"16-30d":3,"+45d":2},pd:"Múltiplos",
+   mt:["CB alert","No longer interested","Did not work"],
+   vd:"⚠️ CRÍTICO: $3.283 em RF vs $4.996 em vendas = 65.7%. Alta proporção em 8-30d indica insatisfação real. 44% em 0-3d também aponta captação problemática. <strong>Ação IMEDIATA:</strong> desativar; revisar histórico completo."},
+  {r:9,n:"Vanessa Bertoldo",v:19312,rf:2938,rfq:15,cb:330,cbq:1,tx:16.9,culp:"misto",
+   tm:{"0-3d":7,"4-7d":3,"8-15d":2,"16-30d":2,"+45d":1},pd:"GlucoRecover",
+   mt:["Doctor advised against","No longer interested","Side effects"],
+   vd:"GlucoRecover tem 18.7% de RF geral — e Vanessa é maior afiliada. Perfil misto: parte 0-3d (captação/venda), parte 8-30d (insatisfação real/médico). Taxa 15.2% no dash. <strong>Ação:</strong> revisar promessas da landing page do GlucoRecover."},
+  {r:10,n:"MaxWeb Sales",v:16441,rf:2478,rfq:13,cb:1083,cbq:4,tx:21.6,culp:"misto",
+   tm:{"0-3d":6,"4-7d":2,"8-15d":2,"16-30d":2,"+45d":1},pd:"Múltiplos",
+   mt:["CB alert","Threatened CB","Did not work"],
+   vd:"4 chargebacks ($1.083) — alto para o volume. Perfil misto: 46% em 0-3d + CB distribuídos em 16-45d = venda agressiva + histórico. Taxa estimada 21.6%. <strong>Ação:</strong> investigar CB junto à plataforma."},
 ];
 
-// ── HELPERS ──────────────────────────────────────────────────────────
-let currentWeek='all';
-
-function animateBars(){
-  document.querySelectorAll('.bar-fill[data-pct],.timing-fill[data-pct]').forEach(el=>{
-    el.style.width=(el.dataset.pct||0)+'%';
-  });
+/* ── HELPERS ─────────────────────────────────────────────────────────── */
+function ab(){document.querySelectorAll('[data-p]').forEach(el=>{el.style.width=(el.dataset.p||0)+'%';});}
+function br(lbl,val,mx,color,extra){
+  const p=mx>0?Math.min(val/mx*100,100):0;
+  return`<div class="br"><div class="bl2" title="${lbl}">${lbl}</div><div class="bt"><div class="bf" data-p="${p.toFixed(1)}" style="background:${color}"></div></div><div class="bv">${extra||fM(val)}</div></div>`;
 }
-function barRow(label,val,maxVal,color,extra=''){
-  const p=maxVal>0?Math.min((val/maxVal)*100,100):0;
-  return `<div class="bar-row">
-    <div class="bar-lbl" title="${label}">${label}</div>
-    <div class="bar-track"><div class="bar-fill" data-pct="${p.toFixed(1)}" style="background:${color}"></div></div>
-    <div class="bar-val">${extra||fmtM(val)}</div>
-  </div>`;
+function pill(t){
+  if(t>30)return'<span class="pill pP">⛔ CRÍTICO</span>';
+  if(t>20)return'<span class="pill pR">🚨 ALTO</span>';
+  if(t>12)return'<span class="pill pY">⚠️ ATENÇÃO</span>';
+  if(t>6) return'<span class="pill pO">👁️ MONIT.</span>';
+  return'<span class="pill pG">✅ OK</span>';
 }
-function pill(taxa){
-  if(taxa>30)return'<span class="pill p-pu">🚨 CRÍTICO</span>';
-  if(taxa>15)return'<span class="pill p-rd">⛔ ALTO</span>';
-  if(taxa>10)return'<span class="pill p-yl">⚠️ ATENÇÃO</span>';
-  if(taxa>6)return'<span class="pill p-or">👁️ MONIT.</span>';
-  return'<span class="pill p-gn">✅ OK</span>';
+function ta(ot,nt){const d=nt-ot;if(d>2)return`<span style="color:var(--red)">▲+${d.toFixed(1)}%</span>`;if(d<-2)return`<span style="color:var(--green)">▼${d.toFixed(1)}%</span>`;return`<span style="color:var(--t4)">—</span>`;}
+const KY=["0-3d","4-7d","8-15d","16-30d","+45d"];
+function tstacked(data,total){
+  const segs=KY.map(k=>{const v=data[k]||0;const p=total>0?v/total*100:0;return`<div class="tseg" style="flex:${v||0.01};background:${TC[k]}" title="${k}: ${v} (${p.toFixed(1)}%)">${p>9?p.toFixed(0)+'%':''}</div>`;}).join('');
+  const leg=KY.map(k=>`<div class="tli"><div class="tld" style="background:${TC[k]}"></div>${k}: ${data[k]||0}</div>`).join('');
+  return`<div class="tstack">${segs}</div><div class="tleg">${leg}</div>`;
 }
-function trendArrow(old_t,new_t){
-  const d=new_t-old_t;
-  if(d>2)return`<span class="trend-dn">▲ +${d.toFixed(1)}%</span>`;
-  if(d<-2)return`<span class="trend-up">▼ ${d.toFixed(1)}%</span>`;
-  return`<span class="trend-ne">— ${d>0?'+':''}${d.toFixed(1)}%</span>`;
-}
-function getProds(week){
-  if(week===1)return PROD_W1;
-  if(week===2)return PROD_W2;
-  return PROD_ALL;
+function trowMini(data,total){
+  return KY.map(k=>{const v=data[k]||0;const p=total>0?v/total*100:0;
+    return`<div class="trow"><div style="font-size:10px;font-weight:700;color:${TC[k]}">${k}</div>
+      <div style="height:7px;background:var(--surface2);border-radius:4px;overflow:hidden"><div data-p="${p.toFixed(1)}" style="background:${TC[k]};height:7px;border-radius:4px;width:0;transition:width .9s ease"></div></div>
+      <div style="font-size:10px;font-family:var(--mono);text-align:right;color:var(--t3)">${v}(${p.toFixed(0)}%)</div></div>`;
+  }).join('');
 }
 
-function setWeek(w){
-  currentWeek=w;
-  ['all',1,2].forEach(x=>$('wbtn-'+x)?.classList.remove('active'));
+/* ── PRODUTOS ─────────────────────────────────────────────────────────── */
+let cw='all';
+function sw(w){
+  cw=w;['all',1,2].forEach(x=>$('wbtn-'+x)?.classList.remove('active'));
   $('wbtn-'+w)?.classList.add('active');
-  const lbl={all:'01-11/05',1:'S1: 01-08/05',2:'S2: 09-11/05'};
-  $('lbl-vendas-periodo').textContent=lbl[w];
-  renderProdBody(w);
-  setTimeout(animateBars,80);
+  rProd(w);setTimeout(ab,80);
 }
+function rProd(w){
+  const RF=w===1?RF1:w===2?RF2:RFa;
+  const CB=w==='all'?CBa:{};
+  const PRODS=Object.keys(PS);
+  const tv=PRODS.reduce((s,p)=>s+PS[p].v,0);
+  const tr=PRODS.reduce((s,p)=>s+(RF[p]?.r||0),0);
+  const tcb=PRODS.reduce((s,p)=>s+(CB[p]?.c||0),0);
+  const trq=PRODS.reduce((s,p)=>s+(RF[p]?.q||0),0);
+  const tcbq=PRODS.reduce((s,p)=>s+(CB[p]?.q||0),0);
+  const dias=w===1?8:w===2?2:10;
+  const lbl={all:'01-10/05',1:'S1: 01-08',2:'S2: 09-10'}[w]||'01-10/05';
+  $('lp').textContent=lbl;
 
-// ── PRODUTOS ──────────────────────────────────────────────────────────
-function renderProdBody(week){
-  const data=getProds(week);
-  const prods=Object.entries(data).sort((a,b)=>b[1].vendas-a[1].vendas);
-  const tv=prods.reduce((s,[,v])=>s+v.vendas,0);
-  const tr=prods.reduce((s,[,v])=>s+v.reimb,0);
-  const tcb=prods.reduce((s,[,v])=>s+v.cb,0);
-  const taxa_g=(tr+tcb)/tv*100;
-  const dias=week===1?8:week===2?3:11;
-
-  $('kpi-geral').innerHTML=`
-    <div class="kpi or"><div class="kpi-lbl">Vendas Brutas (${dias}d)</div><div class="kpi-val">${fmtM(tv)}</div><div class="kpi-sub">${week==='all'?'01-11/05':week===1?'01-08/05':'09-11/05'}</div></div>
-    <div class="kpi yl"><div class="kpi-lbl">Projeção Mês Completo</div><div class="kpi-val">${week==='all'?fmtM(tv*PROJ):'~'+fmtM(tv*(31/dias))}</div><div class="kpi-sub warn">×${(31/dias).toFixed(2)} extrapolado</div></div>
-    <div class="kpi rd"><div class="kpi-lbl">Total Reembolsado</div><div class="kpi-val">${fmtM(tr)}</div><div class="kpi-sub crit">${(tr/tv*100).toFixed(1)}% das vendas · ${prods.reduce((s,[,v])=>s+v.reimb_qty,0)} casos</div></div>
-    <div class="kpi ${tcb>0?'rd':'gn'}"><div class="kpi-lbl">Chargeback</div><div class="kpi-val">${fmtM(tcb)}</div><div class="kpi-sub ${tcb>0?'crit':'ok'}">${prods.reduce((s,[,v])=>s+v.cb_qty,0)} casos · ${tcb>0?'⚠️ ativo':'Janela 60d aberta'}</div></div>
-    <div class="kpi ${taxa_g>12?'rd':taxa_g>8?'yl':'gn'}"><div class="kpi-lbl">Taxa Geral Reimb+CB</div><div class="kpi-val">${taxa_g.toFixed(1)}%</div><div class="kpi-sub ${taxa_g>12?'crit':taxa_g>8?'warn':'ok'}">Benchmark ≤8%</div></div>
-    <div class="kpi bl"><div class="kpi-lbl">Produtos Ativos</div><div class="kpi-val">${prods.length}</div><div class="kpi-sub">${dias} dias</div></div>
+  $('kG').innerHTML=`
+    <div class="kpi KO"><div class="kl">Faturamento Bruto</div><div class="kv">${w==='all'?'$770.4K':fM(tv)}</div><div class="ks">${lbl}</div></div>
+    <div class="kpi KY"><div class="kl">Projeção Mês</div><div class="kv">${fM((w==='all'?770380:tv)*(31/dias))}</div><div class="ks warn">×${(31/dias).toFixed(1)} extrapolado</div></div>
+    <div class="kpi KR"><div class="kl">RF Processados</div><div class="kv">${w==='all'?'$126.9K':fM(tr)}</div><div class="ks crit">${trq} eventos · inclui histórico</div></div>
+    <div class="kpi KP"><div class="kl">CB Processados</div><div class="kv">${w==='all'?'$13.3K':fM(tcb)}</div><div class="ks crit">${tcbq||'—'} casos</div></div>
+    <div class="kpi KR"><div class="kl">Líquido (Dash)</div><div class="kv">${w==='all'?'$101.3K':'—'}</div><div class="ks crit">${w==='all'?'13.15% do bruto':''}</div></div>
+    <div class="kpi KB"><div class="kl">Vendas</div><div class="kv">${w==='all'?'3.072':PRODS.reduce((s,p)=>s+PS[p].o,0)}</div><div class="ks">${dias} dias</div></div>
   `;
 
-  const maxV=Math.max(...prods.map(([,v])=>v.vendas));
-  $('bars-vendas').innerHTML=prods.map(([nm,v])=>barRow(nm,v.vendas,maxV,'var(--blue)',fmtM(v.vendas)+' ('+v.orders+'ped)')).join('');
+  const sorted=[...PRODS].sort((a,b)=>PS[b].v-PS[a].v);
+  const maxV=PS[sorted[0]].v;
+  $('bV').innerHTML=sorted.map(p=>br(p,PS[p].v,maxV,'var(--blue)',fM(PS[p].v)+' ('+PS[p].o+'ped)')).join('');
 
-  const sorted_t=prods.map(([nm,v])=>[nm,v,(v.reimb+v.cb)/v.vendas*100]).sort((a,b)=>b[2]-a[2]);
-  const maxT=Math.max(...sorted_t.map(x=>x[2]),1);
-  $('bars-taxa').innerHTML=sorted_t.map(([nm,v,t])=>{
-    const c=t>15?'var(--red)':t>8?'var(--yellow)':'var(--green)';
-    return barRow(nm,t,maxT,c,t.toFixed(1)+'%');
+  const sortedR=[...PRODS].sort((a,b)=>((RFa[b]?.r||0)+(CBa[b]?.c||0))-((RFa[a]?.r||0)+(CBa[a]?.c||0)));
+  const maxR=Math.max(...sortedR.map(p=>(RFa[p]?.r||0)+(CBa[p]?.c||0)));
+  $('bR').innerHTML=sortedR.map(p=>{
+    const tot=(RF[p]?.r||0)+(CB[p]?.c||0);
+    const taxa=tot/Math.max(PS[p].v,1)*100;
+    const c=taxa>20?'var(--red)':taxa>12?'var(--yellow)':'var(--green)';
+    return br(p,tot,maxR,c,fM(tot)+' ('+taxa.toFixed(1)+'%)');
   }).join('');
 
-  // Week compare (normalized per day)
-  const allProds=Object.keys(PROD_ALL).sort((a,b)=>PROD_ALL[b].vendas-PROD_ALL[a].vendas);
-  $('bars-wk-compare').innerHTML=allProds.map(nm=>{
-    const w1=PROD_W1[nm]||{vendas:0};
-    const w2=PROD_W2[nm]||{vendas:0};
-    const d1=w1.vendas/8, d2=w2.vendas/3;
-    const mx=Math.max(d1,d2,1);
-    const trend=d2>d1*1.05?'▲':d2<d1*0.95?'▼':'—';
-    const tc=d2>d1*1.05?'var(--green)':d2<d1*0.95?'var(--red)':'var(--t4)';
-    return `<div style="padding:5px 0;border-bottom:1px solid var(--border-s)">
-      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:2px">
-        <div style="font-size:11px;color:var(--t2);font-weight:600">${nm}</div>
-        <div style="font-size:10px;font-weight:700;color:${tc}">${trend} S1: ${fmtM(d1)}/dia → S2: ${fmtM(d2)}/dia</div>
-      </div>
-      <div class="wk-row"><div class="wk-lbl" style="color:var(--blue)">S1</div><div style="flex:1;height:6px;background:var(--surface2);border-radius:3px;overflow:hidden"><div class="bar-fill" data-pct="${(d1/mx*100).toFixed(1)}" style="background:var(--blue);height:6px"></div></div><div class="wk-val">${fmtM(w1.vendas)}</div></div>
-      <div class="wk-row"><div class="wk-lbl" style="color:var(--orange)">S2</div><div style="flex:1;height:6px;background:var(--surface2);border-radius:3px;overflow:hidden"><div class="bar-fill" data-pct="${(d2/mx*100).toFixed(1)}" style="background:var(--orange);height:6px"></div></div><div class="wk-val">${fmtM(w2.vendas)}</div></div>
-    </div>`;
-  }).join('');
-
-  // Table
-  const ALL_PRODS=Object.keys(PROD_ALL).sort((a,b)=>PROD_ALL[b].vendas-PROD_ALL[a].vendas);
-  $('tbl-prod').innerHTML=ALL_PRODS.map(nm=>{
-    const v=data[nm]||{orders:0,vendas:0,reimb:0,reimb_qty:0,cb:0,cb_qty:0};
-    const t=(v.reimb+v.cb)/Math.max(v.vendas,1)*100;
-    const proj=v.vendas*(31/dias);
-    const w1=PROD_W1[nm]||{vendas:0}; const w2=PROD_W2[nm]||{vendas:0};
-    const d1=w1.vendas/8, d2=w2.vendas/3;
-    const tdir=d2>d1*1.05?'<span class="trend-up">▲</span>':d2<d1*0.95?'<span class="trend-dn">▼</span>':'<span class="trend-ne">—</span>';
-    const isNew=!HIST[nm];
+  $('tP').innerHTML=sorted.map(p=>{
+    const r=RF[p]||{r:0,q:0},c2=CB[p]||{c:0,q:0};
+    const taxa=(r.r+c2.c)/Math.max(PS[p].v,1)*100;
+    const td=TaxaDash[p];
+    const isNew=!HIST[p];
     return`<tr>
-      <td class="bold">${nm}${isNew?'<span class="pill p-bl" style="margin-left:5px">NOVO</span>':''}</td>
-      <td class="right mono">${fmtM(v.vendas)}</td>
-      <td class="center">${v.orders}</td>
-      <td class="right mono crit">${v.reimb>0?fmtM(v.reimb):'—'}</td>
-      <td class="center ${v.reimb_qty>0?'warn':''}">${v.reimb_qty||'—'}</td>
-      <td class="right mono ${v.cb>0?'crit':''}">${v.cb>0?fmtM(v.cb):'—'}</td>
-      <td class="center ${v.cb_qty>0?'crit':''}">${v.cb_qty||'—'}</td>
-      <td class="center"><span class="pill ${t>15?'p-rd':t>8?'p-yl':t>5?'p-or':'p-gn'}">${t.toFixed(1)}%</span></td>
-      <td class="right mono yl">${fmtM(proj)}</td>
-      <td class="center">${tdir}</td>
-      <td class="center">${pill(t)}</td>
+      <td class="b">${p}${isNew?'<span class="pill pB" style="margin-left:4px">NOVO</span>':''}</td>
+      <td class="r mn">${fM(PS[p].v)}</td><td class="c">${PS[p].o}</td>
+      <td class="r mn tcr">${r.r>0?fM(r.r):'—'}</td>
+      <td class="c ${r.q>0?'twn':''}">${r.q||'—'}</td>
+      <td class="r mn ${c2.c>0?'tcr':''}">${c2.c>0?fM(c2.c):'—'}</td>
+      <td class="c ${c2.q>0?'tcr':''}">${c2.q||'—'}</td>
+      <td class="c">${td!=null?`<span class="pill pR">${td}% 📊</span>`:`<span class="pill ${taxa>20?'pP':taxa>12?'pR':taxa>6?'pY':'pG'}">${taxa.toFixed(1)}%</span>`}</td>
+      <td class="r mn twn">${fM(PS[p].v*(31/dias))}</td>
+      <td class="c">${pill(td||taxa)}</td>
     </tr>`;
   }).join('');
 
-  // Total row
-  const totv=Object.values(data).reduce((s,v)=>s+v.vendas,0);
-  const totr=Object.values(data).reduce((s,v)=>s+v.reimb,0);
-  const totcb=Object.values(data).reduce((s,v)=>s+v.cb,0);
-  const totqr=Object.values(data).reduce((s,v)=>s+v.reimb_qty,0);
-  const totqcb=Object.values(data).reduce((s,v)=>s+v.cb_qty,0);
-  const tottaxa=(totr+totcb)/totv*100;
-  $('tbl-prod').innerHTML+=`<tr style="background:var(--surface2);font-weight:700">
+  // Totals
+  const tRv=PRODS.reduce((s,p)=>s+(RF[p]?.r||0),0);
+  const tCv=PRODS.reduce((s,p)=>s+(CB[p]?.c||0),0);
+  const tRq=PRODS.reduce((s,p)=>s+(RF[p]?.q||0),0);
+  const tCq=PRODS.reduce((s,p)=>s+(CB[p]?.q||0),0);
+  const tTx=(tRv+tCv)/tv*100;
+  $('tP').innerHTML+=`<tr style="background:var(--surface2);font-weight:700">
     <td>TOTAL</td>
-    <td class="right mono">${fmtM(totv)}</td>
-    <td class="center">${Object.values(data).reduce((s,v)=>s+v.orders,0)}</td>
-    <td class="right mono crit">${fmtM(totr)}</td>
-    <td class="center warn">${totqr}</td>
-    <td class="right mono ${totcb>0?'crit':''}">${totcb>0?fmtM(totcb):'—'}</td>
-    <td class="center ${totqcb>0?'crit':''}">${totqcb||'—'}</td>
-    <td class="center"><span class="pill ${tottaxa>10?'p-yl':'p-gn'}">${tottaxa.toFixed(1)}%</span></td>
-    <td class="right mono yl">${fmtM(totv*(31/dias))}</td>
-    <td class="center">—</td>
-    <td class="center">—</td>
+    <td class="r mn">${w==='all'?'$770.4K':fM(tv)}</td>
+    <td class="c">${w==='all'?'3.072':PRODS.reduce((s,p)=>s+PS[p].o,0)}</td>
+    <td class="r mn tcr">${w==='all'?'$126.9K':fM(tRv)}</td>
+    <td class="c twn">${tRq}</td>
+    <td class="r mn tcr">${w==='all'?'$13.3K':fM(tCv)}</td>
+    <td class="c tcr">${tCq||'—'}</td>
+    <td class="c"><span class="pill pR">${tTx.toFixed(1)}%</span></td>
+    <td class="r mn twn">${fM((w==='all'?770380:tv)*(31/dias))}</td>
+    <td class="c">—</td>
   </tr>`;
 }
 
-// ── AFILIADOS ──────────────────────────────────────────────────────────
-function renderAfil(){
-  const afils=Object.entries(AFIL_DATA).sort((a,b)=>b[1].vendas-a[1].vendas);
-  const tv=afils.reduce((s,[,v])=>s+v.vendas,0);
-  const tr=afils.reduce((s,[,v])=>s+v.reimb,0);
-  const tcb=afils.reduce((s,[,v])=>s+v.cb,0);
-  const rq=afils.reduce((s,[,v])=>s+v.reimb_qtd,0);
-  const cq=afils.reduce((s,[,v])=>s+v.cb_qtd,0);
-  $('lbl-afil-count').textContent=afils.length+' afiliados ativos';
+/* ── AFILIADOS ─────────────────────────────────────────────────────────── */
+function rAfil(){
+  const sortedV=[...AFILS].filter(a=>a.v>0).sort((a,b)=>b.v-a.v);
+  const sortedR=[...AFILS].sort((a,b)=>(b.rf+b.cb)-(a.rf+a.cb));
+  $('lA').textContent=sortedV.length+' mapeados';
 
-  $('kpi-afil').innerHTML=`
-    <div class="kpi bl"><div class="kpi-lbl">Afiliados Ativos</div><div class="kpi-val">${afils.length}</div><div class="kpi-sub">01-11/05</div></div>
-    <div class="kpi or"><div class="kpi-lbl">Volume Total</div><div class="kpi-val">${fmtM(tv)}</div><div class="kpi-sub">11 dias</div></div>
-    <div class="kpi rd"><div class="kpi-lbl">Total Reembolsado</div><div class="kpi-val">${fmtM(tr)}</div><div class="kpi-sub crit">${rq} casos · ${(tr/tv*100).toFixed(1)}%</div></div>
-    <div class="kpi ${tcb>0?'rd':'gn'}"><div class="kpi-lbl">Total CB</div><div class="kpi-val">${fmtM(tcb)}</div><div class="kpi-sub ${tcb>0?'crit':'ok'}">${cq} casos</div></div>
-    <div class="kpi yl"><div class="kpi-lbl">Afiliados Taxa >10%</div><div class="kpi-val">${afils.filter(([,v])=>(v.reimb+v.cb)/Math.max(v.vendas,1)*100>10).length}</div><div class="kpi-sub warn">Requerem atenção</div></div>
-    <div class="kpi pu"><div class="kpi-lbl">Afiliados Taxa >30%</div><div class="kpi-val">${afils.filter(([,v])=>(v.reimb+v.cb)/Math.max(v.vendas,1)*100>30).length}</div><div class="kpi-sub crit">CRÍTICO — suspender</div></div>
+  const trfV=AFILS.reduce((s,a)=>s+a.rf,0);
+  const tcbV=AFILS.reduce((s,a)=>s+a.cb,0);
+  $('kA').innerHTML=`
+    <div class="kpi KB"><div class="kl">Afiliados Mapeados</div><div class="kv">${sortedV.length}</div><div class="ks">Com dados vendas</div></div>
+    <div class="kpi KO"><div class="kl">Fat. Total (Dash)</div><div class="kv">$770.4K</div><div class="ks">01-10/05</div></div>
+    <div class="kpi KR"><div class="kl">RF Processados</div><div class="kv">${fM(trfV)}</div><div class="ks crit">${AFILS.reduce((s,a)=>s+a.rfq,0)} eventos</div></div>
+    <div class="kpi KP"><div class="kl">CB Processados</div><div class="kv">${fM(tcbV)}</div><div class="ks crit">${AFILS.reduce((s,a)=>s+a.cbq,0)} casos</div></div>
+    <div class="kpi KY"><div class="kl">% RF Dash Empresa</div><div class="kv">16.56%</div><div class="ks warn">$127.6K de $770.4K</div></div>
+    <div class="kpi KR"><div class="kl">% CB Dash Empresa</div><div class="kv">1.96%</div><div class="ks crit">$15.1K de $770.4K</div></div>
   `;
 
-  const top15=afils.slice(0,15);
-  const maxV=top15[0]?.[1]?.vendas||1;
-  $('bars-afil-vol').innerHTML=top15.map(([nm,v])=>barRow(nm,v.vendas,maxV,'var(--blue)',fmtM(v.vendas))).join('');
-
-  const byTaxa=afils.filter(([,v])=>(v.reimb_qtd+v.cb_qtd)>0)
-    .map(([nm,v])=>[nm,v,(v.reimb+v.cb)/Math.max(v.vendas,1)*100])
-    .sort((a,b)=>b[2]-a[2]).slice(0,15);
-  const maxT=byTaxa[0]?.[2]||1;
-  $('bars-afil-taxa').innerHTML=byTaxa.map(([nm,v,t])=>{
-    const c=t>30?'var(--purple)':t>15?'var(--red)':t>8?'var(--yellow)':'var(--green)';
-    return barRow(nm,t,maxT,c,t.toFixed(1)+'% ('+v.reimb_qtd+'R+'+(v.cb_qtd||0)+'CB)');
+  const maxV=sortedV[0]?.v||1;
+  $('bAV').innerHTML=sortedV.slice(0,15).map(a=>br(a.nm,a.v,maxV,'var(--blue)',fM(a.v)+'('+a.o+'ped)')).join('');
+  const maxR=sortedR[0]?(sortedR[0].rf+sortedR[0].cb):1;
+  $('bAR').innerHTML=sortedR.slice(0,15).map(a=>{
+    const tot=a.rf+a.cb;
+    const tx=a.v>0?(tot/a.v*100):0;
+    const c=tx>30?'var(--purple)':tx>20?'var(--red)':tx>12?'var(--yellow)':'var(--green)';
+    return br(a.nm,tot,maxR,c,fM(tot)+' ('+a.rfq+'R+'+a.cbq+'CB)');
   }).join('');
 
-  $('tbl-afil').innerHTML=afils.map(([nm,v],i)=>{
-    const t=(v.reimb+v.cb)/Math.max(v.vendas,1)*100;
+  $('tA').innerHTML=sortedV.map((a,i)=>{
+    const tx=a.v>0?((a.rf+a.cb)/a.v*100):0;
     return`<tr>
-      <td class="center" style="color:var(--t4)">${i+1}</td>
-      <td class="bold">${nm}</td>
-      <td class="right mono">${fmtM(v.vendas)}</td>
-      <td class="center">${v.orders}</td>
-      <td class="center ${v.reimb_qtd>0?'warn':''}">${v.reimb_qtd||'—'}</td>
-      <td class="right mono ${v.reimb>0?'crit':''}">${v.reimb>0?fmtM(v.reimb):'—'}</td>
-      <td class="center ${v.cb_qtd>0?'crit':''}">${v.cb_qtd||'—'}</td>
-      <td class="right mono ${v.cb>0?'crit':''}">${v.cb>0?fmtM(v.cb):'—'}</td>
-      <td class="center"><span class="pill ${t>30?'p-pu':t>15?'p-rd':t>8?'p-yl':t>3?'p-or':'p-gn'}">${t.toFixed(1)}%</span></td>
-      <td class="center">${pill(t)}</td>
+      <td class="c" style="color:var(--t4)">${i+1}</td>
+      <td class="b">${a.nm}<div style="font-size:9px;color:var(--t4)">${a.al}</div></td>
+      <td class="r mn">${fM(a.v)}</td><td class="c">${a.o}</td>
+      <td class="r mn ${a.rf>0?'tcr':''}">${a.rf>0?fM(a.rf):'—'}</td>
+      <td class="c ${a.rfq>0?'twn':''}">${a.rfq||'—'}</td>
+      <td class="r mn ${a.cb>0?'tcr':''}">${a.cb>0?fM(a.cb):'—'}</td>
+      <td class="c ${a.cbq>0?'tcr':''}">${a.cbq||'—'}</td>
+      <td class="c">${a.td!=null?`<span class="pill pY">📊 ${a.td}%</span>`:`<span class="pill ${tx>20?'pR':tx>12?'pY':tx>0?'pO':'pG'}">${a.v>0?tx.toFixed(1)+'%':'—'}</span>`}</td>
+      <td class="c">${pill(a.td||tx)}</td>
     </tr>`;
   }).join('');
 
-  // Top 10 analysis
-  $('top10-analysis').innerHTML=TOP10.map(a=>{
-    const timingChips=Object.entries(a.timing).map(([k,v])=>{
-      const cls=k==='0-3d'?'t0':k==='4-7d'?'t4':'t8';
-      return`<span class="timing-chip ${cls}">${k}: ${v}x</span>`;
+  $('t10').innerHTML=TOP10.map(a=>{
+    const culpH=a.culp==='afiliado'?'<span class="ca">AFILIADO</span>':a.culp==='op'?'<span class="co">OPERAÇÃO</span>':a.culp==='crit'?'<span class="cc">CRÍTICO</span>':'<span class="cm">MISTO</span>';
+    const chips=Object.entries(a.tm).filter(([,v])=>v>0).map(([k,v])=>{
+      const cl=k==='0-3d'?'tc0':k==='4-7d'?'tc4':k==='8-15d'?'tc8':k==='16-30d'?'tc16':'tc45';
+      return`<span class="tc ${cl}">${k}:${v}x</span>`;
     }).join('');
-    const culpaLabel=a.culpa==='afiliado'?'<span class="culp-afil">AFILIADO</span>':
-      a.culpa==='operacao'?'<span class="culp-op">OPERAÇÃO</span>':
-      a.culpa==='crit'?'<span class="culp-crit">CRÍTICO</span>':'<span class="culp-mix">MISTO</span>';
-    return`<div class="top10-card">
-      <div class="top10-hdr">
-        <div>
-          <div style="font-size:9px;color:var(--t4);font-weight:700;margin-bottom:2px">#${a.rank} — TOP REEMBOLSOS</div>
-          <div class="top10-name">${a.nome}</div>
-        </div>
-        <div class="top10-badges">
-          ${culpaLabel}
-          ${pill(a.taxa)}
-        </div>
+    const tot=Object.values(a.tm).reduce((s,v)=>s+v,0);
+    return`<div class="t10c">
+      <div class="t10h">
+        <div><div style="font-size:9px;color:var(--t4);font-weight:700">#${a.r}</div><div class="t10n">${a.n}</div></div>
+        <div style="display:flex;gap:4px;flex-wrap:wrap">${culpH}${pill(a.tx)}</div>
       </div>
-      <div class="top10-stats">
-        <div class="top10-stat"><div class="top10-stat-lbl">Volume</div><div class="top10-stat-val">${fmtM(a.vendas)}</div></div>
-        <div class="top10-stat"><div class="top10-stat-lbl">Reimb Qtd</div><div class="top10-stat-val crit">${a.reimb_qty}x</div></div>
-        <div class="top10-stat"><div class="top10-stat-lbl">Reimb $</div><div class="top10-stat-val crit">${fmtM(a.reimb_val)}</div></div>
-        <div class="top10-stat"><div class="top10-stat-lbl">Taxa</div><div class="top10-stat-val ${a.taxa>15?'crit':a.taxa>8?'warn':'ok'}">${a.taxa}%</div></div>
+      <div class="t10s">
+        <div class="t10si"><div class="t10sl">Vendas</div><div class="t10sv">${fM(a.v)}</div></div>
+        <div class="t10si"><div class="t10sl">RF Qtd</div><div class="t10sv tcr">${a.rfq}x</div></div>
+        <div class="t10si"><div class="t10sl">RF+CB $</div><div class="t10sv tcr">${fM(a.rf+a.cb)}</div></div>
+        <div class="t10si"><div class="t10sl">Taxa est.</div><div class="t10sv ${a.tx>20?'tcr':a.tx>12?'twn':'tok'}">${a.tx}%</div></div>
       </div>
-      <div class="top10-motivos"><strong>Principais motivos:</strong> ${a.motivos.join(' · ')}</div>
-      <div class="top10-motivos"><strong>Produtos:</strong> ${a.produtos}</div>
-      <div style="margin:6px 0 4px;font-size:9px;color:var(--t4);font-weight:700">TIMING DOS REEMBOLSOS:</div>
-      <div class="top10-timing">${timingChips}</div>
-      <div class="top10-veredicto ${a.culpa}"><strong>🔍 Análise:</strong> ${a.veredicto}</div>
+      <div class="t10m"><strong>Motivos:</strong> ${a.mt.join(' · ')}</div>
+      <div class="t10m"><strong>Produto:</strong> ${a.pd}</div>
+      <div style="font-size:9px;color:var(--t4);font-weight:700;margin-top:5px">TIMING (${tot} RF processados em Maio):</div>
+      <div class="t10t">${chips}</div>
+      <div class="t10v ${a.culp==='op'?'op':a.culp==='crit'?'crit':a.culp==='misto'?'misto':'afil'}"><strong>🔍</strong> ${a.vd}</div>
     </div>`;
   }).join('');
 }
 
-// ── TIMING ──────────────────────────────────────────────────────────
-function renderTiming(){
-  const total=190;
-  const colors={"0-3d":"var(--red)","4-7d":"var(--yellow)","8-15d":"var(--blue)","16-30d":"var(--t3)","+45d":"var(--t4)"};
-  const meanings={"0-3d":"Imediato — venda agressiva/upsell","4-7d":"Arrependimento — produto/afiliado","8-15d":"Insatisfação — operação/produto","16-30d":"Resultado ruim — produto","+45d":"CB bancário — fraude/operação"};
-
-  $('kpi-timing').innerHTML=`
-    <div class="kpi rd"><div class="kpi-lbl">0-3 Dias (Imediato)</div><div class="kpi-val">167</div><div class="kpi-sub crit">87.9% de todos · AFILIADO/OP</div></div>
-    <div class="kpi yl"><div class="kpi-lbl">4-7 Dias (Curto)</div><div class="kpi-val">19</div><div class="kpi-sub warn">10% · Arrependimento misto</div></div>
-    <div class="kpi bl"><div class="kpi-lbl">8-15 Dias (Médio)</div><div class="kpi-val">4</div><div class="kpi-sub">2.1% · Insatisfação / produto</div></div>
-    <div class="kpi gn"><div class="kpi-lbl">16-30 Dias</div><div class="kpi-val">0</div><div class="kpi-sub ok">Nenhum neste período</div></div>
-    <div class="kpi gn"><div class="kpi-lbl">+45 Dias (CB Tardio)</div><div class="kpi-val">0</div><div class="kpi-sub ok">Janela ainda aberta</div></div>
-    <div class="kpi or"><div class="kpi-lbl">Média de Dias</div><div class="kpi-val">1.5d</div><div class="kpi-sub warn">Concentradíssimo no imediato</div></div>
+/* ── TIMING ─────────────────────────────────────────────────────────────── */
+function rTiming(){
+  $('kT').innerHTML=`
+    <div class="kpi KR"><div class="kl">0-3d Imediato</div><div class="kv">295</div><div class="ks crit">41.1% · AFILIADO/OP</div></div>
+    <div class="kpi KY"><div class="kl">4-7d</div><div class="kv">63</div><div class="ks warn">8.8% · Misto</div></div>
+    <div class="kpi KB"><div class="kl">8-15d Produto</div><div class="kv">99</div><div class="ks">13.8% · Produto</div></div>
+    <div class="kpi KG"><div class="kl">16-30d Logística</div><div class="kv">116</div><div class="ks">16.2% · Prod/Log</div></div>
+    <div class="kpi KP"><div class="kl">+45d Histórico</div><div class="kv">144</div><div class="ks">20.1% · Histórico</div></div>
+    <div class="kpi KO"><div class="kl">Média RF (dias)</div><div class="kv">17.2d</div><div class="ks warn">Não é só imediato!</div></div>
   `;
 
-  $('timing-global-bars').innerHTML=`<div class="timing-grid">`+
-    Object.entries(TIMING_GLOBAL).map(([k,v])=>{
-      const pct=(v/total*100);
-      return`<div class="timing-row">
-        <div class="timing-label">${k}</div>
-        <div class="timing-track"><div class="timing-fill" data-pct="${pct.toFixed(1)}" style="background:${colors[k]}"></div></div>
-        <div class="timing-pct">${pct.toFixed(1)}%</div>
-        <div class="timing-meaning">${meanings[k]}</div>
-      </div>
-      <div style="font-size:10px;color:var(--t4);padding-left:88px;margin-top:-2px;margin-bottom:4px">${v} evento${v!==1?'s':''}</div>`;
-    }).join('')+`</div>`;
+  $('tRF').innerHTML=`<div style="font-size:10px;color:var(--t3);margin-bottom:6px">717 reembolsos por tempo decorrido (compra → reembolso):</div>
+    ${tstacked(TRF,717)}
+    <div style="margin-top:14px">${trowMini(TRF,717)}</div>`;
 
-  // by product
-  const prods=Object.entries(TIMING_PRODS).sort((a,b)=>{
-    const ta=Object.values(a[1]).reduce((s,v)=>s+v,0);
-    const tb=Object.values(b[1]).reduce((s,v)=>s+v,0);
-    return tb-ta;
-  });
-  $('timing-prod-bars').innerHTML=prods.map(([nm,t])=>{
+  $('tCB').innerHTML=`<div style="font-size:10px;color:var(--t3);margin-bottom:6px">48 chargebacks por tempo decorrido (compra → CB):</div>
+    ${tstacked(TCB,48)}
+    <div style="margin-top:14px">${trowMini(TCB,48)}</div>`;
+
+  const prodsSorted=Object.entries(TProd).sort((a,b)=>Object.values(b[1]).reduce((s,v)=>s+v,0)-Object.values(a[1]).reduce((s,v)=>s+v,0));
+  $('tProd').innerHTML=prodsSorted.map(([p,t])=>{
     const tot=Object.values(t).reduce((s,v)=>s+v,0);
-    if(tot===0)return'';
-    return`<div style="padding:6px 0;border-bottom:1px solid var(--border-s)">
-      <div style="font-size:11px;font-weight:600;color:var(--t2);margin-bottom:4px">${nm} <span style="color:var(--t4);font-weight:400;font-size:9px">(${tot} eventos)</span></div>
-      <div style="display:flex;gap:2px;height:8px;border-radius:4px;overflow:hidden;margin-bottom:4px">
-        ${Object.entries(t).filter(([,v])=>v>0).map(([k,v])=>`<div style="flex:${v};background:${colors[k]};min-width:1px" title="${k}: ${v}"></div>`).join('')}
+    if(!tot)return'';
+    return`<div style="padding:5px 0;border-bottom:1px solid var(--border-s)">
+      <div style="display:flex;justify-content:space-between;margin-bottom:3px">
+        <div style="font-size:11px;font-weight:600;color:var(--t2)">${p}</div>
+        <div style="font-size:9px;color:var(--t4)">${tot} RF</div>
       </div>
-      <div style="display:flex;gap:6px;flex-wrap:wrap">
-        ${Object.entries(t).filter(([,v])=>v>0).map(([k,v])=>`<span style="font-size:9px;color:${colors[k]};font-weight:600">${k}: ${v}</span>`).join('')}
-      </div>
-    </div>`;
+      ${tstacked(t,tot)}</div>`;
   }).join('');
 
-  // Motivos
-  const maxQ=MOTIVOS_DATA[0].qtd;
-  const tipoColors={afiliado:'var(--red)',misto:'var(--yellow)',produto:'var(--blue)'};
-  const tipoLabels={afiliado:'AFILIADO','misto':'MISTO','produto':'PRODUTO'};
-  $('timing-motivos').innerHTML=MOTIVOS_DATA.map(m=>{
-    const pct=(m.qtd/190*100).toFixed(1);
-    return`<div class="bar-row">
-      <div class="bar-lbl">${m.motivo}</div>
-      <div class="bar-track"><div class="bar-fill" data-pct="${(m.qtd/maxQ*100).toFixed(1)}" style="background:${tipoColors[m.tipo]}"></div></div>
-      <div class="bar-val">${m.qtd}x (${pct}%)</div>
-    </div>`;
+  const mxQ=MOTIVOS[0].q;
+  const mC={afiliado:'var(--red)',produto:'var(--blue)',operacao:'var(--yellow)',misto:'var(--t3)'};
+  $('mB').innerHTML=MOTIVOS.map(m=>{
+    const pct=(m.q/717*100).toFixed(1);
+    return`<div class="br"><div class="bl2" title="${m.m}">${m.m}</div><div class="bt"><div class="bf" data-p="${(m.q/mxQ*100).toFixed(1)}" style="background:${mC[m.t]}"></div></div><div class="bv">${m.q}x (${pct}%)</div></div>`;
   }).join('');
+
+  setTimeout(ab,80);
 }
 
-// ── TENDÊNCIA ──────────────────────────────────────────────────────────
-function renderTrend(){
-  const MAR={v:2715255,r:343649,cb:18738};
-  const ABR={v:2434052,r:351361,cb:16301};
-  const MAIV_tot=Object.values(PROD_ALL).reduce((s,v)=>s+v.vendas,0);
-  const MAIR_tot=Object.values(PROD_ALL).reduce((s,v)=>s+v.reimb+v.cb,0);
-  const MAI_PROJ={v:MAIV_tot*PROJ,r:MAIR_tot*PROJ};
+/* ── TENDÊNCIA ─────────────────────────────────────────────────────────── */
+function rTrend(){
+  const rows=Object.keys(PS).map(p=>{
+    const h=HIST[p]||{m:{v:0,r:0},a:{v:0,r:0}};
+    const tm=h.m.v>0?h.m.r/h.m.v*100:0;
+    const ta=h.a.v>0?h.a.r/h.a.v*100:0;
+    const tmai=TaxaDash[p]||((RFa[p]?.r||0)+(CBa[p]?.c||0))/Math.max(PS[p].v,1)*100;
+    return{p,h,tm,ta,tmai,proj:PS[p].v*PROJ};
+  }).sort((a,b)=>b.proj-a.proj);
 
-  const t_mar=(MAR.r+MAR.cb)/MAR.v*100;
-  const t_abr=(ABR.r+ABR.cb)/ABR.v*100;
-  const t_mai=MAIR_tot/MAIV_tot*100;
-
-  $('kpi-trend').innerHTML=`
-    <div class="kpi bl"><div class="kpi-lbl">Março 2026</div><div class="kpi-val">${fmtM(MAR.v)}</div><div class="kpi-sub crit">Taxa: ${t_mar.toFixed(1)}%</div></div>
-    <div class="kpi yl"><div class="kpi-lbl">Abril 2026</div><div class="kpi-val">${fmtM(ABR.v)}</div><div class="kpi-sub crit">Taxa: ${t_abr.toFixed(1)}%</div></div>
-    <div class="kpi gn"><div class="kpi-lbl">Maio 2026 (11d)</div><div class="kpi-val">${fmtM(MAIV_tot)}</div><div class="kpi-sub ok">Taxa: ${t_mai.toFixed(1)}% (CB aberto)</div></div>
-    <div class="kpi or"><div class="kpi-lbl">Maio Projetado</div><div class="kpi-val">${fmtM(MAI_PROJ.v)}</div><div class="kpi-sub yl">×2.82 · vs Abr: ${((MAI_PROJ.v-ABR.v)/ABR.v*100).toFixed(0)}%</div></div>
-    <div class="kpi ${t_mai<t_abr?'gn':'rd'}"><div class="kpi-lbl">Tendência Taxa</div><div class="kpi-val">${t_mai.toFixed(1)}%</div><div class="kpi-sub ${t_mai<t_abr?'ok':'crit'}">vs Abr ${t_abr.toFixed(1)}%: ${t_mai<t_abr?'▼ Melhora':'▲ Piora'}</div></div>
+  $('kTR').innerHTML=`
+    <div class="kpi KB"><div class="kl">Março 2026</div><div class="kv">$2.72M</div><div class="ks crit">Taxa: ${(361387/2715255*100).toFixed(1)}%</div></div>
+    <div class="kpi KY"><div class="kl">Abril 2026</div><div class="kv">$2.43M</div><div class="ks crit">Taxa: ${(367662/2434052*100).toFixed(1)}%</div></div>
+    <div class="kpi KR"><div class="kl">Maio (10d)</div><div class="kv">$770.4K</div><div class="ks crit">RF:16.56% · CB:1.96%</div></div>
+    <div class="kpi KO"><div class="kl">Maio Projetado</div><div class="kv">${fM(770380*PROJ)}</div><div class="ks warn">×3.1</div></div>
+    <div class="kpi KR"><div class="kl">RF+CB Maio $</div><div class="kv">$142.7K</div><div class="ks crit">18.5% do faturamento</div></div>
+    <div class="kpi KP"><div class="kl">Líquido Maio</div><div class="kv">$101.3K</div><div class="ks crit">13.15% — baixo</div></div>
   `;
 
-  const all_prods=new Set([...Object.keys(HIST),...Object.keys(PROD_ALL)]);
-  const rows=[...all_prods].map(nm=>{
-    const h=HIST[nm]||{marco:{v:0,r:0,cb:0},abril:{v:0,r:0,cb:0}};
-    const mai=PROD_ALL[nm]||{vendas:0,reimb:0,cb:0};
-    const tm=h.marco.v>0?(h.marco.r+h.marco.cb)/h.marco.v*100:0;
-    const ta=h.abril.v>0?(h.abril.r+h.abril.cb)/h.abril.v*100:0;
-    const tmai=(mai.reimb+mai.cb)/Math.max(mai.vendas,1)*100;
-    return{nm,h,mai,tm,ta,tmai,proj:mai.vendas*PROJ};
-  }).sort((a,b)=>b.mai.vendas-a.mai.vendas);
-
-  $('tbl-trend').innerHTML=rows.map(p=>{
-    const isNew=!HIST[p.nm];
+  $('tTR').innerHTML=rows.map(r=>{
+    const isNew=!HIST[r.p];
     return`<tr>
-      <td class="bold">${p.nm}${isNew?'<span class="pill p-bl" style="margin-left:4px">NOVO</span>':''}</td>
-      <td class="right mono">${p.h.marco.v>0?fmtM(p.h.marco.v):'—'}</td>
-      <td class="center"><span class="pill ${p.tm>15?'p-rd':p.tm>8?'p-yl':'p-gn'}">${p.h.marco.v>0?p.tm.toFixed(1)+'%':'—'}</span></td>
-      <td class="right mono">${p.h.abril.v>0?fmtM(p.h.abril.v):'—'}</td>
-      <td class="center"><span class="pill ${p.ta>15?'p-rd':p.ta>8?'p-yl':'p-gn'}">${p.h.abril.v>0?p.ta.toFixed(1)+'%':'—'}</span></td>
-      <td class="right mono yl">${fmtM(p.proj)}</td>
-      <td class="center"><span class="pill ${p.tmai>15?'p-rd':p.tmai>8?'p-yl':p.tmai>0?'p-gn':'p-bl'}">${p.mai.vendas>0?p.tmai.toFixed(1)+'%':'—'}</span></td>
-      <td class="center">${p.mai.vendas>0&&p.h.abril.v>0?trendArrow(p.ta,p.tmai):'—'}</td>
+      <td class="b">${r.p}${isNew?'<span class="pill pB" style="margin-left:4px">NOVO</span>':''}</td>
+      <td class="r mn">${r.h.m.v>0?fM(r.h.m.v):'—'}</td>
+      <td class="c"><span class="pill ${r.tm>15?'pR':r.tm>8?'pY':'pG'}">${r.h.m.v>0?r.tm.toFixed(1)+'%':'—'}</span></td>
+      <td class="r mn">${r.h.a.v>0?fM(r.h.a.v):'—'}</td>
+      <td class="c"><span class="pill ${r.ta>15?'pR':r.ta>8?'pY':'pG'}">${r.h.a.v>0?r.ta.toFixed(1)+'%':'—'}</span></td>
+      <td class="r mn twn">${fM(r.proj)}</td>
+      <td class="c"><span class="pill ${r.tmai>20?'pR':r.tmai>12?'pY':r.tmai>0?'pG':'pB'}">${TaxaDash[r.p]?'📊 ':''}${r.tmai.toFixed(1)}%</span></td>
+      <td class="c">${r.h.a.v>0?ta(r.ta,r.tmai):'—'}</td>
     </tr>`;
   }).join('');
 
-  const tc_colors={"0-3d":"var(--red)","4-7d":"var(--yellow)","8-15d":"var(--blue)"};
-  $('bars-trend-taxa').innerHTML=rows.filter(p=>p.mai.vendas>0).sort((a,b)=>b.tmai-a.tmai).map(p=>{
-    const mx=Math.max(p.tm,p.ta,p.tmai,1);
-    return`<div style="padding:6px 0;border-bottom:1px solid var(--border-s)">
-      <div style="font-size:11px;color:var(--t2);font-weight:600;margin-bottom:4px">${p.nm}</div>
-      ${[["Mar",p.tm,"var(--blue)"],["Abr",p.ta,"var(--yellow)"],["Mai",p.tmai,p.tmai<p.ta?'var(--green)':p.tmai>p.ta?'var(--red)':'var(--orange)']].map(([l,v,c])=>`
+  $('bTR').innerHTML=rows.filter(r=>r.proj>0).map(r=>{
+    const mx=Math.max(r.tm,r.ta,r.tmai,1);
+    return`<div style="padding:5px 0;border-bottom:1px solid var(--border-s)">
+      <div style="font-size:11px;font-weight:600;color:var(--t2);margin-bottom:3px">${r.p}</div>
+      ${[["Mar",r.tm,"var(--blue)"],["Abr",r.ta,"var(--yellow)"],["Mai",r.tmai,r.tmai<r.ta?'var(--green)':r.tmai>r.ta?'var(--red)':'var(--orange)']].map(([l,v,c])=>`
         <div style="display:flex;gap:4px;align-items:center;margin-bottom:2px">
-          <div style="width:30px;font-size:9px;color:var(--t4)">${l}</div>
-          <div style="flex:1;height:5px;background:var(--surface2);border-radius:3px;overflow:hidden"><div class="bar-fill" data-pct="${(v/mx*100).toFixed(1)}" style="background:${c};height:5px;border-radius:3px"></div></div>
-          <div style="width:35px;text-align:right;font-size:9px;color:${c}">${v.toFixed(1)}%</div>
+          <div style="width:27px;font-size:9px;color:var(--t4)">${l}</div>
+          <div style="flex:1;height:5px;background:var(--surface2);border-radius:3px;overflow:hidden"><div data-p="${(v/mx*100).toFixed(1)}" style="background:${c};height:5px;border-radius:3px;width:0;transition:width .9s ease"></div></div>
+          <div style="width:32px;text-align:right;font-size:9px;color:${c}">${v.toFixed(1)}%</div>
         </div>`).join('')}
     </div>`;
   }).join('');
 
-  const improving=rows.filter(p=>p.mai.vendas>0&&p.h.abril.v>0&&p.tmai<p.ta-2);
-  const worsening=rows.filter(p=>p.mai.vendas>0&&p.h.abril.v>0&&p.tmai>p.ta+2);
-  const newProds=rows.filter(p=>!HIST[p.nm]&&p.mai.vendas>0);
-  $('insights').innerHTML=`
-    ${improving.length?`<div style="margin-bottom:12px"><div style="font-size:11px;font-weight:700;color:var(--green);margin-bottom:6px">✅ Melhorando (taxa ↓):</div>
-    ${improving.map(p=>`<div style="font-size:10px;color:var(--t2);padding:3px 0">• <strong>${p.nm}</strong>: ${p.ta.toFixed(1)}% → ${p.tmai.toFixed(1)}% (▼${(p.ta-p.tmai).toFixed(1)}pp)</div>`).join('')}</div>`:''}
-    ${worsening.length?`<div style="margin-bottom:12px"><div style="font-size:11px;font-weight:700;color:var(--red);margin-bottom:6px">⚠️ Piorando (taxa ↑):</div>
-    ${worsening.map(p=>`<div style="font-size:10px;color:var(--t2);padding:3px 0">• <strong>${p.nm}</strong>: ${p.ta.toFixed(1)}% → ${p.tmai.toFixed(1)}% (▲${(p.tmai-p.ta).toFixed(1)}pp)</div>`).join('')}</div>`:''}
-    ${newProds.length?`<div style="margin-bottom:12px"><div style="font-size:11px;font-weight:700;color:var(--blue);margin-bottom:6px">🆕 Novos em Maio:</div>
-    ${newProds.map(p=>`<div style="font-size:10px;color:var(--t2);padding:3px 0">• <strong>${p.nm}</strong>: ${fmtM(p.mai.vendas)} (${p.tmai.toFixed(1)}% taxa)</div>`).join('')}</div>`:''}
-    <div style="padding:8px;background:var(--yellow-l);border-radius:6px;font-size:10px;color:var(--yellow);border:1px solid rgba(245,158,11,.2);margin-top:8px">
-      ⚠️ <strong>AudiLeaf</strong> domina Maio com ${fmtM(PROD_ALL['AudiLeaf']?.vendas||0)} (${((PROD_ALL['AudiLeaf']?.vendas||0)/Object.values(PROD_ALL).reduce((s,v)=>s+v.vendas,0)*100).toFixed(0)}% do volume). Taxa ainda em ${((PROD_ALL['AudiLeaf'].reimb+PROD_ALL['AudiLeaf'].cb)/PROD_ALL['AudiLeaf'].vendas*100).toFixed(1)}% — monitorar S2.
-    </div>`;
-  setTimeout(animateBars,100);
+  const worsening=rows.filter(r=>r.h.a.v>0&&r.tmai>r.ta+2);
+  const improving=rows.filter(r=>r.h.a.v>0&&r.tmai<r.ta-2);
+  $('ins').innerHTML=`
+    <div style="padding:10px;background:var(--red-l);border-radius:7px;border:1px solid rgba(239,68,68,.2);margin-bottom:9px">
+      <div style="font-size:11px;font-weight:700;color:var(--red);margin-bottom:3px">🚨 Situação crítica em Maio</div>
+      <div style="font-size:10px;color:var(--t2)">RF+CB = $142.7K de $770.4K = <strong>18.5% de perda bruta</strong>. Liquido só $101.3K (13.15%). Todos os top5 produtos com taxa >12%.</div>
+    </div>
+    ${worsening.length?`<div style="margin-bottom:9px"><div style="font-size:11px;font-weight:700;color:var(--red);margin-bottom:3px">⚠️ Piorando vs Abr:</div>${worsening.map(r=>`<div style="font-size:10px;color:var(--t2);padding:2px 0">• <strong>${r.p}</strong>: ${r.ta.toFixed(1)}% → ${r.tmai.toFixed(1)}%</div>`).join('')}</div>`:''}
+    ${improving.length?`<div><div style="font-size:11px;font-weight:700;color:var(--green);margin-bottom:3px">✅ Melhorando:</div>${improving.map(r=>`<div style="font-size:10px;color:var(--t2);padding:2px 0">• <strong>${r.p}</strong>: ${r.ta.toFixed(1)}% → ${r.tmai.toFixed(1)}%</div>`).join('')}</div>`:''}
+    <div style="margin-top:9px;padding:8px;background:var(--yellow-l);border-radius:6px;font-size:10px;color:var(--yellow);border:1px solid rgba(245,158,11,.2)">
+      GlucoRecover (18.7%) e NervoLyn (13.9%) têm as maiores taxas RF entre os produtos com volume significativo. Investigar padrão de motivos "doctor advised" e "side effects".
+    </div>
+  `;
+  setTimeout(ab,100);
 }
 
 function show(id,el){
   document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-  $('s-'+id).classList.add('active');
-  if(el)el.classList.add('active');
-  setTimeout(animateBars,50);
+  $('s-'+id).classList.add('active');if(el)el.classList.add('active');setTimeout(ab,50);
 }
-function toggleTheme(){
+function tt(){
   const r=document.documentElement,l=r.getAttribute('data-theme')==='light';
   r.setAttribute('data-theme',l?'dark':'light');
-  $('theme-ico').textContent=l?'🌙':'☀️';
-  $('theme-lbl').textContent=l?'Modo Escuro':'Modo Claro';
+  $('ti').textContent=l?'🌙':'☀️';$('tl').textContent=l?'Escuro':'Claro';
 }
-
 window.addEventListener('DOMContentLoaded',()=>{
-  renderProdBody('all');
-  renderAfil();
-  renderTiming();
-  renderTrend();
-  setTimeout(animateBars,200);
+  rProd('all');rAfil();rTiming();rTrend();setTimeout(ab,200);
 });
 </script>
 </body>
