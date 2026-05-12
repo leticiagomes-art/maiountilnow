@@ -274,20 +274,43 @@ const PROJ=3.1;
 const TC={"0-3d":"var(--red)","4-7d":"var(--yellow)","8-15d":"var(--blue)","16-30d":"var(--green)","+45d":"var(--purple)"};
 
 /* ── DADOS ───────────────────────────────────────────────────────────── */
-const PS={  // Produto Sales (dash empresa)
-  "AudiLeaf":    {o:864,v:214979},
-  "NervoLyn":    {o:559,v:139284},
-  "GlucoRecover":{o:380,v:99002},
-  "VisiumPro":   {o:333,v:81220},
-  "Prostafense": {o:294,v:74666},
-  "Marobrain":   {o:239,v:62885},
-  "VigorLong":   {o:129,v:33028},
-  "BreathEaseX": {o:85, v:20200},
-  "ReduBurn":    {o:34, v:8541},
-  "LipoBliss":   {o:31, v:7414},
-  "LipoTrine":   {o:37, v:9448},
-  "LipoVive":    {o:33, v:6783},
+const PS={  // Produto Sales ALL (dash empresa 01-10/05)
+  "AudiLeaf":    {o:864,v:214979},"NervoLyn":    {o:559,v:139284},
+  "GlucoRecover":{o:380,v:99002}, "VisiumPro":   {o:333,v:81220},
+  "Prostafense": {o:294,v:74666}, "Marobrain":   {o:239,v:62885},
+  "VigorLong":   {o:129,v:33028}, "BreathEaseX": {o:85, v:20200},
+  "ReduBurn":    {o:34, v:8541},  "LipoBliss":   {o:31, v:7414},
+  "LipoTrine":   {o:37, v:9448},  "LipoVive":    {o:33, v:6783},
   "Booster XT":  {o:3,  v:744},
+};
+// S1 (01-08) — top5 do dash, demais estimados (~78.4% do total)
+const PS1={
+  "AudiLeaf":    {o:646,v:162601},"NervoLyn":    {o:437,v:108969},
+  "GlucoRecover":{o:329,v:85977}, "VisiumPro":   {o:250,v:61250},
+  "Prostafense": {o:230,v:58915}, "Marobrain":   {o:188,v:49303},
+  "VigorLong":   {o:102,v:25904}, "BreathEaseX": {o:67, v:15837},
+  "ReduBurn":    {o:27, v:6696},  "LipoBliss":   {o:24, v:5813},
+  "LipoTrine":   {o:29, v:7407},  "LipoVive":    {o:26, v:5318},
+  "Booster XT":  {o:2,  v:583},
+};
+// S2 (09-10) — top5 do dash, demais = ALL - S1
+const PS2={
+  "AudiLeaf":    {o:218,v:52378}, "NervoLyn":    {o:122,v:30315},
+  "GlucoRecover":{o:51, v:13025}, "VisiumPro":   {o:83, v:19970},
+  "Prostafense": {o:64, v:15751}, "Marobrain":   {o:51, v:13582},
+  "VigorLong":   {o:27, v:7124},  "BreathEaseX": {o:18, v:4363},
+  "ReduBurn":    {o:7,  v:1845},  "LipoBliss":   {o:7,  v:1601},
+  "LipoTrine":   {o:8,  v:2041},  "LipoVive":    {o:7,  v:1465},
+  "Booster XT":  {o:1,  v:161},
+};
+// Taxa % por produto por semana (dash empresa)
+const TaxaDash1={"AudiLeaf":18.1,"NervoLyn":13.0,"GlucoRecover":18.4,"VisiumPro":18.0,"Prostafense":15.5};
+const TaxaDash2={"AudiLeaf":6.4,"NervoLyn":17.4,"GlucoRecover":20.5,"VisiumPro":10.5,"Prostafense":3.1};
+// KPIs consolidados por período (dash empresa)
+const DASH={
+  all:{fat:770380.07,liq:101330.51,vend:3072,rf:127607.71,cb:15093.62,rf_pct:16.56,cb_pct:1.96,liq_pct:13.15},
+  1:  {fat:603738.04,liq:69431.04, vend:2392,rf:110145.97,cb:11176.95,rf_pct:18.24,cb_pct:1.85,liq_pct:11.50},
+  2:  {fat:166642.03,liq:31899.48, vend:680, rf:17461.74, cb:3916.67, rf_pct:10.48,cb_pct:2.35,liq_pct:19.14},
 };
 const RFa={  // RF by refund date 01-10/05 (ALL)
   "AudiLeaf":    {r:33300.47,q:202},"NervoLyn":    {r:19204.28,q:114},
@@ -323,7 +346,7 @@ const CBa={  // CB by cb_date 01-10/05
   "LipoVive":    {c:536.15, q:2},"LipoBliss":   {c:0,q:0},
   "LipoTrine":   {c:0,q:0},"Booster XT":{c:0,q:0},"BreathEaseX":{c:0,q:0},
 };
-// Dash company taxa % por produto
+// Taxa ALL período (dash empresa)
 const TaxaDash={"AudiLeaf":15.2,"NervoLyn":13.9,"GlucoRecover":18.7,"VisiumPro":16.2,"Prostafense":12.9};
 
 const AFILS=[
@@ -479,72 +502,66 @@ function sw(w){
 function rProd(w){
   const RF=w===1?RF1:w===2?RF2:RFa;
   const CB=w==='all'?CBa:{};
+  const PSw=w===1?PS1:w===2?PS2:PS;
+  const TDw=w===1?TaxaDash1:w===2?TaxaDash2:TaxaDash;
+  const D=DASH[w]||DASH.all;
   const PRODS=Object.keys(PS);
-  const tv=PRODS.reduce((s,p)=>s+PS[p].v,0);
-  const tr=PRODS.reduce((s,p)=>s+(RF[p]?.r||0),0);
-  const tcb=PRODS.reduce((s,p)=>s+(CB[p]?.c||0),0);
-  const trq=PRODS.reduce((s,p)=>s+(RF[p]?.q||0),0);
-  const tcbq=PRODS.reduce((s,p)=>s+(CB[p]?.q||0),0);
   const dias=w===1?8:w===2?2:10;
   const lbl={all:'01-10/05',1:'S1: 01-08',2:'S2: 09-10'}[w]||'01-10/05';
   $('lp').textContent=lbl;
 
   $('kG').innerHTML=`
-    <div class="kpi KO"><div class="kl">Faturamento Bruto</div><div class="kv">${w==='all'?'$770.4K':fM(tv)}</div><div class="ks">${lbl}</div></div>
-    <div class="kpi KY"><div class="kl">Projeção Mês</div><div class="kv">${fM((w==='all'?770380:tv)*(31/dias))}</div><div class="ks warn">×${(31/dias).toFixed(1)} extrapolado</div></div>
-    <div class="kpi KR"><div class="kl">RF Processados</div><div class="kv">${w==='all'?'$126.9K':fM(tr)}</div><div class="ks crit">${trq} eventos · inclui histórico</div></div>
-    <div class="kpi KP"><div class="kl">CB Processados</div><div class="kv">${w==='all'?'$13.3K':fM(tcb)}</div><div class="ks crit">${tcbq||'—'} casos</div></div>
-    <div class="kpi KR"><div class="kl">Líquido (Dash)</div><div class="kv">${w==='all'?'$101.3K':'—'}</div><div class="ks crit">${w==='all'?'13.15% do bruto':''}</div></div>
-    <div class="kpi KB"><div class="kl">Vendas</div><div class="kv">${w==='all'?'3.072':PRODS.reduce((s,p)=>s+PS[p].o,0)}</div><div class="ks">${dias} dias</div></div>
+    <div class="kpi KO"><div class="kl">Faturamento Bruto</div><div class="kv">${fM(D.fat)}</div><div class="ks">${lbl}</div></div>
+    <div class="kpi KY"><div class="kl">Projeção Mês</div><div class="kv">${fM(D.fat*(31/dias))}</div><div class="ks warn">×${(31/dias).toFixed(1)} extrapolado</div></div>
+    <div class="kpi KR"><div class="kl">RF (Dash)</div><div class="kv">${fM(D.rf)}</div><div class="ks crit">${D.rf_pct}% · inclui histórico</div></div>
+    <div class="kpi KP"><div class="kl">CB (Dash)</div><div class="kv">${fM(D.cb)}</div><div class="ks crit">${D.cb_pct}%</div></div>
+    <div class="kpi KG"><div class="kl">Líquido (Dash)</div><div class="kv">${fM(D.liq)}</div><div class="ks ok">${D.liq_pct}% do bruto</div></div>
+    <div class="kpi KB"><div class="kl">Vendas</div><div class="kv">${D.vend.toLocaleString('pt-BR')}</div><div class="ks">${dias} dias</div></div>
   `;
 
-  const sorted=[...PRODS].sort((a,b)=>PS[b].v-PS[a].v);
-  const maxV=PS[sorted[0]].v;
-  $('bV').innerHTML=sorted.map(p=>br(p,PS[p].v,maxV,'var(--blue)',fM(PS[p].v)+' ('+PS[p].o+'ped)')).join('');
+  const sorted=[...PRODS].sort((a,b)=>(PSw[b]?.v||0)-(PSw[a]?.v||0));
+  const maxV=PSw[sorted[0]]?.v||1;
+  $('bV').innerHTML=sorted.map(p=>{const s=PSw[p]||{v:0,o:0};return br(p,s.v,maxV,'var(--blue)',fM(s.v)+' ('+s.o+'ped)');}).join('');
 
   const sortedR=[...PRODS].sort((a,b)=>((RFa[b]?.r||0)+(CBa[b]?.c||0))-((RFa[a]?.r||0)+(CBa[a]?.c||0)));
   const maxR=Math.max(...sortedR.map(p=>(RFa[p]?.r||0)+(CBa[p]?.c||0)));
   $('bR').innerHTML=sortedR.map(p=>{
     const tot=(RF[p]?.r||0)+(CB[p]?.c||0);
-    const taxa=tot/Math.max(PS[p].v,1)*100;
+    const taxa=tot/Math.max(PSw[p]?.v||PS[p].v,1)*100;
     const c=taxa>20?'var(--red)':taxa>12?'var(--yellow)':'var(--green)';
     return br(p,tot,maxR,c,fM(tot)+' ('+taxa.toFixed(1)+'%)');
   }).join('');
 
   $('tP').innerHTML=sorted.map(p=>{
+    const s=PSw[p]||PS[p];
     const r=RF[p]||{r:0,q:0},c2=CB[p]||{c:0,q:0};
-    const taxa=(r.r+c2.c)/Math.max(PS[p].v,1)*100;
-    const td=TaxaDash[p];
+    const taxa=(r.r+c2.c)/Math.max(s.v,1)*100;
+    const td=TDw[p];
     const isNew=!HIST[p];
     return`<tr>
       <td class="b">${p}${isNew?'<span class="pill pB" style="margin-left:4px">NOVO</span>':''}</td>
-      <td class="r mn">${fM(PS[p].v)}</td><td class="c">${PS[p].o}</td>
+      <td class="r mn">${fM(s.v)}</td><td class="c">${s.o}</td>
       <td class="r mn tcr">${r.r>0?fM(r.r):'—'}</td>
       <td class="c ${r.q>0?'twn':''}">${r.q||'—'}</td>
       <td class="r mn ${c2.c>0?'tcr':''}">${c2.c>0?fM(c2.c):'—'}</td>
       <td class="c ${c2.q>0?'tcr':''}">${c2.q||'—'}</td>
       <td class="c">${td!=null?`<span class="pill pR">${td}% 📊</span>`:`<span class="pill ${taxa>20?'pP':taxa>12?'pR':taxa>6?'pY':'pG'}">${taxa.toFixed(1)}%</span>`}</td>
-      <td class="r mn twn">${fM(PS[p].v*(31/dias))}</td>
+      <td class="r mn twn">${fM(s.v*(31/dias))}</td>
       <td class="c">${pill(td||taxa)}</td>
     </tr>`;
   }).join('');
 
-  // Totals
-  const tRv=PRODS.reduce((s,p)=>s+(RF[p]?.r||0),0);
-  const tCv=PRODS.reduce((s,p)=>s+(CB[p]?.c||0),0);
-  const tRq=PRODS.reduce((s,p)=>s+(RF[p]?.q||0),0);
-  const tCq=PRODS.reduce((s,p)=>s+(CB[p]?.q||0),0);
-  const tTx=(tRv+tCv)/tv*100;
+  // Total row
   $('tP').innerHTML+=`<tr style="background:var(--surface2);font-weight:700">
     <td>TOTAL</td>
-    <td class="r mn">${w==='all'?'$770.4K':fM(tv)}</td>
-    <td class="c">${w==='all'?'3.072':PRODS.reduce((s,p)=>s+PS[p].o,0)}</td>
-    <td class="r mn tcr">${w==='all'?'$126.9K':fM(tRv)}</td>
-    <td class="c twn">${tRq}</td>
-    <td class="r mn tcr">${w==='all'?'$13.3K':fM(tCv)}</td>
-    <td class="c tcr">${tCq||'—'}</td>
-    <td class="c"><span class="pill pR">${tTx.toFixed(1)}%</span></td>
-    <td class="r mn twn">${fM((w==='all'?770380:tv)*(31/dias))}</td>
+    <td class="r mn">${fM(D.fat)}</td>
+    <td class="c">${D.vend.toLocaleString('pt-BR')}</td>
+    <td class="r mn tcr">${fM(D.rf)}</td>
+    <td class="c twn">—</td>
+    <td class="r mn tcr">${fM(D.cb)}</td>
+    <td class="c tcr">—</td>
+    <td class="c"><span class="pill pR">${((D.rf+D.cb)/D.fat*100).toFixed(1)}%</span></td>
+    <td class="r mn twn">${fM(D.fat*(31/dias))}</td>
     <td class="c">—</td>
   </tr>`;
 }
@@ -672,10 +689,10 @@ function rTrend(){
   $('kTR').innerHTML=`
     <div class="kpi KB"><div class="kl">Março 2026</div><div class="kv">$2.72M</div><div class="ks crit">Taxa: ${(361387/2715255*100).toFixed(1)}%</div></div>
     <div class="kpi KY"><div class="kl">Abril 2026</div><div class="kv">$2.43M</div><div class="ks crit">Taxa: ${(367662/2434052*100).toFixed(1)}%</div></div>
-    <div class="kpi KR"><div class="kl">Maio (10d)</div><div class="kv">$770.4K</div><div class="ks crit">RF:16.56% · CB:1.96%</div></div>
-    <div class="kpi KO"><div class="kl">Maio Projetado</div><div class="kv">${fM(770380*PROJ)}</div><div class="ks warn">×3.1</div></div>
-    <div class="kpi KR"><div class="kl">RF+CB Maio $</div><div class="kv">$142.7K</div><div class="ks crit">18.5% do faturamento</div></div>
-    <div class="kpi KP"><div class="kl">Líquido Maio</div><div class="kv">$101.3K</div><div class="ks crit">13.15% — baixo</div></div>
+    <div class="kpi KO"><div class="kl">S1 (01-08)</div><div class="kv">$603.7K</div><div class="ks crit">RF:18.24% · CB:1.85% · Liq:11.50%</div></div>
+    <div class="kpi KG"><div class="kl">S2 (09-10)</div><div class="kv">$166.6K</div><div class="ks ok">RF:10.48% · CB:2.35% · Liq:19.14%</div></div>
+    <div class="kpi KR"><div class="kl">Total Mai (10d)</div><div class="kv">$770.4K</div><div class="ks crit">RF:16.56% · CB:1.96%</div></div>
+    <div class="kpi KP"><div class="kl">Mai Projetado</div><div class="kv">${fM(770380*PROJ)}</div><div class="ks warn">Liq. projetado: ${fM(101330*PROJ)}</div></div>
   `;
 
   $('tTR').innerHTML=rows.map(r=>{
