@@ -126,7 +126,7 @@ footer{text-align:center;padding:22px;font-size:10px;color:var(--t4);border-top:
         <div class="meta">
           <span class="bdg or">$1.374M faturamento acumulado</span>
           <span class="bdg rd">1.176 reembolsos · $171.5K</span>
-          <span class="bdg pu">76 chargebacks · $23.1K</span>
+          <span class="bdg pu">76 chargebacks · $21.3K</span>
           <span class="bdg yl">5.442 vendas</span>
         </div>
       </div>
@@ -211,7 +211,7 @@ footer{text-align:center;padding:22px;font-size:10px;color:var(--t4);border-top:
 </div>
 
 <div class="sec" id="s-timing">
-  <div class="nb C">🔄 <strong>Metodologia crítica:</strong> filtrado por <strong>data do reembolso/CB</strong> (01-17/05). Reembolsos com +45d = pedidos de Mar/Abr sendo processados agora. CBs levam 16-45 dias para processar bancariamente. Total acumulado: 1.176 RF · 76 CB.</div>
+  <div class="nb C">🔄 <strong>Metodologia crítica:</strong> filtrado por <strong>data do reembolso/CB</strong> (01-17/05). Reembolsos com +45d = pedidos de Mar/Abr sendo processados agora. CBs levam 16-45 dias para processar bancariamente. Total acumulado: 1.176 RF · 76 CB · $21.3K.</div>
   <div class="kpis" id="kT"></div>
   <div class="g2">
     <div class="card">
@@ -320,10 +320,10 @@ const TaxaDash2={"AudiLeaf":6.4,"NervoLyn":17.4,"GlucoRecover":20.5,"VisiumPro":
 const TaxaDash3={"AudiLeaf":12.0,"NervoLyn":13.5,"GlucoRecover":14.8,"VisiumPro":14.8,"Prostafense":7.2,"Marobrain":16.4};
 // KPIs consolidados por período (dash empresa)
 const DASH={
-  all:{fat:1374147.43,liq:203336.23,vend:5442,rf:171452.81,cb:23101.85,rf_pct:12.48,cb_pct:1.68,liq_pct:14.80},
-  1:  {fat:603738.04,liq:69431.04, vend:2392,rf:110145.97,cb:11176.95,rf_pct:18.24,cb_pct:1.85,liq_pct:11.50},
-  2:  {fat:166642.03,liq:31899.48, vend:680, rf:17461.74, cb:3916.67, rf_pct:10.48,cb_pct:2.35,liq_pct:19.14},
-  3:  {fat:603767.36,liq:102005.72,vend:2370,rf:86452.22, cb:9117.07, rf_pct:14.32,cb_pct:1.51,liq_pct:16.89},
+  all:{fat:1374147.43,liq:203336.23,vend:5442,rf:171452.81,cb:21303.57,rf_pct:12.48,cb_pct:1.55,liq_pct:14.80},
+  1:  {fat:603738.04,liq:69431.04, vend:2392,rf:110145.97,cb:10095.77,rf_pct:18.24,cb_pct:1.67,liq_pct:11.50},
+  2:  {fat:166642.03,liq:31899.48, vend:680, rf:17461.74, cb:3219.02, rf_pct:10.48,cb_pct:1.93,liq_pct:19.14},
+  3:  {fat:603767.36,liq:102005.72,vend:2370,rf:86452.22, cb:7988.78, rf_pct:14.32,cb_pct:1.32,liq_pct:16.89},
 };
 const RFa={  // RF by refund date 01-17/05 (ALL)
   "AudiLeaf":    {r:52481.17,q:308},"NervoLyn":    {r:34326.12,q:199},
@@ -360,21 +360,37 @@ const RF3={  // S3 RF (11-17) — extraído do arquivo
   "LipoBliss":   {r:642.51,  q:5},  "ReduBurn":    {r:1668.36, q:6},
   "Booster XT":  {r:310.17,  q:1},
 };
-const CBa={  // CB by cb_date 01-17/05 (ALL)
+const CBa={  // CB by cb_date 01-17/05 (ALL) — arquivo
   "AudiLeaf":    {c:3121.06,q:11},"NervoLyn":    {c:3439.42,q:12},
-  "GlucoRecover":{c:2614.99,q:9}, "VisiumPro":   {c:998.64,  q:3},
+  "GlucoRecover":{c:2614.99,q:9}, "VisiumPro":   {c:998.64, q:3},
   "Marobrain":   {c:3848.25,q:15},"Prostafense": {c:2830.78,q:11},
-  "VigorLong":   {c:2489.93,q:9}, "ReduBurn":    {c:1424.35, q:4},
+  "VigorLong":   {c:2489.93,q:9}, "ReduBurn":    {c:1424.35,q:4},
   "LipoVive":    {c:536.15, q:2}, "LipoBliss":   {c:0,q:0},
   "LipoTrine":   {c:0,q:0},"Booster XT":{c:0,q:0},"BreathEaseX":{c:0,q:0},
 };
-const CB3={  // CB S3 (11-17)
-  "AudiLeaf":    {c:1630.89,q:6},"NervoLyn":    {c:1600.02,q:5},
-  "GlucoRecover":{c:864.44, q:3},"VisiumPro":   {c:668.93,  q:2},
-  "Marobrain":   {c:993.96, q:4},"Prostafense": {c:1253.93, q:5},
-  "VigorLong":   {c:976.61, q:3},"ReduBurn":    {c:0,q:0},
-  "LipoVive":    {c:0,q:0},"LipoBliss":{c:0,q:0},"LipoTrine":{c:0,q:0},
-  "Booster XT":  {c:0,q:0},"BreathEaseX":{c:0,q:0},
+const CB1={  // CB S1 (01-08) — arquivo
+  "AudiLeaf":    {c:1154.24,q:4}, "NervoLyn":    {c:626.78, q:3},
+  "GlucoRecover":{c:1750.55,q:6}, "VisiumPro":   {c:329.71, q:1},
+  "Marobrain":   {c:2201.35,q:8}, "Prostafense": {c:1576.85,q:6},
+  "VigorLong":   {c:1299.42,q:5}, "ReduBurn":    {c:620.72, q:2},
+  "LipoVive":    {c:536.15, q:2}, "LipoBliss":   {c:0,q:0},
+  "LipoTrine":   {c:0,q:0},"Booster XT":{c:0,q:0},"BreathEaseX":{c:0,q:0},
+};
+const CB2={  // CB S2 (09-10) — arquivo
+  "AudiLeaf":    {c:335.93, q:1}, "NervoLyn":    {c:1212.62,q:4},
+  "GlucoRecover":{c:0,q:0},       "VisiumPro":   {c:0,q:0},
+  "Marobrain":   {c:652.94, q:3}, "Prostafense": {c:0,q:0},
+  "VigorLong":   {c:213.90, q:1}, "ReduBurn":    {c:803.63, q:2},
+  "LipoVive":    {c:0,q:0},       "LipoBliss":   {c:0,q:0},
+  "LipoTrine":   {c:0,q:0},"Booster XT":{c:0,q:0},"BreathEaseX":{c:0,q:0},
+};
+const CB3={  // CB S3 (11-17) — arquivo
+  "AudiLeaf":    {c:1630.89,q:6}, "NervoLyn":    {c:1600.02,q:5},
+  "GlucoRecover":{c:864.44, q:3}, "VisiumPro":   {c:668.93, q:2},
+  "Marobrain":   {c:993.96, q:4}, "Prostafense": {c:1253.93,q:5},
+  "VigorLong":   {c:976.61, q:3}, "ReduBurn":    {c:0,q:0},
+  "LipoVive":    {c:0,q:0},       "LipoBliss":   {c:0,q:0},
+  "LipoTrine":   {c:0,q:0},"Booster XT":{c:0,q:0},"BreathEaseX":{c:0,q:0},
 };
 // Taxa ALL período (dash empresa)
 const TaxaDash={"AudiLeaf":12.0,"NervoLyn":13.5,"GlucoRecover":14.8,"VisiumPro":14.8,"Prostafense":7.2,"Marobrain":16.4};
@@ -533,7 +549,7 @@ function sw(w){
 }
 function rProd(w){
   const RF=w===1?RF1:w===2?RF2:w===3?RF3:RFa;
-  const CB=w==='all'?CBa:w===3?CB3:{};
+  const CB=w===1?CB1:w===2?CB2:w===3?CB3:CBa;
   const PSw=w===1?PS1:w===2?PS2:w===3?PS3:PS;
   const TDw=w===1?TaxaDash1:w===2?TaxaDash2:w===3?TaxaDash3:TaxaDash;
   const D=DASH[w]||DASH.all;
@@ -612,7 +628,7 @@ function rAfil(){
     <div class="kpi KR"><div class="kl">RF Processados</div><div class="kv">${fM(trfV)}</div><div class="ks crit">${AFILS.reduce((s,a)=>s+a.rfq,0)} eventos</div></div>
     <div class="kpi KP"><div class="kl">CB Processados</div><div class="kv">${fM(tcbV)}</div><div class="ks crit">${AFILS.reduce((s,a)=>s+a.cbq,0)} casos</div></div>
     <div class="kpi KY"><div class="kl">% RF Dash Empresa</div><div class="kv">12.48%</div><div class="ks warn">$171.5K de $1.374M</div></div>
-    <div class="kpi KR"><div class="kl">% CB Dash Empresa</div><div class="kv">1.68%</div><div class="ks crit">$23.1K de $1.374M</div></div>
+    <div class="kpi KR"><div class="kl">% CB Dash Empresa</div><div class="kv">1.55%</div><div class="ks crit">$21.3K de $1.374M</div></div>
   `;
 
   const maxV=sortedV[0]?.v||1;
