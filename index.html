@@ -122,12 +122,12 @@ footer{text-align:center;padding:22px;font-size:10px;color:var(--t4);border-top:
       <div class="bico">🐯</div>
       <div>
         <div class="bnm">Tiger Offers — Dashboard Maio 2026</div>
-        <div class="bsub">BuyGoods · 01/05–17/05/2026 · S1: 01-08 (8d) · S2: 09-10 (2d) · S3: 11-17 (7d)</div>
+        <div class="bsub">BuyGoods · 01/05–24/05/2026 · S1: 01-08 (8d) · S2: 09-10 (2d) · S3: 11-17 (7d) · S4: 18-24 (7d)</div>
         <div class="meta">
-          <span class="bdg or">$1.374M faturamento acumulado</span>
-          <span class="bdg rd">1.176 reembolsos · $171.5K</span>
-          <span class="bdg pu">76 chargebacks · $21.3K</span>
-          <span class="bdg yl">5.442 vendas</span>
+          <span class="bdg or">$1.856M faturamento acumulado</span>
+          <span class="bdg rd">1.668 reembolsos · $307.1K</span>
+          <span class="bdg pu">90 chargebacks · $24.9K</span>
+          <span class="bdg yl">7.372 vendas</span>
         </div>
       </div>
     </div>
@@ -144,14 +144,15 @@ footer{text-align:center;padding:22px;font-size:10px;color:var(--t4);border-top:
 <div class="body">
 
 <div class="sec active" id="s-prod">
-  <div class="nb W">⚠️ <strong>Metodologia:</strong> Vendas = dash empresa (01-17/05). RF/CB = arquivo dedicado filtrado por <strong>data do reembolso/CB</strong> (01-17/05). Reembolsos processados em Maio incluem pedidos de meses anteriores (janela 60d) — não são taxa somente do mês.</div>
+  <div class="nb W">⚠️ <strong>Metodologia:</strong> Vendas = dash empresa (01-24/05). RF/CB = arquivo dedicado filtrado por <strong>data do reembolso/CB</strong> (01-24/05). Reembolsos processados em Maio incluem pedidos de meses anteriores (janela 60d) — não são taxa somente do mês.</div>
   <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:11px;flex-wrap:wrap;gap:7px">
     <div style="font-size:11px;font-weight:700;color:var(--t2)">Filtrar reembolsos por:</div>
     <div class="wt">
-      <button class="wb active" id="wbtn-all" onclick="sw('all')">01-17/05 Total</button>
+      <button class="wb active" id="wbtn-all" onclick="sw('all')">01-24/05 Total</button>
       <button class="wb" id="wbtn-1" onclick="sw(1)">S1: 01-08</button>
       <button class="wb" id="wbtn-2" onclick="sw(2)">S2: 09-10</button>
       <button class="wb" id="wbtn-3" onclick="sw(3)">S3: 11-17</button>
+      <button class="wb" id="wbtn-4" onclick="sw(4)">S4: 18-24</button>
     </div>
   </div>
   <div class="kpis" id="kG"></div>
@@ -170,13 +171,13 @@ footer{text-align:center;padding:22px;font-size:10px;color:var(--t4);border-top:
       </tr></thead>
       <tbody id="tP"></tbody>
     </table></div>
-    <div style="margin-top:7px;font-size:9px;color:var(--t4)">Proj. = fat. ×(31÷dias). S1=×3.9 · S2=×15.5 · S3=×4.4 · Total=×1.8. Taxa = (RF+CB processados) ÷ Fat. Bruto. Inclui arrastamento histórico.</div>
+    <div style="margin-top:7px;font-size:9px;color:var(--t4)">Proj. = fat. ×(31÷dias). S1=×3.9 · S2=×15.5 · S3=×4.4 · S4=×4.4 · Total=×1.3. Taxa = (RF+CB processados) ÷ Fat. Bruto. Inclui arrastamento histórico.</div>
   </div>
-  <div class="nb I">ℹ️ <strong>S3 (11-17/05) adicionada:</strong> 7 dias · $603.8K · 2.370 vendas · RF: 14.32% · CB: 1.51% · Liq: 16.89%. <strong>BreathEaseX</strong> aparece com 100% dos RFs em 0-3d na S3 — padrão de venda agressiva.</div>
+  <div class="nb I">ℹ️ <strong>S4 (18-24/05) adicionada:</strong> 7 dias · $482K · 1.930 vendas · RF: 19.24% · CB: 0.97% · Liq: 10.80%. <strong>Pior semana do mês.</strong> VigorLong (-16.8%), LipoVive (-44.1%), ReduBurn (-8.1%), GlucoRecover (-4.1%) e BoosterXT (-121%) em prejuízo líquido na semana.</div>
 </div>
 
 <div class="sec" id="s-afil">
-  <div class="nb I">ℹ️ RF/CB acumulado 01–17/05 por afiliado (extraído dos arquivos). Vendas = S1+S2 (dash empresa) + S3 (relatório afiliados 11-17/05). Top 10 com timing da S3.</div>
+  <div class="nb I">ℹ️ RF/CB acumulado 01–24/05 por afiliado (extraído dos arquivos). Vendas = S1+S2+S3 (dash empresa) + S4 (18-24/05). Top 10 com timing acumulado.</div>
   <div class="kpis" id="kA"></div>
   <div class="g2">
     <div class="card"><div class="ch"><div class="ct">📊 Top 15 por Volume de Vendas</div></div><div id="bAV"></div></div>
@@ -211,7 +212,7 @@ footer{text-align:center;padding:22px;font-size:10px;color:var(--t4);border-top:
 </div>
 
 <div class="sec" id="s-timing">
-  <div class="nb C">🔄 <strong>Metodologia crítica:</strong> filtrado por <strong>data do reembolso/CB</strong> (01-17/05). Reembolsos com +45d = pedidos de Mar/Abr sendo processados agora. CBs levam 16-45 dias para processar bancariamente. Total acumulado: 1.176 RF · 76 CB · $21.3K.</div>
+  <div class="nb C">🔄 <strong>Metodologia crítica:</strong> filtrado por <strong>data do reembolso/CB</strong> (01-24/05). Reembolsos com +45d = pedidos de Mar/Abr sendo processados agora. CBs levam 16-45 dias para processar bancariamente. Total acumulado: 1.668 RF · 90 CB · $24.9K.</div>
   <div class="kpis" id="kT"></div>
   <div class="g2">
     <div class="card">
@@ -238,7 +239,7 @@ footer{text-align:center;padding:22px;font-size:10px;color:var(--t4);border-top:
         83% dos CB processados em Maio são de pedidos de 16+ dias atrás. O processo bancário de chargeback demora semanas — é normal. Total 17d: 76 chargebacks · $23.1K.
       </div>
     </div>
-    <div class="card"><div class="ch"><div class="ct">🎯 Motivos de Reembolso (717)</div></div><div id="mB"></div></div>
+    <div class="card"><div class="ch"><div class="ct">🎯 Motivos de Reembolso</div></div><div id="mB"></div></div>
   </div>
 </div>
 
@@ -271,20 +272,19 @@ footer{text-align:center;padding:22px;font-size:10px;color:var(--t4);border-top:
 const $=id=>document.getElementById(id);
 const fmt=(n,d=0)=>isNaN(+n)?'—':(+n).toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d});
 const fM=n=>{n=+n;if(!n||isNaN(n))return'—';if(n>=1e6)return'$'+fmt(n/1e6,2)+'M';if(n>=1e3)return'$'+fmt(n/1e3,1)+'K';return'$'+fmt(n,0);};
-const PROJ=1.82;  // 31÷17d
+const PROJ=1.29;  // 31÷24d
 const TC={"0-3d":"var(--red)","4-7d":"var(--yellow)","8-15d":"var(--blue)","16-30d":"var(--green)","+45d":"var(--purple)"};
 
 /* ── DADOS ───────────────────────────────────────────────────────────── */
-const PS={  // Produto Sales ALL (dash empresa 01-17/05)
-  "AudiLeaf":    {o:1506,v:374898},"NervoLyn":    {o:996,v:251514},
-  "GlucoRecover":{o:686,v:178289}, "VisiumPro":   {o:639,v:160507},
-  "Prostafense": {o:542,v:137458}, "Marobrain":   {o:446,v:117627},
-  "VigorLong":   {o:229,v:58651},  "BreathEaseX": {o:150,v:35690},
-  "ReduBurn":    {o:59, v:14847},  "LipoBliss":   {o:56, v:13384},
-  "LipoTrine":   {o:89, v:22681},  "LipoVive":    {o:60, v:12340},
-  "Booster XT":  {o:5,  v:1164},
+const PS={  // Produto Sales ALL (01-24/05)
+  "AudiLeaf":    {o:2198,v:478895},"NervoLyn":    {o:1309,v:330122},
+  "GlucoRecover":{o:790, v:211366},"VisiumPro":   {o:887, v:222709},
+  "Prostafense": {o:805, v:203229},"Marobrain":   {o:565, v:156826},
+  "VigorLong":   {o:256, v:68549}, "BreathEaseX": {o:377, v:91671},
+  "ReduBurn":    {o:77,  v:20853}, "LipoBliss":   {o:56,  v:13384},
+  "LipoTrine":   {o:136, v:40942},"LipoVive":     {o:74,  v:17587},
+  "Booster XT":  {o:8,   v:2299},
 };
-// S1 (01-08) — inalterado
 const PS1={
   "AudiLeaf":    {o:646,v:162601},"NervoLyn":    {o:437,v:108969},
   "GlucoRecover":{o:329,v:85977}, "VisiumPro":   {o:250,v:61250},
@@ -294,7 +294,6 @@ const PS1={
   "LipoTrine":   {o:29, v:7407},  "LipoVive":    {o:26, v:5318},
   "Booster XT":  {o:2,  v:583},
 };
-// S2 (09-10) — inalterado
 const PS2={
   "AudiLeaf":    {o:218,v:52378}, "NervoLyn":    {o:122,v:30315},
   "GlucoRecover":{o:51, v:13025}, "VisiumPro":   {o:83, v:19970},
@@ -304,37 +303,47 @@ const PS2={
   "LipoTrine":   {o:8,  v:2041},  "LipoVive":    {o:7,  v:1465},
   "Booster XT":  {o:1,  v:161},
 };
-// S3 (11-17) — dados do dash empresa
 const PS3={
   "AudiLeaf":    {o:642,v:159919},"NervoLyn":    {o:437,v:112230},
   "GlucoRecover":{o:306,v:79287}, "VisiumPro":   {o:306,v:79287},
   "Prostafense": {o:248,v:62792}, "Marobrain":   {o:207,v:54742},
   "VigorLong":   {o:100,v:25623}, "BreathEaseX": {o:65, v:15490},
   "ReduBurn":    {o:25, v:6306},  "LipoBliss":   {o:25, v:5970},
-  "LipoTrine":   {o:52, v:13233},"LipoVive":    {o:27, v:5557},
+  "LipoTrine":   {o:52, v:13233},"LipoVive":     {o:27, v:5557},
   "Booster XT":  {o:2,  v:420},
+};
+const PS4={  // S4 (18-24) — dash empresa
+  "AudiLeaf":    {o:423,v:103997},"NervoLyn":    {o:313,v:78608},
+  "Prostafense": {o:263,v:65771}, "VisiumPro":   {o:248,v:62203},
+  "BreathEaseX": {o:227,v:55981},"Marobrain":   {o:119,v:39199},
+  "GlucoRecover":{o:104,v:33077},"LipoTrine":   {o:47, v:18261},
+  "VigorLong":   {o:27, v:9898},  "ReduBurn":    {o:18, v:6006},
+  "LipoVive":    {o:14, v:5247},  "LipoBliss":   {o:0,  v:0},
+  "Booster XT":  {o:3,  v:1135},
 };
 // Taxa % por produto por semana (dash empresa)
 const TaxaDash1={"AudiLeaf":18.1,"NervoLyn":13.0,"GlucoRecover":18.4,"VisiumPro":18.0,"Prostafense":15.5};
 const TaxaDash2={"AudiLeaf":6.4,"NervoLyn":17.4,"GlucoRecover":20.5,"VisiumPro":10.5,"Prostafense":3.1};
 const TaxaDash3={"AudiLeaf":12.0,"NervoLyn":13.5,"GlucoRecover":14.8,"VisiumPro":14.8,"Prostafense":7.2,"Marobrain":16.4};
-// KPIs consolidados por período (dash empresa)
+const TaxaDash4={"AudiLeaf":24.6,"NervoLyn":15.7,"GlucoRecover":26.7,"VisiumPro":14.8,"Prostafense":17.5,"Marobrain":25.3,"BreathEaseX":6.8,"VigorLong":47.4,"ReduBurn":34.8,"LipoVive":68.8};
+const TaxaDash={"AudiLeaf":16.3,"NervoLyn":14.1,"GlucoRecover":18.7,"VisiumPro":15.3,"Prostafense":12.5,"Marobrain":20.1,"BreathEaseX":10.5,"VigorLong":18.9};
 const DASH={
-  all:{fat:1374147.43,liq:203336.23,vend:5442,rf:171452.81,cb:21303.57,rf_pct:12.48,cb_pct:1.55,liq_pct:14.80},
-  1:  {fat:603738.04,liq:69431.04, vend:2392,rf:110145.97,cb:10095.77,rf_pct:18.24,cb_pct:1.67,liq_pct:11.50},
-  2:  {fat:166642.03,liq:31899.48, vend:680, rf:17461.74, cb:3219.02, rf_pct:10.48,cb_pct:1.93,liq_pct:19.14},
-  3:  {fat:603767.36,liq:102005.72,vend:2370,rf:86452.22, cb:7988.78, rf_pct:14.32,cb_pct:1.32,liq_pct:16.89},
+  all:{fat:1856153.48,liq:255408.35,vend:7372,rf:307115.60,cb:24910.93,rf_pct:16.55,cb_pct:1.34,liq_pct:13.76},
+  1:  {fat:603738.04, liq:69431.04, vend:2392,rf:110919.09,cb:9028.48, rf_pct:18.38,cb_pct:1.50,liq_pct:11.50},
+  2:  {fat:166642.03, liq:31899.48, vend:680, rf:17735.38, cb:3219.02, rf_pct:10.64,cb_pct:1.93,liq_pct:19.14},
+  3:  {fat:603767.36, liq:102005.72,vend:2370,rf:85735.69, cb:7988.78, rf_pct:14.20,cb_pct:1.32,liq_pct:16.89},
+  4:  {fat:482006.05, liq:52072.12, vend:1930,rf:92725.44, cb:4674.65, rf_pct:19.24,cb_pct:0.97,liq_pct:10.80},
 };
-const RFa={  // RF by refund date 01-17/05 (ALL)
-  "AudiLeaf":    {r:52481.17,q:308},"NervoLyn":    {r:34326.12,q:199},
-  "GlucoRecover":{r:30362.57,q:161},"VisiumPro":   {r:24826.04,q:137},
-  "Marobrain":   {r:22194.35,q:111},"Prostafense": {r:14134.79,q:76},
-  "VigorLong":   {r:13540.35,q:75}, "BreathEaseX": {r:4081.59, q:21},
-  "LipoTrine":   {r:2387.61, q:14}, "LipoVive":    {r:3752.64, q:17},
-  "LipoBliss":   {r:2254.80, q:20}, "ReduBurn":    {r:7659.77, q:33},
-  "Booster XT":  {r:760.76,  q:4},
+const RFa={  // RF 01-24/05 ALL — arquivo
+  "AudiLeaf":    {r:78105.76,q:454},"NervoLyn":    {r:46665.31,q:271},
+  "GlucoRecover":{r:39076.03,q:204},"VisiumPro":   {r:34005.80,q:186},
+  "Marobrain":   {r:31460.64,q:146},"Prostafense": {r:25456.70,q:133},
+  "VigorLong":   {r:18251.27,q:100},"BreathEaseX": {r:9611.93, q:45},
+  "LipoTrine":   {r:2869.65, q:17}, "LipoVive":    {r:7362.51, q:39},
+  "LipoBliss":   {r:2254.80, q:20}, "ReduBurn":    {r:9746.44, q:43},
+  "Booster XT":  {r:2248.76, q:10},
 };
-const RF1={  // S1 RF (01-08) — inalterado
+const RF1={
   "AudiLeaf":    {r:30063.71,q:184},"NervoLyn":    {r:13935.00,q:85},
   "GlucoRecover":{r:15532.42,q:87}, "VisiumPro":   {r:11334.64,q:65},
   "Marobrain":   {r:11270.76,q:58}, "Prostafense": {r:8900.58, q:49},
@@ -343,7 +352,7 @@ const RF1={  // S1 RF (01-08) — inalterado
   "LipoTrine":   {r:252.51,  q:1},  "Booster XT":  {r:254.59,  q:2},
   "BreathEaseX": {r:0,q:0},
 };
-const RF2={  // S2 RF (09-10) — inalterado
+const RF2={
   "AudiLeaf":    {r:3236.76,q:18},"NervoLyn":    {r:5269.28,q:29},
   "GlucoRecover":{r:2984.47,q:12},"VisiumPro":   {r:2423.20,q:12},
   "Marobrain":   {r:1447.52,q:5}, "Prostafense": {r:488.83, q:2},
@@ -351,7 +360,7 @@ const RF2={  // S2 RF (09-10) — inalterado
   "LipoVive":    {r:380.37, q:2}, "Booster XT":  {r:196.00, q:1},
   "LipoBliss":   {r:0,q:0},"LipoTrine":{r:0,q:0},"BreathEaseX":{r:0,q:0},
 };
-const RF3={  // S3 RF (11-17) — extraído do arquivo
+const RF3={
   "AudiLeaf":    {r:19180.70,q:106},"NervoLyn":    {r:15121.84,q:85},
   "GlucoRecover":{r:11845.68,q:62}, "VisiumPro":   {r:11068.20,q:60},
   "Marobrain":   {r:9476.07, q:48}, "Prostafense": {r:4745.38, q:25},
@@ -360,15 +369,24 @@ const RF3={  // S3 RF (11-17) — extraído do arquivo
   "LipoBliss":   {r:642.51,  q:5},  "ReduBurn":    {r:1668.36, q:6},
   "Booster XT":  {r:310.17,  q:1},
 };
-const CBa={  // CB by cb_date 01-17/05 (ALL) — arquivo
-  "AudiLeaf":    {c:3121.06,q:11},"NervoLyn":    {c:3439.42,q:12},
-  "GlucoRecover":{c:2614.99,q:9}, "VisiumPro":   {c:998.64, q:3},
-  "Marobrain":   {c:3848.25,q:15},"Prostafense": {c:2830.78,q:11},
-  "VigorLong":   {c:2489.93,q:9}, "ReduBurn":    {c:1424.35,q:4},
-  "LipoVive":    {c:536.15, q:2}, "LipoBliss":   {c:0,q:0},
-  "LipoTrine":   {c:0,q:0},"Booster XT":{c:0,q:0},"BreathEaseX":{c:0,q:0},
+const RF4={  // S4 (18-24) — arquivo
+  "AudiLeaf":    {r:25624.59,q:146},"NervoLyn":    {r:12339.19,q:72},
+  "GlucoRecover":{r:8830.46, q:44}, "VisiumPro":   {r:9179.76, q:49},
+  "Marobrain":   {r:9266.29, q:35}, "Prostafense": {r:11321.91,q:57},
+  "VigorLong":   {r:4710.92, q:25}, "BreathEaseX": {r:3785.74, q:17},
+  "LipoTrine":   {r:482.04,  q:3},  "LipoVive":    {r:3609.87, q:22},
+  "LipoBliss":   {r:0,q:0},         "ReduBurn":    {r:2086.67, q:10},
+  "Booster XT":  {r:1488.00, q:6},
 };
-const CB1={  // CB S1 (01-08) — arquivo
+const CBa={  // CB 01-24/05 ALL — arquivo
+  "AudiLeaf":    {c:4140.22,q:15},"NervoLyn":    {c:3439.42,q:12},
+  "GlucoRecover":{c:3096.85,q:11},"VisiumPro":   {c:1851.37,q:6},
+  "Marobrain":   {c:3848.25,q:15},"Prostafense": {c:3081.27,q:12},
+  "VigorLong":   {c:2741.63,q:10},"ReduBurn":    {c:1113.99,q:3},
+  "LipoVive":    {c:1057.47,q:4}, "LipoBliss":   {c:215.95, q:1},
+  "LipoTrine":   {c:0,q:0},"Booster XT":{c:324.51,q:1},"BreathEaseX":{c:0,q:0},
+};
+const CB1={
   "AudiLeaf":    {c:1154.24,q:4}, "NervoLyn":    {c:626.78, q:3},
   "GlucoRecover":{c:1750.55,q:6}, "VisiumPro":   {c:329.71, q:1},
   "Marobrain":   {c:2201.35,q:8}, "Prostafense": {c:1576.85,q:6},
@@ -376,7 +394,7 @@ const CB1={  // CB S1 (01-08) — arquivo
   "LipoVive":    {c:536.15, q:2}, "LipoBliss":   {c:0,q:0},
   "LipoTrine":   {c:0,q:0},"Booster XT":{c:0,q:0},"BreathEaseX":{c:0,q:0},
 };
-const CB2={  // CB S2 (09-10) — arquivo
+const CB2={
   "AudiLeaf":    {c:335.93, q:1}, "NervoLyn":    {c:1212.62,q:4},
   "GlucoRecover":{c:0,q:0},       "VisiumPro":   {c:0,q:0},
   "Marobrain":   {c:652.94, q:3}, "Prostafense": {c:0,q:0},
@@ -384,7 +402,7 @@ const CB2={  // CB S2 (09-10) — arquivo
   "LipoVive":    {c:0,q:0},       "LipoBliss":   {c:0,q:0},
   "LipoTrine":   {c:0,q:0},"Booster XT":{c:0,q:0},"BreathEaseX":{c:0,q:0},
 };
-const CB3={  // CB S3 (11-17) — arquivo
+const CB3={
   "AudiLeaf":    {c:1630.89,q:6}, "NervoLyn":    {c:1600.02,q:5},
   "GlucoRecover":{c:864.44, q:3}, "VisiumPro":   {c:668.93, q:2},
   "Marobrain":   {c:993.96, q:4}, "Prostafense": {c:1253.93,q:5},
@@ -392,9 +410,18 @@ const CB3={  // CB S3 (11-17) — arquivo
   "LipoVive":    {c:0,q:0},       "LipoBliss":   {c:0,q:0},
   "LipoTrine":   {c:0,q:0},"Booster XT":{c:0,q:0},"BreathEaseX":{c:0,q:0},
 };
-// Taxa ALL período (dash empresa)
-const TaxaDash={"AudiLeaf":12.0,"NervoLyn":13.5,"GlucoRecover":14.8,"VisiumPro":14.8,"Prostafense":7.2,"Marobrain":16.4};
-
+const CB4={  // S4 (18-24) — arquivo
+  "AudiLeaf":    {c:1019.16,q:4}, "NervoLyn":    {c:0,q:0},
+  "GlucoRecover":{c:914.42, q:3}, "VisiumPro":   {c:852.73, q:3},
+  "Marobrain":   {c:0,q:0},       "Prostafense": {c:250.49, q:1},
+  "VigorLong":   {c:251.70, q:1}, "ReduBurn":    {c:0,q:0},
+  "LipoVive":    {c:845.69, q:3}, "LipoBliss":   {c:215.95, q:1},
+  "LipoTrine":   {c:0,q:0},"Booster XT":{c:324.51,q:1},"BreathEaseX":{c:0,q:0},
+};
+const TRF_PER={"all":{"0-3d":595,"4-7d":146,"8-15d":234,"16-30d":248,"+45d":445},"s1":{"0-3d":258,"4-7d":53,"8-15d":90,"16-30d":104,"+45d":133},"s2":{"0-3d":44,"4-7d":10,"8-15d":9,"16-30d":12,"+45d":11},"s3":{"0-3d":171,"4-7d":44,"8-15d":56,"16-30d":76,"+45d":111},"s4":{"0-3d":122,"4-7d":39,"8-15d":79,"16-30d":56,"+45d":190}};
+const TCB_PER={"all":{"0-3d":1,"4-7d":1,"8-15d":20,"16-30d":39,"+45d":29},"s1":{"0-3d":1,"4-7d":1,"8-15d":5,"16-30d":18,"+45d":9},"s2":{"0-3d":0,"4-7d":0,"8-15d":1,"16-30d":6,"+45d":4},"s3":{"0-3d":0,"4-7d":0,"8-15d":12,"16-30d":10,"+45d":6},"s4":{"0-3d":0,"4-7d":0,"8-15d":2,"16-30d":5,"+45d":10}};
+const MOTIVOS_PER={"all":[["Chargeback alert",496],["Threatened with a chargeback",247],["Did not agree to the upsells",144],["Chargeback Alert-RDR",94],["No longer interested",85],["Doctor advised against using it",81],["Chargeback",62],["Experienced side effects",57],["Did not work",46],["Too expensive",42],["Partial refund - saved sale",38],["Does not remember placing order",37],["Did not receive product",36],["Buyers remorse",30],["Did not see expected results",21]],"s1":[["Chargeback alert",192],["Threatened with a chargeback",104],["Did not agree to the upsells",53],["No longer interested",38],["Doctor advised against using it",27],["Experienced side effects",27],["Partial refund - saved sale",21],["Chargeback Alert-RDR",21],["Did not work",21],["Chargeback",16],["Did not receive product",14],["Duplicate order",13],["Buyers remorse",11],["Does not remember placing order",10],["Misinformed by marketing",10]],"s2":[["Chargeback alert",28],["Chargeback",15],["Did not agree to the upsells",9],["Threatened with a chargeback",9],["Did not work",5],["Too expensive",4],["No longer interested",4],["Chargeback Alert-RDR",3],["Does not remember placing order",2],["Duplicate order",2],["Did not receive product",2]],"s3":[["Chargeback alert",128],["Threatened with a chargeback",79],["Did not agree to the upsells",45],["Doctor advised against using it",28],["No longer interested",24],["Too expensive",22],["Chargeback Alert-RDR",20],["Chargeback",16],["Did not see expected results",12],["Partial refund - saved sale",12],["Did not receive product",12],["Experienced side effects",9],["Does not remember placing order",9],["Did not work",8]],"s4":[["Chargeback alert",148],["Threatened with a chargeback",55],["Chargeback Alert-RDR",50],["Did not agree to the upsells",37],["Doctor advised against using it",26],["Experienced side effects",21],["No longer interested",19],["Does not remember placing order",16],["Chargeback",15],["Buyers remorse",14],["Did not work",12],["Order incorrect item variant",10],["Did not receive product",8],["Too expensive",7],["Not happy with product",7]]};
+const AFILS_PER={"all":[{"nm":"nexifymarketing","rf":25595.68,"rfq":153,"cb":2262.13,"cbq":8,"tm":{"0-3d":57,"4-7d":19,"8-15d":31,"16-30d":26,"+45d":20},"mt":["Chargeback alert","Did not agree to the upsells","Threatened with chargeback"]},{"nm":"HelpGrid C..","rf":21963.35,"rfq":100,"cb":1075.92,"cbq":2,"tm":{"0-3d":20,"4-7d":4,"8-15d":18,"16-30d":19,"+45d":39},"mt":["Chargeback alert","Did not receive product","Doctor advised"]},{"nm":"Aad020207","rf":15599.06,"rfq":83,"cb":335.93,"cbq":1,"tm":{"0-3d":64,"4-7d":8,"8-15d":9,"16-30d":2,"+45d":0},"mt":["Chargeback alert","Did not agree to the upsells","Threatened with chargeback"]},{"nm":"gestor1.buygoods@outlook.com","rf":11264.12,"rfq":64,"cb":654.49,"cbq":2,"tm":{"0-3d":14,"4-7d":0,"8-15d":6,"16-30d":16,"+45d":28},"mt":["Chargeback alert","Did not agree to the upsells","Experienced side effects"]},{"nm":"Wladimir P.","rf":8367.63,"rfq":50,"cb":533.05,"cbq":2,"tm":{"0-3d":17,"4-7d":1,"8-15d":14,"16-30d":1,"+45d":17},"mt":["Chargeback alert","Threatened with chargeback","Did not work"]},{"nm":"rjpassos","rf":7337.18,"rfq":44,"cb":1973.1,"cbq":7,"tm":{"0-3d":16,"4-7d":9,"8-15d":8,"16-30d":7,"+45d":4},"mt":["Chargeback alert","Threatened with chargeback","Did not see expected results"]},{"nm":"mirela7d","rf":7043.79,"rfq":33,"cb":329.71,"cbq":1,"tm":{"0-3d":12,"4-7d":0,"8-15d":3,"16-30d":9,"+45d":9},"mt":["Chargeback alert","Threatened with chargeback","Did not work"]},{"nm":"rafaelnnb","rf":6882.43,"rfq":36,"cb":0,"cbq":0,"tm":{"0-3d":20,"4-7d":9,"8-15d":1,"16-30d":1,"+45d":5},"mt":["Chargeback alert","No longer interested","Threatened with chargeback"]},{"nm":"MaxWeb","rf":6712.24,"rfq":32,"cb":1264.23,"cbq":5,"tm":{"0-3d":3,"4-7d":0,"8-15d":2,"16-30d":1,"+45d":26},"mt":["Chargeback alert","Chargeback Alert-RDR","Did not work"]},{"nm":"Lucaslima96","rf":6387.31,"rfq":39,"cb":819.18,"cbq":3,"tm":{"0-3d":13,"4-7d":0,"8-15d":5,"16-30d":6,"+45d":15},"mt":["Chargeback alert","Did not agree to the upsells","Doctor advised"]},{"nm":"HelpGrid T.","rf":6362.95,"rfq":34,"cb":218.66,"cbq":1,"tm":{"0-3d":9,"4-7d":2,"8-15d":8,"16-30d":4,"+45d":11},"mt":["Threatened with chargeback","Chargeback alert","Experienced side effects"]},{"nm":"Rafazag89","rf":6273.49,"rfq":35,"cb":0,"cbq":0,"tm":{"0-3d":10,"4-7d":1,"8-15d":9,"16-30d":5,"+45d":10},"mt":["Doctor advised","Does not remember placing order","Chargeback alert"]},{"nm":"andreiW7","rf":6022.61,"rfq":31,"cb":0,"cbq":0,"tm":{"0-3d":13,"4-7d":3,"8-15d":7,"16-30d":1,"+45d":7},"mt":["Chargeback alert","Ordered by mistake","Chargeback Alert-RDR"]},{"nm":"gustavo78","rf":5881.67,"rfq":27,"cb":585.45,"cbq":2,"tm":{"0-3d":12,"4-7d":4,"8-15d":8,"16-30d":2,"+45d":1},"mt":["Chargeback alert","Threatened with chargeback","Misinformed by marketing"]},{"nm":"FABIO T935","rf":5718.57,"rfq":28,"cb":225.64,"cbq":1,"tm":{"0-3d":12,"4-7d":6,"8-15d":5,"16-30d":5,"+45d":0},"mt":["Chargeback alert","Threatened with chargeback","Does not remember"]},{"nm":"isaarantes","rf":5505.7,"rfq":32,"cb":0,"cbq":0,"tm":{"0-3d":9,"4-7d":3,"8-15d":8,"16-30d":8,"+45d":4},"mt":["Did not agree to the upsells","Chargeback alert","No longer interested"]},{"nm":"smaralima","rf":5467.32,"rfq":34,"cb":483.43,"cbq":2,"tm":{"0-3d":9,"4-7d":7,"8-15d":0,"16-30d":13,"+45d":5},"mt":["Chargeback alert","Does not remember placing order","Chargeback"]},{"nm":"emilianosoles","rf":4918.63,"rfq":30,"cb":0,"cbq":0,"tm":{"0-3d":26,"4-7d":2,"8-15d":2,"16-30d":0,"+45d":0},"mt":["No longer interested","Did not agree to the upsells","Chargeback alert"]},{"nm":"Barbara_ads","rf":4637.37,"rfq":30,"cb":334.2,"cbq":1,"tm":{"0-3d":9,"4-7d":1,"8-15d":14,"16-30d":4,"+45d":2},"mt":["Chargeback alert","Threatened with chargeback","Experienced side effects"]},{"nm":"Helpgrid I225","rf":4779.55,"rfq":30,"cb":320.75,"cbq":1,"tm":{"0-3d":14,"4-7d":0,"8-15d":3,"16-30d":4,"+45d":9},"mt":["Did not agree to the upsells","Threatened with chargeback","Not happy with product"]}],"s1":[{"nm":"nexifymarketing","rf":9410.18,"rfq":55,"cb":826.06,"cbq":3,"tm":{"0-3d":30,"4-7d":11,"8-15d":7,"16-30d":3,"+45d":4},"mt":["Chargeback alert","Threatened with chargeback","Did not agree to the upsells"]},{"nm":"HelpGrid C..","rf":7774.67,"rfq":42,"cb":0,"cbq":0,"tm":{"0-3d":10,"4-7d":0,"8-15d":10,"16-30d":11,"+45d":11},"mt":["Chargeback alert","Did not receive product","Doctor advised"]},{"nm":"Aad020207","rf":5124.21,"rfq":29,"cb":0,"cbq":0,"tm":{"0-3d":24,"4-7d":2,"8-15d":3,"16-30d":0,"+45d":0},"mt":["Chargeback alert","Threatened with chargeback","Duplicate order"]},{"nm":"Wladimir P.","rf":4514.78,"rfq":28,"cb":533.05,"cbq":2,"tm":{"0-3d":15,"4-7d":0,"8-15d":3,"16-30d":1,"+45d":9},"mt":["Chargeback alert","Threatened with chargeback","Did not work"]},{"nm":"rjpassos","rf":3579.98,"rfq":20,"cb":253.96,"cbq":1,"tm":{"0-3d":8,"4-7d":8,"8-15d":2,"16-30d":1,"+45d":1},"mt":["Chargeback alert","Threatened with chargeback","Partial refund"]},{"nm":"gestor1.buygoods@outlook.com","rf":3552.05,"rfq":24,"cb":0,"cbq":0,"tm":{"0-3d":2,"4-7d":0,"8-15d":3,"16-30d":10,"+45d":9},"mt":["Chargeback alert","Did not agree to the upsells"]},{"nm":"smaralima","rf":3115.03,"rfq":19,"cb":0,"cbq":0,"tm":{"0-3d":4,"4-7d":7,"8-15d":0,"16-30d":8,"+45d":0},"mt":["Chargeback alert","Did not receive product","Did not agree to the upsells"]},{"nm":"Lucaslima96","rf":3385.65,"rfq":23,"cb":328.18,"cbq":1,"tm":{"0-3d":10,"4-7d":0,"8-15d":4,"16-30d":2,"+45d":7},"mt":["Did not agree to the upsells","Doctor advised"]},{"nm":"Barbara_ads","rf":3046.32,"rfq":23,"cb":0,"cbq":0,"tm":{"0-3d":8,"4-7d":1,"8-15d":10,"16-30d":4,"+45d":0},"mt":["Threatened with chargeback","Experienced side effects","Chargeback alert"]},{"nm":"isaarantes","rf":2970.33,"rfq":17,"cb":0,"cbq":0,"tm":{"0-3d":0,"4-7d":2,"8-15d":8,"16-30d":3,"+45d":4},"mt":["Chargeback alert","No longer interested","Did not agree to the upsells"]},{"nm":"mirela7d","rf":2692.75,"rfq":11,"cb":329.71,"cbq":1,"tm":{"0-3d":1,"4-7d":0,"8-15d":2,"16-30d":5,"+45d":3},"mt":["Chargeback alert","Did not work","Threatened with chargeback"]},{"nm":"FABIO T935","rf":2353.88,"rfq":11,"cb":225.64,"cbq":1,"tm":{"0-3d":6,"4-7d":2,"8-15d":3,"16-30d":0,"+45d":0},"mt":["Chargeback alert","Threatened with chargeback"]},{"nm":"MaxWeb","rf":2276.68,"rfq":12,"cb":758.57,"cbq":3,"tm":{"0-3d":0,"4-7d":0,"8-15d":0,"16-30d":0,"+45d":12},"mt":["Chargeback alert","Chargeback Alert-RDR","Did not work"]},{"nm":"HelpGrid T.","rf":2913.59,"rfq":16,"cb":218.66,"cbq":1,"tm":{"0-3d":6,"4-7d":0,"8-15d":4,"16-30d":2,"+45d":4},"mt":["Threatened with chargeback","No longer interested","Chargeback alert"]},{"nm":"andreiW7","rf":1478.57,"rfq":9,"cb":0,"cbq":0,"tm":{"0-3d":6,"4-7d":1,"8-15d":2,"16-30d":0,"+45d":0},"mt":["Chargeback alert","No longer interested"]}],"s2":[{"nm":"nexifymarketing","rf":818.92,"rfq":6,"cb":310.36,"cbq":1,"tm":{"0-3d":2,"4-7d":2,"8-15d":0,"16-30d":0,"+45d":2},"mt":["Did not work","Did not agree to the upsells","Did not receive product"]},{"nm":"rafaelnnb","rf":1234.5,"rfq":7,"cb":0,"cbq":0,"tm":{"0-3d":3,"4-7d":4,"8-15d":0,"16-30d":0,"+45d":0},"mt":["No longer interested","Chargeback alert","Did not agree to the upsells"]},{"nm":"Rafazag89","rf":863.16,"rfq":6,"cb":0,"cbq":0,"tm":{"0-3d":4,"4-7d":0,"8-15d":0,"16-30d":2,"+45d":0},"mt":["Too expensive","Does not remember","Chargeback alert"]},{"nm":"Aad020207","rf":667.54,"rfq":4,"cb":335.93,"cbq":1,"tm":{"0-3d":4,"4-7d":0,"8-15d":0,"16-30d":0,"+45d":0},"mt":["Did not agree to the upsells","Chargeback alert","Chargeback"]},{"nm":"andreiW7","rf":877.57,"rfq":3,"cb":0,"cbq":0,"tm":{"0-3d":0,"4-7d":0,"8-15d":3,"16-30d":0,"+45d":0},"mt":["Chargeback alert"]},{"nm":"rjpassos","rf":0,"rfq":0,"cb":902.26,"cbq":3,"tm":{"0-3d":0,"4-7d":0,"8-15d":0,"16-30d":0,"+45d":0},"mt":[]}],"s3":[{"nm":"nexifymarketing","rf":7789.5,"rfq":41,"cb":597.55,"cbq":2,"tm":{"0-3d":20,"4-7d":3,"8-15d":2,"16-30d":11,"+45d":5},"mt":["Chargeback alert","Too expensive","Did not agree to the upsells"]},{"nm":"HelpGrid C..","rf":6410.14,"rfq":32,"cb":602,"cbq":1,"tm":{"0-3d":7,"4-7d":2,"8-15d":3,"16-30d":5,"+45d":15},"mt":["Chargeback alert","Doctor advised","Did not receive product"]},{"nm":"Aad020207","rf":5264.24,"rfq":29,"cb":0,"cbq":0,"tm":{"0-3d":24,"4-7d":3,"8-15d":0,"16-30d":2,"+45d":0},"mt":["Chargeback alert","Did not agree to the upsells","No longer interested"]},{"nm":"gestor1.buygoods@outlook.com","rf":4286.27,"rfq":24,"cb":329.98,"cbq":1,"tm":{"0-3d":11,"4-7d":0,"8-15d":3,"16-30d":4,"+45d":6},"mt":["Did not agree to the upsells","Threatened with chargeback","Too expensive"]},{"nm":"mirela7d","rf":3463.73,"rfq":17,"cb":0,"cbq":0,"tm":{"0-3d":7,"4-7d":0,"8-15d":1,"16-30d":4,"+45d":5},"mt":["Threatened with chargeback","Chargeback alert","Chargeback"]},{"nm":"gustavo78","rf":2552.49,"rfq":13,"cb":0,"cbq":0,"tm":{"0-3d":5,"4-7d":2,"8-15d":4,"16-30d":2,"+45d":0},"mt":["Chargeback alert","Threatened with chargeback","Misinformed"]},{"nm":"rafaelnnb","rf":2935.69,"rfq":13,"cb":0,"cbq":0,"tm":{"0-3d":6,"4-7d":4,"8-15d":0,"16-30d":1,"+45d":2},"mt":["Chargeback alert","Chargeback","Does not remember"]},{"nm":"MaxWeb","rf":2109.82,"rfq":10,"cb":0,"cbq":0,"tm":{"0-3d":2,"4-7d":0,"8-15d":2,"16-30d":1,"+45d":5},"mt":["Chargeback alert","Chargeback Alert-RDR","Does not remember"]},{"nm":"isaarantes","rf":1585.74,"rfq":12,"cb":0,"cbq":0,"tm":{"0-3d":7,"4-7d":1,"8-15d":0,"16-30d":4,"+45d":0},"mt":["Did not agree to the upsells","Chargeback alert"]},{"nm":"rjpassos","rf":1152.76,"rfq":7,"cb":491,"cbq":2,"tm":{"0-3d":4,"4-7d":1,"8-15d":2,"16-30d":0,"+45d":0},"mt":["Too expensive","Doctor advised","Threatened with chargeback"]},{"nm":"FABIO T935","rf":1430.82,"rfq":5,"cb":0,"cbq":0,"tm":{"0-3d":2,"4-7d":0,"8-15d":2,"16-30d":1,"+45d":0},"mt":["Chargeback alert"]}],"s4":[{"nm":"nexifymarketing","rf":7577.08,"rfq":51,"cb":528.16,"cbq":2,"tm":{"0-3d":5,"4-7d":3,"8-15d":22,"16-30d":12,"+45d":9},"mt":["Did not agree to the upsells","Chargeback alert","Order incorrect"]},{"nm":"HelpGrid C..","rf":7172.16,"rfq":24,"cb":0,"cbq":0,"tm":{"0-3d":3,"4-7d":2,"8-15d":5,"16-30d":2,"+45d":12},"mt":["Chargeback alert","Chargeback Alert-RDR","Buyers remorse"]},{"nm":"Aad020207","rf":4543.07,"rfq":21,"cb":0,"cbq":0,"tm":{"0-3d":12,"4-7d":3,"8-15d":6,"16-30d":0,"+45d":0},"mt":["Chargeback alert","Did not agree to the upsells"]},{"nm":"rjpassos","rf":2604.44,"rfq":17,"cb":325.88,"cbq":1,"tm":{"0-3d":4,"4-7d":0,"8-15d":4,"16-30d":6,"+45d":3},"mt":["Threatened with chargeback","Chargeback alert","Did not see expected results"]},{"nm":"Wladimir P.","rf":2969.77,"rfq":18,"cb":0,"cbq":0,"tm":{"0-3d":0,"4-7d":1,"8-15d":11,"16-30d":0,"+45d":6},"mt":["Doctor advised","Chargeback alert","Did not work"]},{"nm":"gestor1.buygoods@outlook.com","rf":3229.8,"rfq":15,"cb":324.51,"cbq":1,"tm":{"0-3d":1,"4-7d":0,"8-15d":0,"16-30d":2,"+45d":12},"mt":["Chargeback alert","Doctor advised"]},{"nm":"emilianosoles","rf":2611.62,"rfq":13,"cb":0,"cbq":0,"tm":{"0-3d":9,"4-7d":2,"8-15d":2,"16-30d":0,"+45d":0},"mt":["Chargeback alert","Did not agree to the upsells","No longer interested"]},{"nm":"Rafazag89","rf":2441.33,"rfq":15,"cb":0,"cbq":0,"tm":{"0-3d":3,"4-7d":0,"8-15d":6,"16-30d":1,"+45d":5},"mt":["Doctor advised","Does not remember","Not happy with product"]},{"nm":"andreiW7","rf":2144.95,"rfq":11,"cb":0,"cbq":0,"tm":{"0-3d":4,"4-7d":0,"8-15d":0,"16-30d":0,"+45d":7},"mt":["Ordered by mistake","Chargeback Alert-RDR","Does not remember"]},{"nm":"MaxWeb","rf":2124.59,"rfq":9,"cb":505.66,"cbq":2,"tm":{"0-3d":0,"4-7d":0,"8-15d":0,"16-30d":0,"+45d":9},"mt":["Chargeback Alert-RDR","Chargeback alert","Doctor advised"]},{"nm":"FABIO T935","rf":1619.29,"rfq":11,"cb":0,"cbq":0,"tm":{"0-3d":4,"4-7d":3,"8-15d":0,"16-30d":4,"+45d":0},"mt":["Does not remember","Chargeback alert","Threatened with chargeback"]},{"nm":"smaralima","rf":1641.43,"rfq":11,"cb":0,"cbq":0,"tm":{"0-3d":3,"4-7d":0,"8-15d":0,"16-30d":3,"+45d":5},"mt":["Chargeback alert","Does not remember","Experienced side effects"]},{"nm":"Lucaslima96","rf":2088.72,"rfq":10,"cb":491,"cbq":2,"tm":{"0-3d":2,"4-7d":0,"8-15d":1,"16-30d":0,"+45d":7},"mt":["Chargeback alert","Chargeback Alert-RDR"]},{"nm":"Helpgrid I225","rf":1770.44,"rfq":10,"cb":0,"cbq":0,"tm":{"0-3d":6,"4-7d":0,"8-15d":0,"16-30d":3,"+45d":1},"mt":["Buyers remorse","Not happy with product"]}]};
 const AFILS=[
   // v = vendas S1+S2 (dash empresa, S3 do relatório afiliados); rf/cb = arquivo 01-17/05
   {nm:"Walife Garcias",       al:"nexifymarketing",  v:101281,o:415,td:null, rf:18019,rfq:102,cb:1734, cbq:6},
@@ -435,8 +462,8 @@ const HIST={
   "Booster XT":  {m:{v:100696,r:5696}, a:{v:15496,r:1392}},
 };
 
-const TRF={"0-3d":466,"4-7d":107,"8-15d":155,"16-30d":193,"+45d":255};
-const TCB={"0-3d":2,"4-7d":2,"8-15d":10,"16-30d":37,"+45d":25};
+const TRF={"0-3d":595,"4-7d":146,"8-15d":234,"16-30d":248,"+45d":445};
+const TCB={"0-3d":1,"4-7d":1,"8-15d":20,"16-30d":39,"+45d":29};
 const TProd={
   "AudiLeaf":    {"0-3d":195,"4-7d":32,"8-15d":36,"16-30d":30,"+45d":15},
   "NervoLyn":    {"0-3d":65, "4-7d":19,"8-15d":23,"16-30d":47,"+45d":45},
@@ -453,21 +480,21 @@ const TProd={
   "BreathEaseX": {"0-3d":15, "4-7d":6, "8-15d":0, "16-30d":0, "+45d":0},
 };
 const MOTIVOS=[
-  {m:"Chargeback alert",             q:347,t:"afiliado"},
-  {m:"Threatened with chargeback",  q:191,t:"afiliado"},
-  {m:"Did not agree to upsells",    q:105,t:"afiliado"},
-  {m:"Doctor advised against",      q:55, t:"produto"},
-  {m:"No longer interested",        q:66, t:"produto"},
-  {m:"Too expensive",               q:33, t:"produto"},
-  {m:"Chargeback (direto/RDR)",     q:55, t:"afiliado"},
-  {m:"Did not work",                q:34, t:"produto"},
-  {m:"Partial refund (saved sale)", q:34, t:"operacao"},
-  {m:"Did not receive product",     q:28, t:"operacao"},
-  {m:"Experienced side effects",    q:36, t:"produto"},
-  {m:"Doesn't remember placing",    q:21, t:"afiliado"},
-  {m:"Duplicate order",             q:15, t:"operacao"},
-  {m:"Buyer's remorse",             q:16, t:"produto"},
-  {m:"Misinformed by marketing",    q:10, t:"misto"},
+  {m:"Chargeback alert",             q:496,t:"afiliado"},
+  {m:"Threatened with chargeback",  q:247,t:"afiliado"},
+  {m:"Did not agree to upsells",    q:144,t:"afiliado"},
+  {m:"Chargeback Alert-RDR",        q:94, t:"afiliado"},
+  {m:"No longer interested",        q:85, t:"produto"},
+  {m:"Doctor advised against",      q:81, t:"produto"},
+  {m:"Chargeback (direto)",         q:62, t:"afiliado"},
+  {m:"Experienced side effects",    q:57, t:"produto"},
+  {m:"Did not work",                q:46, t:"produto"},
+  {m:"Too expensive",               q:42, t:"produto"},
+  {m:"Partial refund (saved sale)", q:38, t:"operacao"},
+  {m:"Doesn't remember placing",    q:37, t:"afiliado"},
+  {m:"Did not receive product",     q:36, t:"operacao"},
+  {m:"Buyer's remorse",             q:30, t:"produto"},
+  {m:"Did not see expected results",q:21, t:"produto"},
 ];
 const TOP10=[
   {r:1,n:"Walife Garcias",v:101281,rf:18019,rfq:102,cb:1734,cbq:6,tx:19.5,culp:"afiliado",
@@ -543,19 +570,19 @@ function trowMini(data,total){
 /* ── PRODUTOS ─────────────────────────────────────────────────────────── */
 let cw='all';
 function sw(w){
-  cw=w;['all',1,2,3].forEach(x=>$('wbtn-'+x)?.classList.remove('active'));
+  cw=w;['all',1,2,3,4].forEach(x=>$('wbtn-'+x)?.classList.remove('active'));
   $('wbtn-'+w)?.classList.add('active');
   rProd(w);setTimeout(ab,80);
 }
 function rProd(w){
-  const RF=w===1?RF1:w===2?RF2:w===3?RF3:RFa;
-  const CB=w===1?CB1:w===2?CB2:w===3?CB3:CBa;
-  const PSw=w===1?PS1:w===2?PS2:w===3?PS3:PS;
-  const TDw=w===1?TaxaDash1:w===2?TaxaDash2:w===3?TaxaDash3:TaxaDash;
+  const RF=w===1?RF1:w===2?RF2:w===3?RF3:w===4?RF4:RFa;
+  const CB=w===1?CB1:w===2?CB2:w===3?CB3:w===4?CB4:CBa;
+  const PSw=w===1?PS1:w===2?PS2:w===3?PS3:w===4?PS4:PS;
+  const TDw=w===1?TaxaDash1:w===2?TaxaDash2:w===3?TaxaDash3:w===4?TaxaDash4:TaxaDash;
   const D=DASH[w]||DASH.all;
   const PRODS=Object.keys(PS);
-  const dias=w===1?8:w===2?2:w===3?7:17;
-  const lbl={all:'01-17/05',1:'S1: 01-08',2:'S2: 09-10',3:'S3: 11-17'}[w]||'01-17/05';
+  const dias=w===1?8:w===2?2:w===3?7:w===4?7:24;
+  const lbl={all:'01-24/05',1:'S1: 01-08',2:'S2: 09-10',3:'S3: 11-17',4:'S4: 18-24'}[w]||'01-24/05';
   $('lp').textContent=lbl;
 
   $('kG').innerHTML=`
@@ -616,46 +643,59 @@ function rProd(w){
 
 /* ── AFILIADOS ─────────────────────────────────────────────────────────── */
 function rAfil(){
-  const sortedV=[...AFILS].filter(a=>a.v>0).sort((a,b)=>b.v-a.v);
-  const sortedR=[...AFILS].sort((a,b)=>(b.rf+b.cb)-(a.rf+a.cb));
-  $('lA').textContent=sortedV.length+' mapeados';
-
-  const trfV=AFILS.reduce((s,a)=>s+a.rf,0);
-  const tcbV=AFILS.reduce((s,a)=>s+a.cb,0);
+  const pk = cw==='all'?'all':cw===1?'s1':cw===2?'s2':cw===3?'s3':'s4';
+  const data = AFILS_PER[pk]||AFILS_PER.all;
+  const lbl = {all:'01-24/05',1:'S1: 01-08',2:'S2: 09-10',3:'S3: 11-17',4:'S4: 18-24'}[cw]||'01-24/05';
+  const sortedR=[...data].filter(a=>a.rfq>0||a.cbq>0).sort((a,b)=>(b.rf+b.cb)-(a.rf+a.cb));
+  const sortedAll=[...data].sort((a,b)=>(b.rf+b.cb)-(a.rf+a.cb));
+  const trfV=data.reduce((s,a)=>s+a.rf,0);
+  const tcbV=data.reduce((s,a)=>s+a.cb,0);
+  const trfQ=data.reduce((s,a)=>s+a.rfq,0);
+  const tcbQ=data.reduce((s,a)=>s+a.cbq,0);
+  const fatMap={all:'$1.856M',s1:'$603.7K',s2:'$166.6K',s3:'$603.8K',s4:'$482.0K'};
+  $('lA').textContent=lbl+' · '+sortedR.length+' c/ dados';
   $('kA').innerHTML=`
-    <div class="kpi KB"><div class="kl">Afiliados Mapeados</div><div class="kv">${sortedV.length}</div><div class="ks">Com dados vendas</div></div>
-    <div class="kpi KO"><div class="kl">Fat. Total (Dash)</div><div class="kv">$1.374M</div><div class="ks">01-17/05</div></div>
-    <div class="kpi KR"><div class="kl">RF Processados</div><div class="kv">${fM(trfV)}</div><div class="ks crit">${AFILS.reduce((s,a)=>s+a.rfq,0)} eventos</div></div>
-    <div class="kpi KP"><div class="kl">CB Processados</div><div class="kv">${fM(tcbV)}</div><div class="ks crit">${AFILS.reduce((s,a)=>s+a.cbq,0)} casos</div></div>
-    <div class="kpi KY"><div class="kl">% RF Dash Empresa</div><div class="kv">12.48%</div><div class="ks warn">$171.5K de $1.374M</div></div>
-    <div class="kpi KR"><div class="kl">% CB Dash Empresa</div><div class="kv">1.55%</div><div class="ks crit">$21.3K de $1.374M</div></div>
+    <div class="kpi KB"><div class="kl">Período</div><div class="kv">${lbl}</div><div class="ks">Afiliados com RF/CB</div></div>
+    <div class="kpi KO"><div class="kl">Faturamento</div><div class="kv">${fatMap[pk]||'—'}</div><div class="ks">Dash empresa</div></div>
+    <div class="kpi KR"><div class="kl">RF Processados</div><div class="kv">${fM(trfV)}</div><div class="ks crit">${trfQ} eventos</div></div>
+    <div class="kpi KP"><div class="kl">CB Processados</div><div class="kv">${fM(tcbV)}</div><div class="ks crit">${tcbQ} casos</div></div>
+    <div class="kpi KY"><div class="kl">RF+CB Total</div><div class="kv">${fM(trfV+tcbV)}</div><div class="ks warn">${(data.length)} afiliados com dados</div></div>
+    <div class="kpi KR"><div class="kl">Top Afiliado RF</div><div class="kv">${sortedR[0]?.nm||'—'}</div><div class="ks crit">${fM(sortedR[0]?.rf||0)}</div></div>
   `;
-
-  const maxV=sortedV[0]?.v||1;
-  $('bAV').innerHTML=sortedV.slice(0,15).map(a=>br(a.nm,a.v,maxV,'var(--blue)',fM(a.v)+'('+a.o+'ped)')).join('');
   const maxR=sortedR[0]?(sortedR[0].rf+sortedR[0].cb):1;
-  $('bAR').innerHTML=sortedR.slice(0,15).map(a=>{
+  $('bAV').innerHTML=sortedR.slice(0,15).map(a=>{
     const tot=a.rf+a.cb;
-    const tx=a.v>0?(tot/a.v*100):0;
-    const c=tx>30?'var(--purple)':tx>20?'var(--red)':tx>12?'var(--yellow)':'var(--green)';
-    return br(a.nm,tot,maxR,c,fM(tot)+' ('+a.rfq+'R+'+a.cbq+'CB)');
+    return br(a.nm,tot,maxR,'var(--blue)',fM(a.rf)+'RF · '+fM(a.cb)+'CB');
   }).join('');
-
-  $('tA').innerHTML=sortedV.map((a,i)=>{
-    const tx=a.v>0?((a.rf+a.cb)/a.v*100):0;
+  $('bAR').innerHTML=sortedAll.slice(0,15).map(a=>{
+    const tot=a.rf+a.cb;
+    const bkts=Object.entries(a.tm||{}).filter(([,v])=>v>0).map(([k,v])=>{
+      const cl=k==='0-3d'?'tc0':k==='4-7d'?'tc4':k==='8-15d'?'tc8':k==='16-30d'?'tc16':'tc45';
+      return`<span class="tc ${cl}">${k}:${v}</span>`;
+    }).join('');
+    const c=(a.rfq>20)?'var(--red)':(a.rfq>10)?'var(--yellow)':'var(--green)';
+    return`<div class="br">
+      <div class="bl2">${a.nm}</div>
+      <div style="flex:1;padding:0 6px">${bkts}</div>
+      <div class="bv" style="color:${c}">${a.rfq}R · ${a.cbq}CB · ${fM(tot)}</div>
+    </div>`;
+  }).join('');
+  $('tA').innerHTML=sortedAll.map((a,i)=>{
+    const tot=a.rf+a.cb; const bkts=Object.entries(a.tm||{}).filter(([,v])=>v>0).map(([k,v])=>{
+      const cl=k==='0-3d'?'tc0':k==='4-7d'?'tc4':k==='8-15d'?'tc8':k==='16-30d'?'tc16':'tc45';
+      return`<span class="tc ${cl}">${k}:${v}</span>`;
+    }).join('');
     return`<tr>
       <td class="c" style="color:var(--t4)">${i+1}</td>
-      <td class="b">${a.nm}<div style="font-size:9px;color:var(--t4)">${a.al}</div></td>
-      <td class="r mn">${fM(a.v)}</td><td class="c">${a.o}</td>
+      <td class="b">${a.nm}</td>
       <td class="r mn ${a.rf>0?'tcr':''}">${a.rf>0?fM(a.rf):'—'}</td>
       <td class="c ${a.rfq>0?'twn':''}">${a.rfq||'—'}</td>
       <td class="r mn ${a.cb>0?'tcr':''}">${a.cb>0?fM(a.cb):'—'}</td>
       <td class="c ${a.cbq>0?'tcr':''}">${a.cbq||'—'}</td>
-      <td class="c">${a.td!=null?`<span class="pill pY">📊 ${a.td}%</span>`:`<span class="pill ${tx>20?'pR':tx>12?'pY':tx>0?'pO':'pG'}">${a.v>0?tx.toFixed(1)+'%':'—'}</span>`}</td>
-      <td class="c">${pill(a.td||tx)}</td>
+      <td style="font-size:9px">${bkts}</td>
+      <td style="font-size:9px;color:var(--t3)">${(a.mt||[]).join(' · ')}</td>
     </tr>`;
   }).join('');
-
   $('t10').innerHTML=TOP10.map(a=>{
     const culpH=a.culp==='afiliado'?'<span class="ca">AFILIADO</span>':a.culp==='op'?'<span class="co">OPERAÇÃO</span>':a.culp==='crit'?'<span class="cc">CRÍTICO</span>':'<span class="cm">MISTO</span>';
     const chips=Object.entries(a.tm).filter(([,v])=>v>0).map(([k,v])=>{
@@ -676,32 +716,40 @@ function rAfil(){
       </div>
       <div class="t10m"><strong>Motivos:</strong> ${a.mt.join(' · ')}</div>
       <div class="t10m"><strong>Produto:</strong> ${a.pd}</div>
-      <div style="font-size:9px;color:var(--t4);font-weight:700;margin-top:5px">TIMING (${tot} RF processados em Maio):</div>
+      <div style="font-size:9px;color:var(--t4);font-weight:700;margin-top:5px">TIMING ACUMULADO (${tot} RF):</div>
       <div class="t10t">${chips}</div>
       <div class="t10v ${a.culp==='op'?'op':a.culp==='crit'?'crit':a.culp==='misto'?'misto':'afil'}"><strong>🔍</strong> ${a.vd}</div>
     </div>`;
   }).join('');
 }
 
+
 /* ── TIMING ─────────────────────────────────────────────────────────────── */
 function rTiming(){
+  const pk = cw==='all'?'all':cw===1?'s1':cw===2?'s2':cw===3?'s3':'s4';
+  const trf = TRF_PER[pk]||TRF_PER.all;
+  const tcb = TCB_PER[pk]||TCB_PER.all;
+  const mots = MOTIVOS_PER[pk]||MOTIVOS_PER.all;
+  const lbl = {all:'01-24/05',1:'S1: 01-08',2:'S2: 09-10',3:'S3: 11-17',4:'S4: 18-24'}[cw]||'01-24/05';
+  const totRF=Object.values(trf).reduce((s,v)=>s+v,0);
+  const totCB=Object.values(tcb).reduce((s,v)=>s+v,0);
+  const pct0=(trf['0-3d']/totRF*100).toFixed(1);
+  const pct45=(trf['+45d']/totRF*100).toFixed(1);
+  const avgDays={all:21.4,s1:16.2,s2:14.8,s3:18.9,s4:26.1}[pk]||21.4;
   $('kT').innerHTML=`
-    <div class="kpi KR"><div class="kl">0-3d Imediato</div><div class="kv">466</div><div class="ks crit">39.6% · AFILIADO/OP</div></div>
-    <div class="kpi KY"><div class="kl">4-7d</div><div class="kv">107</div><div class="ks warn">9.1% · Misto</div></div>
-    <div class="kpi KB"><div class="kl">8-15d Produto</div><div class="kv">155</div><div class="ks">13.2% · Produto</div></div>
-    <div class="kpi KG"><div class="kl">16-30d Logística</div><div class="kv">193</div><div class="ks">16.4% · Prod/Log</div></div>
-    <div class="kpi KP"><div class="kl">+45d Histórico</div><div class="kv">255</div><div class="ks">21.7% · Histórico</div></div>
-    <div class="kpi KO"><div class="kl">Média RF (dias)</div><div class="kv">18.1d</div><div class="ks warn">Não é só imediato!</div></div>
+    <div class="kpi KR"><div class="kl">0-3d Imediato</div><div class="kv">${trf['0-3d']}</div><div class="ks crit">${pct0}% · AFILIADO/OP</div></div>
+    <div class="kpi KY"><div class="kl">4-7d</div><div class="kv">${trf['4-7d']}</div><div class="ks warn">${(trf['4-7d']/totRF*100).toFixed(1)}% · Misto</div></div>
+    <div class="kpi KB"><div class="kl">8-15d Produto</div><div class="kv">${trf['8-15d']}</div><div class="ks">${(trf['8-15d']/totRF*100).toFixed(1)}% · Produto</div></div>
+    <div class="kpi KG"><div class="kl">16-30d Logística</div><div class="kv">${trf['16-30d']}</div><div class="ks">${(trf['16-30d']/totRF*100).toFixed(1)}% · Prod/Log</div></div>
+    <div class="kpi KP"><div class="kl">+45d Histórico</div><div class="kv">${trf['+45d']}</div><div class="ks">${pct45}% · Histórico</div></div>
+    <div class="kpi KO"><div class="kl">Média RF (dias)</div><div class="kv">${avgDays}d</div><div class="ks warn">${lbl}</div></div>
   `;
-
-  $('tRF').innerHTML=`<div style="font-size:10px;color:var(--t3);margin-bottom:6px">1.176 reembolsos por tempo decorrido (compra → reembolso):</div>
-    ${tstacked(TRF,1176)}
-    <div style="margin-top:14px">${trowMini(TRF,1176)}</div>`;
-
-  $('tCB').innerHTML=`<div style="font-size:10px;color:var(--t3);margin-bottom:6px">76 chargebacks por tempo decorrido (compra → CB):</div>
-    ${tstacked(TCB,76)}
-    <div style="margin-top:14px">${trowMini(TCB,76)}</div>`;
-
+  $('tRF').innerHTML=`<div style="font-size:10px;color:var(--t3);margin-bottom:6px">${totRF} reembolsos · ${lbl} · por tempo decorrido (compra → reembolso):</div>
+    ${tstacked(trf,totRF)}
+    <div style="margin-top:14px">${trowMini(trf,totRF)}</div>`;
+  $('tCB').innerHTML=`<div style="font-size:10px;color:var(--t3);margin-bottom:6px">${totCB} chargebacks · ${lbl} · por tempo decorrido (compra → CB):</div>
+    ${tstacked(tcb,Math.max(totCB,1))}
+    <div style="margin-top:14px">${trowMini(tcb,Math.max(totCB,1))}</div>`;
   const prodsSorted=Object.entries(TProd).sort((a,b)=>Object.values(b[1]).reduce((s,v)=>s+v,0)-Object.values(a[1]).reduce((s,v)=>s+v,0));
   $('tProd').innerHTML=prodsSorted.map(([p,t])=>{
     const tot=Object.values(t).reduce((s,v)=>s+v,0);
@@ -713,14 +761,21 @@ function rTiming(){
       </div>
       ${tstacked(t,tot)}</div>`;
   }).join('');
-
-  const mxQ=MOTIVOS[0].q;
-  const mC={afiliado:'var(--red)',produto:'var(--blue)',operacao:'var(--yellow)',misto:'var(--t3)'};
-  $('mB').innerHTML=MOTIVOS.map(m=>{
-    const pct=(m.q/1176*100).toFixed(1);
-    return`<div class="br"><div class="bl2" title="${m.m}">${m.m}</div><div class="bt"><div class="bf" data-p="${(m.q/mxQ*100).toFixed(1)}" style="background:${mC[m.t]}"></div></div><div class="bv">${m.q}x (${pct}%)</div></div>`;
+  const mxQ=mots[0]?mots[0][1]:1;
+  const mC={};
+  const mTypes={
+    'Chargeback alert':'afiliado','Threatened with a chargeback':'afiliado','Did not agree to the upsells':'afiliado',
+    'Chargeback Alert-RDR':'afiliado','Chargeback':'afiliado','Does not remember placing order':'afiliado',
+    'No longer interested':'produto','Doctor advised against using it':'produto','Experienced side effects':'produto',
+    'Did not work':'produto','Too expensive':'produto','Buyers remorse':'produto','Did not see expected results':'produto','Not happy with product':'produto',
+    'Partial refund - saved sale':'operacao','Did not receive product':'operacao','Duplicate order':'operacao','Order incorrect item variant':'operacao',
+  };
+  const mColor={afiliado:'var(--red)',produto:'var(--blue)',operacao:'var(--yellow)',misto:'var(--t3)'};
+  $('mB').innerHTML=mots.map(([mot,q])=>{
+    const pct=(q/totRF*100).toFixed(1);
+    const type=mTypes[mot]||'misto';
+    return`<div class="br"><div class="bl2" title="${mot}">${mot}</div><div class="bt"><div class="bf" data-p="${(q/mxQ*100).toFixed(1)}" style="background:${mColor[type]}"></div></div><div class="bv">${q}x (${pct}%)</div></div>`;
   }).join('');
-
   setTimeout(ab,80);
 }
 
@@ -737,10 +792,11 @@ function rTrend(){
   $('kTR').innerHTML=`
     <div class="kpi KB"><div class="kl">Março 2026</div><div class="kv">$2.72M</div><div class="ks crit">Taxa: ${(361387/2715255*100).toFixed(1)}%</div></div>
     <div class="kpi KY"><div class="kl">Abril 2026</div><div class="kv">$2.43M</div><div class="ks crit">Taxa: ${(367662/2434052*100).toFixed(1)}%</div></div>
-    <div class="kpi KO"><div class="kl">S1 (01-08)</div><div class="kv">$603.7K</div><div class="ks crit">RF:18.24% · CB:1.85% · Liq:11.50%</div></div>
-    <div class="kpi KG"><div class="kl">S2 (09-10)</div><div class="kv">$166.6K</div><div class="ks ok">RF:10.48% · CB:2.35% · Liq:19.14%</div></div>
-    <div class="kpi KR"><div class="kl">S3 (11-17)</div><div class="kv">$603.8K</div><div class="ks warn">RF:14.32% · CB:1.51% · Liq:16.89%</div></div>
-    <div class="kpi KP"><div class="kl">Total Mai (17d)</div><div class="kv">$1.374M</div><div class="ks warn">RF:12.48% · CB:1.68% · Liq:14.80%</div></div>
+    <div class="kpi KO"><div class="kl">S1 (01-08)</div><div class="kv">$603.7K</div><div class="ks crit">RF:18.38% · CB:1.50% · Liq:11.50%</div></div>
+    <div class="kpi KG"><div class="kl">S2 (09-10)</div><div class="kv">$166.6K</div><div class="ks ok">RF:10.64% · CB:1.93% · Liq:19.14%</div></div>
+    <div class="kpi KR"><div class="kl">S3 (11-17)</div><div class="kv">$603.8K</div><div class="ks warn">RF:14.20% · CB:1.32% · Liq:16.89%</div></div>
+    <div class="kpi KP"><div class="kl">S4 (18-24)</div><div class="kv">$482.0K</div><div class="ks crit">RF:19.24% · CB:0.97% · Liq:10.80%</div></div>
+    <div class="kpi KR" style="grid-column:1/-1"><div class="kl">Total Mai (24d)</div><div class="kv">$1.856M</div><div class="ks warn">RF:16.55% · CB:1.34% · Liq:13.76%</div></div>
   `;
 
   $('tTR').innerHTML=rows.map(r=>{
@@ -773,14 +829,14 @@ function rTrend(){
   const worsening=rows.filter(r=>r.h.a.v>0&&r.tmai>r.ta+2);
   const improving=rows.filter(r=>r.h.a.v>0&&r.tmai<r.ta-2);
   $('ins').innerHTML=`
-    <div style="padding:10px;background:var(--yellow-l);border-radius:7px;border:1px solid rgba(245,158,11,.2);margin-bottom:9px">
-      <div style="font-size:11px;font-weight:700;color:var(--yellow);margin-bottom:3px">📊 S3 (11-17/05): Melhora Consistente</div>
-      <div style="font-size:10px;color:var(--t2)">S3: RF+CB = $95.6K de $603.8K = <strong>15.8% de perda bruta</strong>. Líquido $102K (16.9%). Melhora vs S1 (20.1%) mas ainda acima do ideal. Taxa acumulada 17d: <strong>14.2%</strong>.</div>
+    <div style="padding:10px;background:var(--red-l);border-radius:7px;border:1px solid rgba(239,68,68,.2);margin-bottom:9px">
+      <div style="font-size:11px;font-weight:700;color:var(--red);margin-bottom:3px">🚨 S4 (18-24/05): Piora significativa</div>
+      <div style="font-size:10px;color:var(--t2)">S4: RF+CB = $97.4K de $482K = <strong>20.2% de perda bruta</strong>. Líquido $52K (10.80%) — pior semana do mês. AudiLeaf dispara para 24.6% e GlucoRecover para 26.7%. VigorLong e LipoVive em terreno crítico. Prostafense com 57 RFs em 7 dias é atípico — investigar afiliados específicos.</div>
     </div>
     ${worsening.length?`<div style="margin-bottom:9px"><div style="font-size:11px;font-weight:700;color:var(--red);margin-bottom:3px">⚠️ Piorando vs Abr:</div>${worsening.map(r=>`<div style="font-size:10px;color:var(--t2);padding:2px 0">• <strong>${r.p}</strong>: ${r.ta.toFixed(1)}% → ${r.tmai.toFixed(1)}%</div>`).join('')}</div>`:''}
     ${improving.length?`<div><div style="font-size:11px;font-weight:700;color:var(--green);margin-bottom:3px">✅ Melhorando:</div>${improving.map(r=>`<div style="font-size:10px;color:var(--t2);padding:2px 0">• <strong>${r.p}</strong>: ${r.ta.toFixed(1)}% → ${r.tmai.toFixed(1)}%</div>`).join('')}</div>`:''}
-    <div style="margin-top:9px;padding:8px;background:var(--blue-l);border-radius:6px;font-size:10px;color:var(--blue);border:1px solid rgba(61,142,255,.2)">
-      S3 mostra queda de RF imediatos (0-3d) relativo ao total — sinal de melhora na qualidade dos leads. LipoTrine e BreathEaseX têm padrão 100% em 0-3d na S3 — investigar funis específicos desses produtos.
+    <div style="margin-top:9px;padding:8px;background:var(--red-l);border-radius:6px;font-size:10px;color:var(--red);border:1px solid rgba(239,68,68,.2)">
+      Arrastamento +45d subiu de 21.7% (S3) para 26.7% do total — pedidos de Mar/Abr continuam chegando. Prostafense com 57 RFs em S4 vs 25 em S3 é o maior salto — afiliados específicos precisam ser auditados na semana.
     </div>
   `;
   setTimeout(ab,100);
