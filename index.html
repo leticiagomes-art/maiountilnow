@@ -667,23 +667,23 @@ const JUN = {
     ]
   },
   j3: {
-    fat:1365880, liq:291444, vend:4811, rf_pct:13.16, cb_pct:0.46, liq_pct:21.34,
-    tot_rf:179818.66, tot_rfq:786, tot_cb:6350.79, tot_cbq:22,
+    fat:1364673.33, liq:285726.45, vend:4954, rf_pct:13.06, cb_pct:0.49, liq_pct:20.94,
+    tot_rf:178267.85, tot_rfq:786, tot_cb:6742.06, tot_cbq:22,
     trf:{"0-3d":386,"4-7d":84,"8-15d":110,"16-30d":66,"+45d":140},
     tcb:{"0-3d":0,"4-7d":1,"8-15d":3,"16-30d":5,"+45d":13},
     rf_prod:{
-      "BreathEaseX":{r:89243.66,q:359},"NervoLyn":{r:21163.01,q:106},
-      "AudiLeaf":{r:18087.76,q:89},"Prostafense":{r:14080.43,q:62},
-      "VisiumPro":{r:11568.42,q:58},"GlucoRecover":{r:10551.77,q:43},
-      "Marobrain":{r:6343.36,q:26},"LipoTrine":{r:2160.17,q:9},
+      "BreathEaseX":{r:88111.53,q:359},"NervoLyn":{r:20426.93,q:106},
+      "AudiLeaf":{r:17763.55,q:89},"Prostafense":{r:13786.43,q:62},
+      "VisiumPro":{r:11568.42,q:58},"GlucoRecover":{r:11159.79,q:43},
+      "Marobrain":{r:6108.46,q:26},"LipoTrine":{r:2160.17,q:9},
       "FloraNew":{r:2106.53,q:10},"ReduBurn":{r:1832.39,q:9},
-      "VigorLong":{r:979.80,q:6},"LipoBliss":{r:915.18,q:5},
-      "Booster XT":{r:372.19,q:1},"NailsCleanPro":{r:325.00,q:2},"LipoVive":{r:88.99,q:1}
+      "LipoBliss":{r:915.18,q:5},"VigorLong":{r:958.61,q:6},
+      "BoosterXT":{r:372.19,q:1},"NailsCleanPro":{r:325.00,q:2},"LipoVive":{r:88.99,q:1}
     },
     cb_prod:{
-      "NervoLyn":{c:1328.28,q:5},"VisiumPro":{c:1173.37,q:3},
-      "VigorLong":{c:1154.24,q:4},"AudiLeaf":{c:1081.53,q:4},
-      "BreathEaseX":{c:591.27,q:2},"Marobrain":{c:556.76,q:2},"Prostafense":{c:465.34,q:2}
+      "NervoLyn":{c:1407.22,q:5},"VisiumPro":{c:1244.75,q:3},
+      "VigorLong":{c:1234.87,q:4},"AudiLeaf":{c:1145.89,q:4},
+      "BreathEaseX":{c:626.67,q:2},"Marobrain":{c:589.96,q:2},"Prostafense":{c:492.70,q:2}
     },
     motivos:[
       ["Chargeback alert",229],["Buyers remorse",141],
@@ -712,7 +712,7 @@ const JUN = {
   jall: {
     fat:2940841.58, liq:608139.84, vend:10822, rf_pct:13.62, cb_pct:0.60, liq_pct:20.68,
     tot_rf:403252.72, tot_rfq:1801, tot_cb:16532.26, tot_cbq:59,
-    trf:{"0-3d":788,"4-7d":193,"8-15d":207,"16-30d":194,"+45d":419},
+    trf:{"0-3d":786,"4-7d":193,"8-15d":207,"16-30d":194,"+45d":421},
     tcb:{"0-3d":1,"4-7d":2,"8-15d":12,"16-30d":17,"+45d":27},
     rf_prod:{
       "BreathEaseX":{r:156883.61,q:625},"NervoLyn":{r:54548.51,q:280},
@@ -810,23 +810,22 @@ const JUN_PROD = {
     "LipoTrine":    {fat:0,        v:0,   rf:618.02,   rfpct:0,    cb:276.02,  liq:-894.04,  lpct:0,    aov:0},
     "ReduBurn":     {fat:0,        v:0,   rf:1608.02,  rfpct:0,    cb:0,       liq:-1608.02, lpct:0,    aov:0},
   },
-  j3: {  // ⚠️ 70% black: NervoLyn, BoosterXT, LipoBliss, GlucoRecover (dados 15-21/06 do doc 01-21 - j1 - j2)
-    "BreathEaseX":  {fat:996601.45,v:3164,rf:88011.29, rfpct:8.83, cb:627.39,  liq:260333.82,lpct:26.12,aov:416.25},
-    "NervoLyn":     {fat:94741.01, v:531, rf:20425.93, rfpct:21.56,cb:1357.22, liq:11153.02, lpct:11.77,aov:394.52, blackFunil:true},
-    "AudiLeaf":     {fat:86126.13, v:512, rf:17763.55, rfpct:20.63,cb:1145.89, liq:8175.96,  lpct:9.49, aov:338.63},
-    "Prostafense":  {fat:51104.90, v:274, rf:14786.43, rfpct:28.93,cb:527.70,  liq:1317.06,  lpct:2.58, aov:404.63},
-    "VisiumPro":    {fat:35687.34, v:183, rf:11568.42, rfpct:32.41,cb:1169.75, liq:-2396.93, lpct:-6.71,aov:364.55},
-    "GlucoRecover": {fat:26280.88, v:126, rf:11346.87, rfpct:43.18,cb:0,       liq:-2229.67, lpct:-8.48,aov:366.54, blackFunil:true},
-    "Marobrain":    {fat:22309.39, v:93,  rf:7086.02,  rfpct:31.76,cb:573.94,  liq:-4743.12, lpct:-21.26,aov:296.42},
-    "VigorLong":    {fat:7351.24,  v:37,  rf:3210.51,  rfpct:43.67,cb:1234.87, liq:-2533.28, lpct:-34.46,aov:340.11},
-    "FloraNew":     {fat:12792.94, v:62,  rf:2106.53,  rfpct:16.47,cb:0,       liq:1699.51,  lpct:13.29,aov:381.97},
-    "NailsCleanPro":{fat:6475.16,  v:38,  rf:283.40,   rfpct:4.38, cb:0,       liq:1696.48,  lpct:26.20,aov:374.19},
-    "BoosterXT":    {fat:5526.28,  v:28,  rf:372.19,   rfpct:6.73, cb:0,       liq:1307.63,  lpct:23.66,aov:391.22, blackFunil:true},
-    "LipoVive":     {fat:2538.96,  v:19,  rf:88.99,    rfpct:3.50, cb:0,       liq:912.45,   lpct:35.94,aov:270.59},
-    "LipoBliss":    {fat:3844.43,  v:17,  rf:915.18,   rfpct:23.80,cb:0,       liq:176.26,   lpct:4.58, aov:351.23, blackFunil:true},
-    "LipoTrine":    {fat:0,        v:0,   rf:2160.17,  rfpct:0,    cb:0,       liq:-2160.93, lpct:0,    aov:0},
-    "ReduBurn":     {fat:588,      v:2,   rf:1832.39,  rfpct:311.6,cb:0,       liq:-1701.36, lpct:-289,  aov:294},
-    "Erectrozil":   {fat:0,        v:0,   rf:0,        rfpct:0,    cb:0,       liq:62.88,    lpct:0,    aov:0},
+  j3: {  // ⚠️ 70% black: NervoLyn, BoosterXT, LipoBliss, GlucoRecover
+    "BreathEaseX":  {fat:996601.45,v:2354,rf:88111.53, rfpct:8.84, cb:626.67,  liq:260333.72,lpct:26.12,aov:422.42},
+    "NervoLyn":     {fat:94741.01, v:360, rf:20426.93, rfpct:21.56,cb:1407.22, liq:11053.02, lpct:11.67,aov:394.28, blackFunil:true},
+    "AudiLeaf":     {fat:85969.13, v:337, rf:17763.55, rfpct:20.66,cb:1145.89, liq:8176.07,  lpct:9.51, aov:365.00},
+    "Prostafense":  {fat:63879.90, v:241, rf:13786.43, rfpct:21.58,cb:492.70,  liq:7522.00,  lpct:11.78,aov:393.54},
+    "VisiumPro":    {fat:35688.34, v:128, rf:11568.42, rfpct:32.42,cb:1244.75, liq:-256.92,  lpct:-0.72,aov:377.63},
+    "GlucoRecover": {fat:26320.88, v:92,  rf:11159.79, rfpct:42.40,cb:0,       liq:-2228.67, lpct:-8.47,aov:385.18, blackFunil:true},
+    "Marobrain":    {fat:21904.39, v:83,  rf:6108.46,  rfpct:27.89,cb:589.96,  liq:-743.68,  lpct:-3.40,aov:337.79},
+    "FloraNew":     {fat:12792.94, v:49,  rf:2106.53,  rfpct:16.47,cb:0,       liq:1698.51,  lpct:13.28,aov:338.49},
+    "VigorLong":    {fat:8087.24,  v:30,  rf:958.61,   rfpct:11.85,cb:1234.87, liq:-105.18,  lpct:-1.30,aov:310.95},
+    "NailsCleanPro":{fat:6475.16,  v:27,  rf:325.00,   rfpct:5.02, cb:0,       liq:2050.84,  lpct:31.67,aov:404.40},
+    "LipoBliss":    {fat:3844.43,  v:13,  rf:915.18,   rfpct:23.81,cb:0,       liq:180.26,   lpct:4.69, aov:369.47, blackFunil:true},
+    "BoosterXT":    {fat:2774.30,  v:10,  rf:372.19,   rfpct:13.42,cb:0,       liq:705.48,   lpct:25.43,aov:549.16, blackFunil:true},
+    "LipoVive":     {fat:2559.06,  v:13,  rf:88.99,    rfpct:3.48, cb:0,       liq:909.29,   lpct:35.53,aov:319.90},
+    "ReduBurn":     {fat:588,      v:2,   rf:1832.39,  rfpct:311.63,cb:0,      liq:-1698.43, lpct:-288.85,aov:294},
+    "LipoTrine":    {fat:0,        v:0,   rf:2160.17,  rfpct:0,    cb:0,       liq:-2160.17, lpct:0,    aov:0},
   },
 };
 
@@ -894,10 +893,10 @@ const MES_CONFIG={
       {id:'j3',  label:'S3: 15-21',dias:7},
     ],
     kpis:{
-      jall:{fat:2940841.58,liq:608139.84,vend:10822,rf_pct:13.62,cb_pct:0.60,liq_pct:20.68,tot_rf:403252.72,tot_rfq:1801,tot_cb:16532.26,tot_cbq:59}, // dash empresa 01-21/06
+      jall:{fat:2940841.58,liq:608139.84,vend:10822,rf_pct:13.62,cb_pct:0.60,liq_pct:20.68,tot_rf:400601.56,tot_rfq:1801,tot_cb:17215.17,tot_cbq:59},
       j1:  {fat:648734.38, liq:119707.40,vend:2441, rf_pct:15.70,cb_pct:0.89,liq_pct:18.45,tot_rf:102030.87, tot_rfq:482, tot_cb:5430.82, tot_cbq:20},
       j2:  {fat:927512.82, liq:202723.41, vend:3428, rf_pct:12.99,cb_pct:0.54,liq_pct:21.86,tot_rf:120515.03, tot_rfq:533, tot_cb:5036.55, tot_cbq:17},
-      j3:  {fat:1364815.36,liq:284709.02, vend:4953, rf_pct:13.16,cb_pct:0.46,liq_pct:20.86,tot_rf:179818.66, tot_rfq:786, tot_cb:6350.79, tot_cbq:22},
+      j3:  {fat:1364673.33,liq:285726.45, vend:4954, rf_pct:13.06,cb_pct:0.49,liq_pct:20.94,tot_rf:178267.85, tot_rfq:786, tot_cb:6742.06, tot_cbq:22},
     },
     getRF: (s)=>({j1:JUN.j1.rf_prod,j2:JUN.j2&&JUN.j2.rf_prod,j3:JUN.j3&&JUN.j3.rf_prod,jall:JUN.jall&&JUN.jall.rf_prod}[s]||JUN.j1.rf_prod||{}),
     getCB: (s)=>({j1:JUN.j1.cb_prod,j2:JUN.j2&&JUN.j2.cb_prod,j3:JUN.j3&&JUN.j3.cb_prod,jall:JUN.jall&&JUN.jall.cb_prod}[s]||JUN.j1.cb_prod||{}),
@@ -1145,12 +1144,15 @@ function renderTrend(cfg,kpi,lbl,isJun){
     return`<div style="padding:4px 0;border-bottom:1px solid var(--border-s)"><div style="display:flex;justify-content:space-between;font-size:10px;margin-bottom:3px"><span style="color:var(--t2)">${p}</span><span style="color:var(--t3)">Mai ${maiPct.toFixed(1)}% → Jun ${junPct}%</span></div><div style="height:6px;background:var(--surface2);border-radius:3px;overflow:hidden"><div style="height:6px;background:${c};width:${(junPct/40*100).toFixed(1)}%;border-radius:3px"></div></div></div>`;
   }).join('');
   // Insights
-  $('ins').innerHTML=isJun?`
-    <div style="padding:9px;background:var(--green-l);border-radius:7px;border:1px solid rgba(34,197,94,.2);margin-bottom:8px"><div style="font-size:11px;font-weight:700;color:var(--green);margin-bottom:3px">📊 Jun S1: Semana forte com alertas</div><div style="font-size:10px;color:var(--t2)">$648.7K · 18.45% líquido · RF 15.70% · CB 0.89%. BreathEaseX domina (39%). VisiumPro (31.8%) e GlucoRecover (32.1%) em zona crítica. VigorLong (-61% liq) — sem CB mas RF acima de 90%.</div></div>
-    <div style="font-size:10px;color:var(--t3);line-height:1.8"><div>🟢 <strong>Melhoras:</strong> NervoLyn (11.2% vs 13.4% mai), BreathEaseX (8.1%)</div><div>🔴 <strong>Pioram:</strong> VisiumPro (+16.4pp), Prostafense (+7.1pp), AudiLeaf (+1.6pp)</div><div>🆕 <strong>Novo produto:</strong> FloraNew ($1.1K, 0% RF)</div></div>
-  `:`
-    <div style="padding:9px;background:var(--yellow-l);border-radius:7px;border:1px solid rgba(245,158,11,.2);margin-bottom:8px"><div style="font-size:11px;font-weight:700;color:var(--yellow);margin-bottom:3px">📊 Maio Completo: $2.325M</div><div style="font-size:10px;color:var(--t2)">RF 16.26% · CB 1.34% · Liq 14.29%. Melhor semana: S3 (16.89%). Pior: S4 (10.80%). S5 fechou em recuperação (16.43%). BreathEaseX entrou em S4 e dominou S5.</div></div>
-    <div style="font-size:10px;color:var(--t3);line-height:1.8"><div>📈 S1→S5: ${['18.38%','10.64%','14.20%','19.24%','15.15%'].map((v,i)=>`S${i+1}:${v}`).join(' → ')}</div><div>⚠️ AudiLeaf consistentemente acima de 12% — auditoria de afiliados necessária</div></div>
+  const junInsights={
+    jall:`<div style="padding:9px;background:var(--green-l);border-radius:7px;border:1px solid rgba(34,197,94,.2);margin-bottom:8px"><div style="font-size:11px;font-weight:700;color:var(--green);margin-bottom:3px">📊 Junho 01-21: Melhor mês da operação</div><div style="font-size:10px;color:var(--t2)">$2.94M · 20.68% líquido · RF 13.62% · CB 0.60%. BreathEaseX respondeu por 60% do faturamento. Tendência de melhora consistente nas 3 semanas.</div></div><div style="font-size:10px;color:var(--t3);line-height:1.8"><div>🟢 RF: S1 15.7% → S2 13.0% → S3 13.1% (estabilizou)</div><div>⚡ Funil black (S2+S3): NervoLyn e BoosterXT ok. GlucoRecover em prejuízo.</div><div>🔴 Críticos acumulados: GlucoRecover (-1.9%), Marobrain (-10%), VigorLong (-20%)</div></div>`,
+    j1:`<div style="padding:9px;background:var(--yellow-l);border-radius:7px;border:1px solid rgba(245,158,11,.2);margin-bottom:8px"><div style="font-size:11px;font-weight:700;color:var(--yellow);margin-bottom:3px">📊 Jun S1 (01-07): Início forte, RF ainda alto</div><div style="font-size:10px;color:var(--t2)">$648.7K · 18.45% líquido · RF 15.70% · CB 0.89%. BreathEaseX (8.1%) e NervoLyn (11.2%) puxam resultado. VisiumPro (31.8%) e GlucoRecover (32.1%) problemáticos.</div></div><div style="font-size:10px;color:var(--t3);line-height:1.8"><div>🟢 OK: BreathEaseX 8.1%, NervoLyn 11.2%, BoosterXT 0%</div><div>🔴 Crítico: VisiumPro 31.8%, GlucoRecover 32.1%, VigorLong -61% liq</div></div>`,
+    j2:`<div style="padding:9px;background:var(--green-l);border-radius:7px;border:1px solid rgba(34,197,94,.2);margin-bottom:8px"><div style="font-size:11px;font-weight:700;color:var(--green);margin-bottom:3px">⚡ Jun S2 (08-14): Funil black entra, melhor semana</div><div style="font-size:10px;color:var(--t2)">$927.5K · 21.86% líquido · RF 12.99% · CB 0.54%. NervoLyn (14.7%) e BoosterXT (5%) performam bem no modelo black. GlucoRecover (31.7%) no limiar do prejuízo (-0.18%).</div></div><div style="font-size:10px;color:var(--t3);line-height:1.8"><div>⚡ Black funcionou: NervoLyn 14.7% ok · BoosterXT 5.0% ótimo · LipoBliss 10.8% ok</div><div>⚠️ Black no limite: GlucoRecover 31.7% liq -0.18%</div><div>🔴 Marobrain -23%, VigorLong -10%, LipoTrine prejuízo</div></div>`,
+    j3:`<div style="padding:9px;background:var(--green-l);border-radius:7px;border:1px solid rgba(34,197,94,.2);margin-bottom:8px"><div style="font-size:11px;font-weight:700;color:var(--green);margin-bottom:3px">⚡ Jun S3 (15-21): Maior semana da operação</div><div style="font-size:10px;color:var(--t2)">$1.365M · 20.94% líquido · RF 13.06% · CB 0.49%. BreathEaseX respondeu por $997K (73%). Funil black: NervoLyn manteve liq positivo (11.7%). GlucoRecover entrou em prejuízo (-8.5%).</div></div><div style="font-size:10px;color:var(--t3);line-height:1.8"><div>⚡ Black S3: NervoLyn RF 21.6% liq 11.7% (ok) · BoosterXT RF 13.4% liq 25.4% (ok) · LipoBliss RF 23.8% liq 4.7% (degradando) · GlucoRecover RF 42.4% liq -8.5% (SAIR DO BLACK)</div><div>🟢 BreathEaseX: $997K · RF 8.84% · liq 26.1%</div><div>🔴 Prejuízo: GlucoRecover -8.5%, VisiumPro -0.7%, Marobrain -3.4%, LipoTrine -289%</div></div>`,
+  };
+  $('ins').innerHTML=isJun?(junInsights[cSem]||junInsights.jall):`
+    <div style="padding:9px;background:var(--yellow-l);border-radius:7px;border:1px solid rgba(245,158,11,.2);margin-bottom:8px"><div style="font-size:11px;font-weight:700;color:var(--yellow);margin-bottom:3px">📊 Maio Completo: $2.325M</div><div style="font-size:10px;color:var(--t2)">RF 16.26% · CB 1.34% · Liq 14.29%. Melhor semana: S3 (16.89%). Pior: S4 (10.80%). S5 fechou em recuperação (16.43%).</div></div>
+    <div style="font-size:10px;color:var(--t3);line-height:1.8"><div>📈 S1→S5: ${['18.38%','10.64%','14.20%','19.24%','15.15%'].map((v,i)=>'S'+(i+1)+':'+v).join(' → ')}</div><div>⚠️ AudiLeaf consistentemente acima de 12% — auditoria de afiliados necessária</div></div>
   `;
 }
 
