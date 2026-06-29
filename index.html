@@ -712,8 +712,8 @@ const JUN = {
   jall: {
     fat:2940841.58, liq:608139.84, vend:10822, rf_pct:13.62, cb_pct:0.60, liq_pct:20.68,
     tot_rf:403252.72, tot_rfq:1801, tot_cb:16532.26, tot_cbq:59,
-    trf:{"0-3d":786,"4-7d":193,"8-15d":207,"16-30d":194,"+45d":421},
-    tcb:{"0-3d":1,"4-7d":2,"8-15d":12,"16-30d":17,"+45d":27},
+    trf:{"0-3d":1188,"4-7d":336,"8-15d":347,"16-30d":283,"+45d":570},
+    tcb:{"0-3d":1,"4-7d":4,"8-15d":15,"16-30d":21,"+45d":33},
     rf_prod:{
       "BreathEaseX":{r:156883.61,q:625},"NervoLyn":{r:54548.51,q:280},
       "AudiLeaf":{r:45070.01,q:212},"VisiumPro":{r:34846.18,q:166},
@@ -752,6 +752,50 @@ const JUN = {
       {nm:"Aad020207",rf:6669.64,rfq:31,cb:637.30,cbq:1,tm:{"0-3d":10,"4-7d":1,"8-15d":8,"16-30d":11,"+45d":1},mt:["Chargeback alert","Side effects"]},
       {nm:"smaralima",rf:6320.58,rfq:38,cb:0,cbq:0,tm:{"0-3d":19,"4-7d":0,"8-15d":0,"16-30d":2,"+45d":17},mt:["Threatened","No longer interested"]},
       {nm:"Helpgrid I225",rf:6041.81,rfq:31,cb:0,cbq:0,tm:{"0-3d":16,"4-7d":9,"8-15d":0,"16-30d":3,"+45d":3},mt:["Threatened","No longer interested"]}
+    ]
+  },
+  j4: {
+    fat:992733.74, liq:129118.70, vend:3610, rf_pct:20.50, cb_pct:0.43, liq_pct:13.01,
+    tot_rf:203508.41, tot_rfq:923, tot_cb:4270.34, tot_cbq:15,
+    trf:{"0-3d":402,"4-7d":143,"8-15d":140,"16-30d":89,"+45d":149},
+    tcb:{"0-3d":0,"4-7d":2,"8-15d":3,"16-30d":4,"+45d":6},
+    rf_prod:{
+      "BreathEaseX":{r:113135.06,q:478},"NervoLyn":{r:25346.23,q:136},
+      "AudiLeaf":{r:16117.53,q:73},"Prostafense":{r:12174.70,q:56},
+      "VisiumPro":{r:11682.87,q:55},"GlucoRecover":{r:8217.10,q:41},
+      "Marobrain":{r:5609.14,q:27},"LipoBliss":{r:3650.54,q:13},
+      "FloraNew":{r:3348.51,q:14},"NailsCleanPro":{r:2158.01,q:10},
+      "VigorLong":{r:2049.25,q:10},"ReduBurn":{r:1116.27,q:6},
+      "LipoVive":{r:734.66,q:3},"LipoTrine":{r:318.55,q:1}
+    },
+    cb_prod:{
+      "BreathEaseX":{c:1710.03,q:6},"VisiumPro":{c:798.48,q:3},
+      "AudiLeaf":{c:522.60,q:2},"NervoLyn":{c:511.22,q:2},
+      "Prostafense":{c:488.29,q:2}
+    },
+    motivos:[
+      ["Chargeback alert",225],["Threatened with a chargeback",162],
+      ["Buyers remorse",87],["Doesn't remember placing order",68],
+      ["Partial refund - saved sale",33],["No longer interested",26],
+      ["Customer threatened chargeback",18],["Did not agree to the upsells",17],
+      ["Not happy with product",16],["Product arrived defective",15],
+      ["Chargeback Alert-RDR",14],["Doctor advised against using it",13]
+    ],
+    afils:[
+      {nm:"gestor1.buygoods@outlook.com",rf:35708.90,rfq:150,cb:865.13,cbq:1,tm:{"0-3d":24,"4-7d":55,"8-15d":46,"16-30d":21,"+45d":4},mt:["Chargeback alert","Threatened with chargeback"]},
+      {nm:"Tiger Offers LTDA",rf:16503.54,rfq:58,cb:0,cbq:0,tm:{"0-3d":58,"4-7d":0,"8-15d":0,"16-30d":0,"+45d":0},mt:["Chargeback alert","Buyers remorse"]},
+      {nm:"buyerlab",rf:12524.20,rfq:57,cb:0,cbq:0,tm:{"0-3d":30,"4-7d":14,"8-15d":13,"16-30d":0,"+45d":0},mt:["Chargeback alert","Threatened"]},
+      {nm:"Joaofernandes",rf:7911.55,rfq:39,cb:0,cbq:0,tm:{"0-3d":14,"4-7d":10,"8-15d":7,"16-30d":8,"+45d":0},mt:["Threatened","Chargeback alert"]},
+      {nm:"vazdigital",rf:7692.46,rfq:31,cb:0,cbq:0,tm:{"0-3d":25,"4-7d":2,"8-15d":4,"16-30d":0,"+45d":0},mt:["Threatened","Doesn't remember"]},
+      {nm:"HelpGrid C..",rf:5446.61,rfq:28,cb:0,cbq:0,tm:{"0-3d":7,"4-7d":6,"8-15d":6,"16-30d":3,"+45d":6},mt:["Chargeback alert","No longer interested"]},
+      {nm:"smaralima",rf:4582.66,rfq:20,cb:0,cbq:0,tm:{"0-3d":11,"4-7d":1,"8-15d":0,"16-30d":2,"+45d":6},mt:["Threatened","Buyers remorse"]},
+      {nm:"rjpassos",rf:4322.92,rfq:18,cb:251.25,cbq:1,tm:{"0-3d":13,"4-7d":1,"8-15d":1,"16-30d":0,"+45d":3},mt:["Doesn't remember","Doctor advised"]},
+      {nm:"daveoreo",rf:3743.30,rfq:14,cb:0,cbq:0,tm:{"0-3d":11,"4-7d":0,"8-15d":3,"16-30d":0,"+45d":0},mt:["Buyers remorse","Doesn't remember"]},
+      {nm:"kuhnads",rf:3480.67,rfq:15,cb:0,cbq:0,tm:{"0-3d":7,"4-7d":1,"8-15d":0,"16-30d":1,"+45d":6},mt:["Chargeback alert","Threatened"]},
+      {nm:"emilianosoles",rf:3246.36,rfq:15,cb:0,cbq:0,tm:{"0-3d":4,"4-7d":1,"8-15d":7,"16-30d":3,"+45d":0},mt:["Chargeback alert","Doesn't remember"]},
+      {nm:"Aad020207",rf:2932.49,rfq:15,cb:522.60,cbq:2,tm:{"0-3d":0,"4-7d":0,"8-15d":2,"16-30d":6,"+45d":7},mt:["Chargeback alert","Threatened"]},
+      {nm:"viderimedia",rf:2929.72,rfq:10,cb:0,cbq:0,tm:{"0-3d":6,"4-7d":3,"8-15d":1,"16-30d":0,"+45d":0},mt:["Chargeback alert","Duplicate charge"]},
+      {nm:"Helpgrid I225",rf:2812.15,rfq:11,cb:0,cbq:0,tm:{"0-3d":3,"4-7d":0,"8-15d":5,"16-30d":1,"+45d":2},mt:["Chargeback alert","Threatened"]}
     ]
   }
 };
@@ -827,6 +871,24 @@ const JUN_PROD = {
     "ReduBurn":     {fat:588,      v:2,   rf:1832.39,  rfpct:311.63,cb:0,      liq:-1698.43, lpct:-288.85,aov:294},
     "LipoTrine":    {fat:0,        v:0,   rf:2160.17,  rfpct:0,    cb:0,       liq:-2160.17, lpct:0,    aov:0},
   },
+  j4: {  // ⚠️ S4: 70% black ativo. RF disparou 20.5% — alerta
+    "BreathEaseX":  {fat:622274.32,v:1490,rf:111402.82,rfpct:17.90,cb:1812.15,liq:101370.92,lpct:16.29,aov:417.88},
+    "NervoLyn":     {fat:91169.48, v:235, rf:25630.36, rfpct:28.11,cb:541.51, liq:7536.55,  lpct:8.27, aov:387.24, blackFunil:true},
+    "AudiLeaf":     {fat:73798.15, v:219, rf:16420.75, rfpct:22.25,cb:553.62, liq:2836.95,  lpct:3.84, aov:337.96},
+    "Prostafense":  {fat:55472.42, v:148, rf:12174.70, rfpct:21.95,cb:517.12, liq:4684.01,  lpct:8.44, aov:376.41},
+    "VisiumPro":    {fat:34638.24, v:88,  rf:11682.87, rfpct:33.73,cb:845.94, liq:272.98,   lpct:0.79, aov:394.90},
+    "Marobrain":    {fat:29939.31, v:84,  rf:4785.61,  rfpct:15.98,cb:0,      liq:4358.73,  lpct:14.56,aov:351.25},
+    "GlucoRecover": {fat:21922.38, v:58,  rf:8217.10,  rfpct:37.48,cb:0,      liq:-698.99,  lpct:-3.19,aov:387.11, blackFunil:true},
+    "LipoBliss":    {fat:18875.02, v:44,  rf:3369.96,  rfpct:17.85,cb:0,      liq:3342.74,  lpct:17.71,aov:407.81, blackFunil:true},
+    "BoosterXT":    {fat:16818.10, v:45,  rf:0,        rfpct:0,    cb:0,      liq:5415.50,  lpct:32.20,aov:373.48, blackFunil:true},
+    "FloraNew":     {fat:14585.25, v:41,  rf:3348.51,  rfpct:22.96,cb:0,      liq:1400.05,  lpct:9.60, aov:362.58},
+    "NailsCleanPro":{fat:3597.27,  v:11,  rf:2158.01,  rfpct:59.99,cb:0,      liq:-1004.68, lpct:-27.93,aov:351.42},
+    "LipoVive":     {fat:3402.85,  v:21,  rf:734.66,   rfpct:21.59,cb:0,      liq:1099.32,  lpct:32.31,aov:346.70},
+    "LipoTrine":    {fat:2085.72,  v:5,   rf:318.55,   rfpct:15.27,cb:0,      liq:427.31,   lpct:20.49,aov:439.95},
+    "VigorLong":    {fat:2142.42,  v:6,   rf:2028.06,  rfpct:94.66,cb:0,      liq:-1357.39, lpct:-63.36,aov:367.92},
+    "ReduBurn":     {fat:406.76,   v:1,   rf:1116.27,  rfpct:274.43,cb:0,     liq:-956.60,  lpct:-235.17,aov:327.81},
+    "Erectrozil":   {fat:98.99,    v:1,   rf:98.99,    rfpct:100,  cb:0,      liq:-136.84,  lpct:-138.24,aov:98.99},
+  }
 };
 
 
@@ -887,25 +949,28 @@ const MES_CONFIG={
   jun:{
     label:'Junho 2026',
     semanas:[
-      {id:'jall',label:'Jun Total',dias:21},
+      {id:'jall',label:'Jun Total',dias:28},
       {id:'j1',  label:'S1: 01-07',dias:7},
       {id:'j2',  label:'S2: 08-14',dias:7},
       {id:'j3',  label:'S3: 15-21',dias:7},
+      {id:'j4',  label:'S4: 22-28',dias:7},
     ],
     kpis:{
-      jall:{fat:2940841.58,liq:608139.84,vend:10822,rf_pct:13.62,cb_pct:0.60,liq_pct:20.68,tot_rf:400601.56,tot_rfq:1801,tot_cb:17215.17,tot_cbq:59},
+      jall:{fat:3933654.39,liq:737275.52,vend:14433,rf_pct:15.37,cb_pct:0.55,liq_pct:18.74,tot_rf:604322.73,tot_rfq:2724,tot_cb:21485.36,tot_cbq:74},
       j1:  {fat:648734.38, liq:119707.40,vend:2441, rf_pct:15.70,cb_pct:0.89,liq_pct:18.45,tot_rf:102030.87, tot_rfq:482, tot_cb:5430.82, tot_cbq:20},
       j2:  {fat:927512.82, liq:202723.41, vend:3428, rf_pct:12.99,cb_pct:0.54,liq_pct:21.86,tot_rf:120515.03, tot_rfq:533, tot_cb:5036.55, tot_cbq:17},
       j3:  {fat:1364673.33,liq:285726.45, vend:4954, rf_pct:13.06,cb_pct:0.49,liq_pct:20.94,tot_rf:178267.85, tot_rfq:786, tot_cb:6742.06, tot_cbq:22},
+      j4:  {fat:992733.74, liq:129118.70, vend:3610, rf_pct:20.50,cb_pct:0.43,liq_pct:13.01,tot_rf:203508.41, tot_rfq:923, tot_cb:4270.34, tot_cbq:15},
+      j4:  {fat:992733.74, liq:129118.70, vend:3610, rf_pct:20.50,cb_pct:0.43,liq_pct:13.01,tot_rf:203508.41, tot_rfq:923, tot_cb:4270.34, tot_cbq:15},
     },
-    getRF: (s)=>({j1:JUN.j1.rf_prod,j2:JUN.j2&&JUN.j2.rf_prod,j3:JUN.j3&&JUN.j3.rf_prod,jall:JUN.jall&&JUN.jall.rf_prod}[s]||JUN.j1.rf_prod||{}),
-    getCB: (s)=>({j1:JUN.j1.cb_prod,j2:JUN.j2&&JUN.j2.cb_prod,j3:JUN.j3&&JUN.j3.cb_prod,jall:JUN.jall&&JUN.jall.cb_prod}[s]||JUN.j1.cb_prod||{}),
+    getRF: (s)=>({j1:JUN.j1.rf_prod,j2:JUN.j2&&JUN.j2.rf_prod,j3:JUN.j3&&JUN.j3.rf_prod,j4:JUN.j4&&JUN.j4.rf_prod,jall:JUN.jall&&JUN.jall.rf_prod}[s]||JUN.j1.rf_prod||{}),
+    getCB: (s)=>({j1:JUN.j1.cb_prod,j2:JUN.j2&&JUN.j2.cb_prod,j3:JUN.j3&&JUN.j3.cb_prod,j4:JUN.j4&&JUN.j4.cb_prod,jall:JUN.jall&&JUN.jall.cb_prod}[s]||JUN.j1.cb_prod||{}),
     getPS: (s)=>JUN_PROD[s]||JUN_PROD.jall||JUN_PROD.j1,
     getTD: ()=>({}),
-    getTRF:(s)=>({j1:JUN.j1.trf,j2:JUN.j2&&JUN.j2.trf,j3:JUN.j3&&JUN.j3.trf,jall:JUN.jall&&JUN.jall.trf}[s]||JUN.j1.trf||{}),
-    getTCB:(s)=>({j1:JUN.j1.tcb,j2:JUN.j2&&JUN.j2.tcb,j3:JUN.j3&&JUN.j3.tcb,jall:JUN.jall&&JUN.jall.tcb}[s]||JUN.j1.tcb||{}),
-    getMot:(s)=>({j1:JUN.j1.motivos,j2:JUN.j2&&JUN.j2.motivos,j3:JUN.j3&&JUN.j3.motivos,jall:JUN.jall&&JUN.jall.motivos}[s]||JUN.j1.motivos||[]),
-    getAfils:(s)=>({j1:JUN.j1.afils,j2:JUN.j2&&JUN.j2.afils,j3:JUN.j3&&JUN.j3.afils,jall:JUN.jall&&JUN.jall.afils}[s]||JUN.j1.afils||[]),
+    getTRF:(s)=>({j1:JUN.j1.trf,j2:JUN.j2&&JUN.j2.trf,j3:JUN.j3&&JUN.j3.trf,j4:JUN.j4&&JUN.j4.trf,jall:JUN.jall&&JUN.jall.trf}[s]||JUN.j1.trf||{}),
+    getTCB:(s)=>({j1:JUN.j1.tcb,j2:JUN.j2&&JUN.j2.tcb,j3:JUN.j3&&JUN.j3.tcb,j4:JUN.j4&&JUN.j4.tcb,jall:JUN.jall&&JUN.jall.tcb}[s]||JUN.j1.tcb||{}),
+    getMot:(s)=>({j1:JUN.j1.motivos,j2:JUN.j2&&JUN.j2.motivos,j3:JUN.j3&&JUN.j3.motivos,j4:JUN.j4&&JUN.j4.motivos,jall:JUN.jall&&JUN.jall.motivos}[s]||JUN.j1.motivos||[]),
+    getAfils:(s)=>({j1:JUN.j1.afils,j2:JUN.j2&&JUN.j2.afils,j3:JUN.j3&&JUN.j3.afils,j4:JUN.j4&&JUN.j4.afils,jall:JUN.jall&&JUN.jall.afils}[s]||JUN.j1.afils||[]),
     hasTop10: false,
     nota:'RF/CB filtrado 01-07/06. Semana S1 de junho.',
   }
@@ -991,7 +1056,7 @@ function renderProd(cfg,kpi,lbl,dias,isJun){
     const sorted=Object.entries(prods).sort((a,b)=>b[1].fat-a[1].fat);
     const maxFat=sorted[0]?sorted[0][1].fat:1;
     const maxRF=Math.max(...sorted.map(([,v])=>v.rf),1);
-    const hasBlack=(cSem==='j2'||cSem==='j3');
+    const hasBlack=(cSem==='j2'||cSem==='j3'||cSem==='j4');
     if($('nota-prod')) $('nota-prod').innerHTML='<strong>Metodologia:</strong> RF/CB filtrado por data do reembolso.'+(hasBlack?' <strong style="color:#A855F7">⚡ Funil 70% black ativo em S2 e S3 para: NervoLyn, BoosterXT, LipoBliss, GlucoRecover.</strong> RF elevado nesses produtos é parcialmente esperado nesse modelo.':'');
     $('bV').innerHTML=sorted.filter(([,v])=>v.fat>0).map(([p,v])=>{
       const bl=v.blackFunil?'⚡ ':'';
@@ -1145,7 +1210,7 @@ function renderTrend(cfg,kpi,lbl,isJun){
   }).join('');
   // Insights
   const junInsights={
-    jall:`<div style="padding:9px;background:var(--green-l);border-radius:7px;border:1px solid rgba(34,197,94,.2);margin-bottom:8px"><div style="font-size:11px;font-weight:700;color:var(--green);margin-bottom:3px">📊 Junho 01-21: Melhor mês da operação</div><div style="font-size:10px;color:var(--t2)">$2.94M · 20.68% líquido · RF 13.62% · CB 0.60%. BreathEaseX respondeu por 60% do faturamento. Tendência de melhora consistente nas 3 semanas.</div></div><div style="font-size:10px;color:var(--t3);line-height:1.8"><div>🟢 RF: S1 15.7% → S2 13.0% → S3 13.1% (estabilizou)</div><div>⚡ Funil black (S2+S3): NervoLyn e BoosterXT ok. GlucoRecover em prejuízo.</div><div>🔴 Críticos acumulados: GlucoRecover (-1.9%), Marobrain (-10%), VigorLong (-20%)</div></div>`,
+    jall:`<div style="padding:9px;background:var(--yellow-l);border-radius:7px;border:1px solid rgba(245,158,11,.2);margin-bottom:8px"><div style="font-size:11px;font-weight:700;color:var(--yellow);margin-bottom:3px">📊 Junho 01-28: $3.93M · RF médio 15.4%</div><div style="font-size:10px;color:var(--t2)">S1-S3 excelentes (13-15% RF). S4 regrediu para 20.5% com ondas de reembolso das semanas anteriores chegando. BreathEaseX dominante ($1.76M · 60%). Funil black funcionou em NervoLyn e BoosterXT.</div></div><div style="font-size:10px;color:var(--t3);line-height:1.8"><div>📈 RF semanal: S1 15.7% → S2 13.0% → S3 13.1% → S4 20.5% ⚠️</div><div>⚡ Funil black: BoosterXT ótimo (0-5%). NervoLyn ok em S2-S3, degradou em S4. GlucoRecover deve sair do black.</div><div>🔴 Críticos acumulados: GlucoRecover (-3.2%), VigorLong (-63%), NailsCleanPro S4 (-28%), ReduBurn (-235%)</div></div>`,
     j1:`<div style="padding:9px;background:var(--yellow-l);border-radius:7px;border:1px solid rgba(245,158,11,.2);margin-bottom:8px"><div style="font-size:11px;font-weight:700;color:var(--yellow);margin-bottom:3px">📊 Jun S1 (01-07): Início forte, RF ainda alto</div><div style="font-size:10px;color:var(--t2)">$648.7K · 18.45% líquido · RF 15.70% · CB 0.89%. BreathEaseX (8.1%) e NervoLyn (11.2%) puxam resultado. VisiumPro (31.8%) e GlucoRecover (32.1%) problemáticos.</div></div><div style="font-size:10px;color:var(--t3);line-height:1.8"><div>🟢 OK: BreathEaseX 8.1%, NervoLyn 11.2%, BoosterXT 0%</div><div>🔴 Crítico: VisiumPro 31.8%, GlucoRecover 32.1%, VigorLong -61% liq</div></div>`,
     j2:`<div style="padding:9px;background:var(--green-l);border-radius:7px;border:1px solid rgba(34,197,94,.2);margin-bottom:8px"><div style="font-size:11px;font-weight:700;color:var(--green);margin-bottom:3px">⚡ Jun S2 (08-14): Funil black entra, melhor semana</div><div style="font-size:10px;color:var(--t2)">$927.5K · 21.86% líquido · RF 12.99% · CB 0.54%. NervoLyn (14.7%) e BoosterXT (5%) performam bem no modelo black. GlucoRecover (31.7%) no limiar do prejuízo (-0.18%).</div></div><div style="font-size:10px;color:var(--t3);line-height:1.8"><div>⚡ Black funcionou: NervoLyn 14.7% ok · BoosterXT 5.0% ótimo · LipoBliss 10.8% ok</div><div>⚠️ Black no limite: GlucoRecover 31.7% liq -0.18%</div><div>🔴 Marobrain -23%, VigorLong -10%, LipoTrine prejuízo</div></div>`,
     j3:`<div style="padding:9px;background:var(--green-l);border-radius:7px;border:1px solid rgba(34,197,94,.2);margin-bottom:8px"><div style="font-size:11px;font-weight:700;color:var(--green);margin-bottom:3px">⚡ Jun S3 (15-21): Maior semana da operação</div><div style="font-size:10px;color:var(--t2)">$1.365M · 20.94% líquido · RF 13.06% · CB 0.49%. BreathEaseX respondeu por $997K (73%). Funil black: NervoLyn manteve liq positivo (11.7%). GlucoRecover entrou em prejuízo (-8.5%).</div></div><div style="font-size:10px;color:var(--t3);line-height:1.8"><div>⚡ Black S3: NervoLyn RF 21.6% liq 11.7% (ok) · BoosterXT RF 13.4% liq 25.4% (ok) · LipoBliss RF 23.8% liq 4.7% (degradando) · GlucoRecover RF 42.4% liq -8.5% (SAIR DO BLACK)</div><div>🟢 BreathEaseX: $997K · RF 8.84% · liq 26.1%</div><div>🔴 Prejuízo: GlucoRecover -8.5%, VisiumPro -0.7%, Marobrain -3.4%, LipoTrine -289%</div></div>`,
